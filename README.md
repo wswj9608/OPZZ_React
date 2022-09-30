@@ -1,3 +1,8 @@
 # OP.GG Clone project OPZZ
 
-react
+## stack
+
+- React.js
+- TypeScript
+- Next.js
+- Recoil
