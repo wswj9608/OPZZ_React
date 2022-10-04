@@ -1,15 +1,16 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { getSummonerInfo } from "../../lib/api/summoner"
+import { useSummonerInfoState } from "../../atoms/summoners"
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
   const { summonerName } = query
-  const [summoner, setSummoner] = useState<string>()
+  const [, setSummonerInfoState] = useSummonerInfoState()
 
   const getSummoner = async () => {
     const res = await getSummonerInfo({ summonerName })
-    setSummoner(res)
+    setSummonerInfoState(res)
   }
 
   console.log(isReady)
@@ -18,8 +19,6 @@ const Summoners = () => {
     if (!summonerName) return
     if (!isReady) return
 
-    console.log("summoner ====>", summoner)
-    console.log("summonerName ====>", summonerName)
     getSummoner()
   }, [summonerName, isReady])
 
