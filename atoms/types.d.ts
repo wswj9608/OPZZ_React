@@ -1,9 +1,7 @@
 interface SummonerInfoType {
-  id: string
-  accountId: string
-  puuid: string
   name: string
-  profileIconId: number
-  revisionDate: number
+  id: string
+  puuid: string
   summonerLevel: number
+  imageUrl: string
 }
