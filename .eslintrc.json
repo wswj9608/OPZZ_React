@@ -1,7 +1,79 @@
 {
-  "extends": "next/core-web-vitals",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "off" // <--- THIS IS THE NEW RULE
-  }
+    "react-hooks/exhaustive-deps": "off", // <--- THIS IS THE NEW RULE
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "indent": "off",
+    "import/no-unresolved": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+
+    "@typescript-eslint/no-empty-function": "off",
+    "import/extensions": "off",
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "no-use-before-define": "off",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "no-shadow": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-empty-function": "off",
+    "no-empty-pattern": "off",
+    "no-underscore-dangle": "off",
+    "react/display-name": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "consistent-return": ["off", { "treatUndefinedAsUnspecified": false }],
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "warn",
+    "no-lonely-if": "warn",
+    "no-unused-vars": "off"
+  },
+  "ignorePatterns": ["node_modules"]
 }
