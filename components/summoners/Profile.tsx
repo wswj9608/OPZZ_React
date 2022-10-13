@@ -11,57 +11,51 @@ const Profile = ({ summonerInfo }: ProfileProps) => {
 
   return (
     <ProfileWrapper>
-      <div className='profile'>
-        <div className='image-box'>
-          <Image
-            className='icon'
-            src={imageUrl}
-            alt='profile'
-            width='100'
-            height='100'
-          />
-          <div className='level'>
-            <Text size='12px' color='#FFF'>
+      <div className="profile">
+        <div className="image-box">
+          <Image className="icon" src={imageUrl} alt="profile" width="100" height="100" />
+          <div className="level">
+            <Text size="12px" color="#FFF">
               {summonerLevel}
             </Text>
           </div>
         </div>
-        <div className='profile-state'>
-          <div className='tier-history'>
-            <div className='badge'>
-              <Text size='10px' color='#7b7a8e'>
+        <div className="profile-state">
+          <div className="tier-history">
+            <div className="badge">
+              <Text size="10px" color="#7b7a8e">
                 S2021 Platinum 4
               </Text>
             </div>
-            <div className='badge'>
-              <Text size='10px' color='#7b7a8e'>
+            <div className="badge">
+              <Text size="10px" color="#7b7a8e">
                 S2021 Platinum 4
               </Text>
             </div>
-            <div className='badge'>
-              <Text size='10px' color='#7b7a8e'>
+            <div className="badge">
+              <Text size="10px" color="#7b7a8e">
                 S2021 Platinum 4
               </Text>
             </div>
           </div>
-          <div className='user-name'>
-            <Text size='24px' color='#FFF' weight='bold'>
+          <div className="user-name">
+            <Text size="24px" color="#FFF" weight="bold">
               {name}
             </Text>
           </div>
-          <div className='ranking'>
-            <Text size='12px' color='#7b7a8e'>
+          <div className="ranking">
+            <Text size="12px" color="#7b7a8e">
               래더 랭킹 <span>156,676</span> 위 (상위 3.71%)
             </Text>
           </div>
-          <div className='button-wrap'>
-            <Button type='A'>전적 갱신</Button>
-            <Button type='B'>티어 그래프</Button>
-            <Button type='A' color='#7d59ea'>
+          <div className="button-wrap">
+            <Button type="A">전적 갱신</Button>
+            <Button type="B">티어 그래프</Button>
+            <Button type="A" color="#7d59ea">
               롤 몇 시간 했는지 궁금해?
             </Button>
           </div>
-          <Text size='12px' color='#7b7a8e'>
+          <Text size="12px" color="#7b7a8e">
             최근 업데이트: 5일 전
           </Text>
         </div>
