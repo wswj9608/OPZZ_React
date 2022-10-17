@@ -1,3 +1,3 @@
 interface ProfileProps {
-  summonerInfo: SummonerInfoType
+  summonerProfile: { name: string; id: string; puuid: string; summonerLevel: number; imageUrl: string }
 }

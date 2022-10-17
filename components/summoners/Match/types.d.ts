@@ -1,0 +1,3 @@
+interface MatchProps {
+  matchData: any[]
+}

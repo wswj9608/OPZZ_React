@@ -4,10 +4,8 @@ import styled from 'styled-components'
 import { useSummonerInfoState } from '../../atoms/summoners'
 import { Button, Text } from '../../elements'
 
-const Profile = ({ summonerInfo }: ProfileProps) => {
-  const { imageUrl, summonerLevel, name } = summonerInfo
-
-  console.log(imageUrl)
+const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
+  const { imageUrl, summonerLevel, name } = summonerProfile
 
   return (
     <ProfileWrapper>

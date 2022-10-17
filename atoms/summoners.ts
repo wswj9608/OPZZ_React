@@ -1,10 +1,10 @@
-import { atom, useRecoilState } from "recoil"
+import { atom, useRecoilState } from 'recoil'
 
-export const summonerInfoState = atom<SummonerInfoType | null>({
-  key: "summonerInfoState",
+export const summonerInfoToRecoil = atom<SummonerInfoType | null>({
+  key: 'summonerInfoState',
   default: null,
 })
 
 export const useSummonerInfoState = () => {
-  return useRecoilState(summonerInfoState)
+  return useRecoilState(summonerInfoToRecoil)
 }

@@ -4,4 +4,5 @@ interface SummonerInfoType {
   puuid: string
   summonerLevel: number
   imageUrl: string
+  matchs: any
 }
