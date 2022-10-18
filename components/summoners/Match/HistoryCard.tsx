@@ -2,8 +2,25 @@ import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 import { Text } from '@/elements'
+import { useRouter } from 'next/router'
+import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
 
-const HistoryCard = () => {
+const HistoryCard = ({ match }: HistoryCardProps) => {
+  const { query } = useRouter()
+  const { summonerName } = query
+  const { champion, champLevel, summonerSpells, kills, deaths, assists, subPerkStyleId, primaryPerkId, kda, items } =
+    match.gameDatas.find(data => data.summonerName === summonerName) as GameDataType
+
+  const getPrimaryPerk = (perkId: number) => {
+    return match.primaryPerks?.find(perk => perk.perk_id === perkId)
+  }
+
+  const COMMUNITY_DRAGON_URL = 'https://raw.communitydragon.org/12.19/plugins/rcp-be-lol-game-data/global/default/v1'
+  const primery = getPrimaryPerk(primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
+
+  console.log(match)
+  console.log(COMMUNITY_DRAGON_URL + primery)
+
   return (
     <HistoryCardWrapper>
       <GameInfoWrapper>
@@ -16,41 +33,30 @@ const HistoryCard = () => {
         <div className="first-line">
           <div className="champion">
             <div className="champ">
-              <Image
-                className="champ-icon"
-                src="https://s3.ap-northeast-2.amazonaws.com/opzz.back/champIcon/Aatrox.png"
-                alt="champ"
-                width="48"
-                height="48"
-              />
+              <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" />
               <div className="champ-level">
                 <Text size="10px" color="#FFF">
-                  11
+                  {champLevel}
                 </Text>
               </div>
             </div>
             <div className="spells">
-              <Image
-                className="spell-icon"
-                src="https://s3.ap-northeast-2.amazonaws.com/opzz.back/champIcon/Aatrox.png"
-                alt="champ"
-                width="22"
-                height="22"
-                layout="responsive"
-              />
-              <Image
-                className="spell-icon"
-                src="https://s3.ap-northeast-2.amazonaws.com/opzz.back/champIcon/Aatrox.png"
-                alt="champ"
-                width="22"
-                height="22"
-                layout="responsive"
-              />
+              {summonerSpells.map(spell => (
+                <Image
+                  key={spell.spell_id}
+                  className="spell-icon"
+                  src={spell.image_url}
+                  alt="champ"
+                  width={22}
+                  height={22}
+                  layout="responsive"
+                />
+              ))}
             </div>
             <div className="runes">
               <Image
                 className="rune-icon"
-                src="https://s3.ap-northeast-2.amazonaws.com/opzz.back/champIcon/Aatrox.png"
+                src={(COMMUNITY_DRAGON_URL + primery) as string}
                 alt="champ"
                 width="22"
                 height="22"
@@ -58,7 +64,7 @@ const HistoryCard = () => {
               />
               <Image
                 className="rune-icon"
-                src="https://s3.ap-northeast-2.amazonaws.com/opzz.back/champIcon/Aatrox.png"
+                src={getSubPerkIcon(subPerkStyleId)}
                 alt="champ"
                 width="22"
                 height="22"
@@ -68,13 +74,25 @@ const HistoryCard = () => {
           </div>
           <div className="kda">
             <Text size="15px" weight="bold" color="#FFF">
-              2 <span className="slash">/</span> <span className="death">4</span> <span className="slash">/</span> 9
+              {kills} <span className="slash">/</span> <span className="death">{deaths}</span>{' '}
+              <span className="slash">/</span> {assists}
             </Text>
             <Text size="12px" color="#7b7a8e">
-              2.75:1 평점
+              {`${kda}:1 평점`}
             </Text>
           </div>
         </div>
+        <ItemsWrapper>
+          {items.map((item, idx) => {
+            if (!item) return <Item></Item>
+
+            return (
+              <Item isAccessaryItem={idx === items.length - 1}>
+                <Image src={item.image_url} alt="item" width={22} height={22} />
+              </Item>
+            )
+          })}
+        </ItemsWrapper>
       </GamePlayDataWrapper>
       <GameParticipantsWrapper />
       <DetailButton>+</DetailButton>
@@ -105,7 +123,7 @@ const GameInfoWrapper = styled.div`
 const GamePlayDataWrapper = styled.div`
   min-width: 377px;
   margin-left: 8px;
-  background-color: red;
+  /* background-color: red; */
   height: 96px;
 
   .first-line {
@@ -178,6 +196,19 @@ const GamePlayDataWrapper = styled.div`
   .slash {
     color: #7b7a8e;
   }
+`
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  gap: 2px;
+`
+
+const Item = styled.div<{ isAccessaryItem?: boolean }>`
+  width: 22px;
+  height: 22px;
+  border-radius: ${({ isAccessaryItem }) => (isAccessaryItem ? '50%' : '4px')};
+  background-color: #2f436e;
+  overflow: hidden;
 `
 
 const GameParticipantsWrapper = styled.div`

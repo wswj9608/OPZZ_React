@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import HistoryCard from './HistoryCard'
+import { useSummonerMatchs } from '@/atoms/summoners'
 
-const Match = ({ matchData }: MatchProps) => {
-  console.log(matchData)
+const Match = () => {
+  const [matchs] = useSummonerMatchs()
 
   return (
     <MatchWrapper>
-      <HistoryCard />
+      {matchs?.map((match, idx) => (
+        <HistoryCard key={idx} match={match} />
+      ))}
     </MatchWrapper>
   )
 }

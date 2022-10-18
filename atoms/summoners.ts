@@ -1,10 +1,19 @@
 import { atom, useRecoilState } from 'recoil'
 
-export const summonerInfoToRecoil = atom<SummonerInfoType | null>({
-  key: 'summonerInfoState',
+export const summonerProfile = atom<SummonerProfileType | null>({
+  key: 'summonerProfile',
   default: null,
 })
 
-export const useSummonerInfoState = () => {
-  return useRecoilState(summonerInfoToRecoil)
+export const summonerMatchs = atom<SummonerMatchsType[] | null>({
+  key: 'summonerMatchs',
+  default: null,
+})
+
+export const useSummonerProfile = () => {
+  return useRecoilState(summonerProfile)
+}
+
+export const useSummonerMatchs = () => {
+  return useRecoilState(summonerMatchs)
 }

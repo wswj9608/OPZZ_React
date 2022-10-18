@@ -2,19 +2,22 @@ import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { getSummonerInfo } from '@/lib/api/summoner'
-import { useSummonerInfoState } from '@/atoms/summoners'
+import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
 import Profile from '@/components/summoners/Profile'
 import Match from '@/components/summoners/Match'
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
   const { summonerName } = query
-  const [summonerInfoState, setSummonerInfoState] = useSummonerInfoState()
-  // console.log(process.env)
+  const [summonerProfile, setSummonerProfile] = useSummonerProfile()
+  const [, setSummonerMatchs] = useSummonerMatchs()
 
   const getSummoner = async () => {
     const res = await getSummonerInfo({ summonerName })
-    setSummonerInfoState(res)
+    const { id, puuid, imageUrl, summonerLevel, name, matchs } = res
+
+    setSummonerProfile({ id, puuid, imageUrl, summonerLevel, name })
+    setSummonerMatchs(matchs)
   }
 
   useEffect(() => {
@@ -24,24 +27,14 @@ const Summoners = () => {
     getSummoner()
   }, [summonerName, isReady])
 
-  if (!summonerInfoState) return null
-
-  const { id, puuid, imageUrl, summonerLevel, name, matchs } = summonerInfoState
-
-  const summonerProfile = {
-    id,
-    puuid,
-    imageUrl,
-    summonerLevel,
-    name,
-  }
+  if (!summonerProfile) return null
 
   return (
     <SummonersWrapper>
       <Profile summonerProfile={summonerProfile} />
       <UserHistoryWrappser>
         <div className="user-info" />
-        <Match matchData={matchs} />
+        <Match />
       </UserHistoryWrappser>
     </SummonersWrapper>
   )
