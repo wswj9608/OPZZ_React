@@ -1,15 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
-import { getSummonerInfo } from '../../lib/api/summoner'
-import { useSummonerInfoState } from '../../atoms/summoners'
-import Profile from '../../components/summoners/Profile'
-import Match from '../../components/summoners/Match'
+import { getSummonerInfo } from '@/lib/api/summoner'
+import { useSummonerInfoState } from '@/atoms/summoners'
+import Profile from '@/components/summoners/Profile'
+import Match from '@/components/summoners/Match'
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
   const { summonerName } = query
   const [summonerInfoState, setSummonerInfoState] = useSummonerInfoState()
+  // console.log(process.env)
 
   const getSummoner = async () => {
     const res = await getSummonerInfo({ summonerName })

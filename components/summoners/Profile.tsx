@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
-import { useSummonerInfoState } from '../../atoms/summoners'
-import { Button, Text } from '../../elements'
+import { Button, Text } from '@/elements'
 
 const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
   const { imageUrl, summonerLevel, name } = summonerProfile

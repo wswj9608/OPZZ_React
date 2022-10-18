@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '../../../elements'
+import { Text } from '@/elements'
 
 const HistoryCard = () => {
   return (
