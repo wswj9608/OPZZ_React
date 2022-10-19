@@ -17,7 +17,6 @@ const Match = () => {
 
 const MatchWrapper = styled.div`
   width: 740px;
-  background-color: blue;
 `
 
 export default Match

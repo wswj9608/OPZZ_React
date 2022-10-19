@@ -18,6 +18,7 @@ interface GameDataType {
   assists: number
   deaths: number
   kda: number
+  win: boolean
   status: GameDataStatusType
   mostMultiKills: string
   summonerName: string

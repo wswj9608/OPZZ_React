@@ -43,7 +43,7 @@ const Summoners = () => {
 const SummonersWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background: lightgreen;
+  background: #1c1c1f;
 
   .user-info {
     width: 332px;

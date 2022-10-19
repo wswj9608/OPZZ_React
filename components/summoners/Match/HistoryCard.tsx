@@ -8,7 +8,7 @@ import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
   const { summonerName } = query
-  const { teams } = match
+  const { gameDuration, gameDatas, gameEndTimestamp } = match
   const {
     champion,
     champLevel,
@@ -16,6 +16,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     kills,
     deaths,
     assists,
+    win,
     subPerkStyleId,
     primaryPerkId,
     status,
@@ -34,117 +35,174 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
   const COMMUNITY_DRAGON_URL = 'https://raw.communitydragon.org/12.19/plugins/rcp-be-lol-game-data/global/default/v1'
   const primery = getPrimaryPerk(primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
 
-  console.log(teams)
-  console.log(COMMUNITY_DRAGON_URL + primery)
+  // const blueTeam = match.gameDatas.find(data => data.teamId === 100)
+  // const purpleTeam = match.gameDatas.find(data => data.teamId === 100)
+
+  console.log(match.gameDatas.find(data => data.summonerName === summonerName))
+  // console.log(blueTeam)
 
   return (
-    <HistoryCardWrapper>
+    <HistoryCardWrapper isWin={win}>
       <GameInfoWrapper>
-        <Text>자유 5:5랭크</Text>
-        <Text>하루 전</Text>
-        <Text>승리</Text>
-        <Text>16분 15초</Text>
-      </GameInfoWrapper>
-      <GamePlayDataWrapper>
-        <div className="first-line">
-          <div className="champion">
-            <div className="champ">
-              <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" />
-              <div className="champ-level">
-                <Text size="10px" color="#FFF">
-                  {champLevel}
-                </Text>
-              </div>
-            </div>
-            <div className="spells">
-              {summonerSpells.map(spell => (
-                <Image
-                  key={spell.spell_id}
-                  className="spell-icon"
-                  src={spell.image_url}
-                  alt="champ"
-                  width={22}
-                  height={22}
-                  layout="responsive"
-                />
-              ))}
-            </div>
-            <div className="runes">
-              <Image
-                className="rune-icon"
-                src={(COMMUNITY_DRAGON_URL + primery) as string}
-                alt="champ"
-                width="22"
-                height="22"
-                layout="responsive"
-              />
-              <Image
-                className="rune-icon"
-                src={getSubPerkIcon(subPerkStyleId)}
-                alt="champ"
-                width="22"
-                height="22"
-                layout="responsive"
-              />
-            </div>
+        <div className="wrap">
+          <div>
+            <Text color={win ? '#5383e8' : '#e84057'} weight="bold">
+              자유 5:5랭크
+            </Text>
+            <Text color="#9e9eb1">{gameEndTimestamp}</Text>
           </div>
-          <div className="kda">
-            <Text size="15px" weight="bold" color="#FFF">
-              {kills} <span className="slash">/</span> <span className="death">{deaths}</span>{' '}
-              <span className="slash">/</span> {assists}
+          <div>
+            <Text color="#9e9eb1" weight="bold">
+              {win ? '승리' : '패배'}
             </Text>
-            <Text size="12px" color="#7b7a8e">
-              {`${kda}:1 평점`}
-            </Text>
-          </div>
-          <div className="status">
-            <Text size="11px" color="#e84057">
-              {`킬관여 ${killParticipationRate}%`}
-            </Text>
-            <Text size="11px" color="#9e9eb1">
-              {`제어 와드 ${visionWardsBoughtInGame}`}
-            </Text>
-            <Text size="11px" color="#9e9eb1">
-              {`CS ${totalMinionsKilled} (${minionsPerMinute})`}
-            </Text>
-            <Text size="11px" color="#9e9eb1" weight="bold">
-              Gold 4
-            </Text>
+            <Text color="#9e9eb1">{`${gameDuration.split(':')[0]}분 ${gameDuration.split(':')[1]}초`}</Text>
           </div>
         </div>
-        <div className="second-line">
-          <ItemsWrapper>
-            {items.map((item, idx) => {
-              if (!item) return <Item></Item>
-
-              return (
-                <Item isAccessaryItem={idx === items.length - 1}>
-                  <Image src={item.image_url} alt="item" width={22} height={22} />
-                </Item>
-              )
-            })}
-          </ItemsWrapper>
-          {mostMultiKills && (
-            <div className="most-kill-badge">
-              <Text size="12px" color="#FFF">
-                {mostMultiKills}
+      </GameInfoWrapper>
+      <GamePlayDataWrapper>
+        <div>
+          <div className="first-line">
+            <div className="champion">
+              <div className="champ">
+                <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" />
+                <div className="champ-level">
+                  <Text size="10px" color="#FFF">
+                    {champLevel}
+                  </Text>
+                </div>
+              </div>
+              <div className="spells">
+                {summonerSpells.map(spell => (
+                  <Image
+                    key={spell.spell_id}
+                    className="spell-icon"
+                    src={spell.image_url}
+                    alt="champ"
+                    width={22}
+                    height={22}
+                    layout="responsive"
+                  />
+                ))}
+              </div>
+              <div className="runes">
+                <Image
+                  className="rune-icon"
+                  src={(COMMUNITY_DRAGON_URL + primery) as string}
+                  alt="champ"
+                  width="22"
+                  height="22"
+                  layout="responsive"
+                />
+                <Image
+                  className="rune-icon"
+                  src={getSubPerkIcon(subPerkStyleId)}
+                  alt="champ"
+                  width="22"
+                  height="22"
+                  layout="responsive"
+                />
+              </div>
+            </div>
+            <div className="kda">
+              <Text size="15px" weight="bold" color="#FFF">
+                {kills} <span className="slash">/</span> <span className="death">{deaths}</span>{' '}
+                <span className="slash">/</span> {assists}
+              </Text>
+              <Text size="12px" color="#7b7a8e">
+                {`${kda}:1 평점`}
               </Text>
             </div>
-          )}
-          {/* <div className="mvp-badge">
+            <div className="status">
+              <Text size="11px" color="#e84057">
+                {`킬관여 ${killParticipationRate}%`}
+              </Text>
+              <Text size="11px" color="#9e9eb1">
+                {`제어 와드 ${visionWardsBoughtInGame}`}
+              </Text>
+              <Text size="11px" color="#9e9eb1">
+                {`CS ${totalMinionsKilled} (${minionsPerMinute})`}
+              </Text>
+              <Text size="11px" color="#9e9eb1" weight="bold">
+                Gold 4
+              </Text>
+            </div>
+          </div>
+          <div className="second-line">
+            <ItemsWrapper>
+              {items.map((item, idx) => {
+                if (!item) return <Item></Item>
+
+                return (
+                  <Item isAccessaryItem={idx === items.length - 1}>
+                    <Image src={item.image_url} alt="item" width={22} height={22} />
+                  </Item>
+                )
+              })}
+            </ItemsWrapper>
+            {mostMultiKills && (
+              <div className="most-kill-badge">
+                <Text size="12px" color="#FFF">
+                  {mostMultiKills}
+                </Text>
+              </div>
+            )}
+            {/* <div className="mvp-badge">
             <Text size="12px" color="#FFF">
               MVP
             </Text>
           </div> */}
+          </div>
         </div>
       </GamePlayDataWrapper>
-      <GameParticipantsWrapper />
-      <DetailButton>+</DetailButton>
+      <GameParticipantsWrapper>
+        <div className="wrap">
+          <div>
+            {gameDatas.map(data => {
+              if (data.teamId === 100)
+                return (
+                  <div className="summoner-wrap">
+                    <Image
+                      style={{ borderRadius: '4px' }}
+                      src={data.champion.image_url}
+                      alt="champ"
+                      width={16}
+                      height={16}
+                    />
+                    <div className="summoner-name">
+                      <Text color="#9e9eb1">{data.summonerName}</Text>
+                    </div>
+                  </div>
+                )
+            })}
+          </div>
+          <div>
+            {gameDatas.map(data => {
+              if (data.teamId === 200) {
+                const isSearchUser = data.summonerName === summonerName
+
+                return (
+                  <div className="summoner-wrap">
+                    <Image
+                      style={{ borderRadius: '4px' }}
+                      src={data.champion.image_url}
+                      alt="champ"
+                      width={16}
+                      height={16}
+                    />
+                    <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
+                  </div>
+                )
+              }
+            })}
+          </div>
+        </div>
+      </GameParticipantsWrapper>
+      <DetailButton isWin={win}></DetailButton>
     </HistoryCardWrapper>
   )
 }
 
-const HistoryCardWrapper = styled.div`
+const HistoryCardWrapper = styled.div<{ isWin: boolean }>`
   width: 100%;
   background-color: lightcoral;
   display: flex;
@@ -152,22 +210,41 @@ const HistoryCardWrapper = styled.div`
   border-radius: 4px;
   border-left-width: 6px;
   border-left-style: solid;
-  border-color: #5383e8;
-  background-color: #28344e;
+  border-color: ${({ isWin }) => (isWin ? '#5383e8' : '#e84057')};
+  background-color: ${({ isWin }) => (isWin ? '#28344e' : '#59343b')};
   box-sizing: border-box;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
 `
 
 const GameInfoWrapper = styled.div`
   width: 100%;
   margin-left: 12px;
-  background-color: aliceblue;
   height: 96px;
+  display: flex;
+  align-items: center;
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 77px;
+
+    p {
+      font-size: 12px;
+    }
+  }
 `
 
 const GamePlayDataWrapper = styled.div`
   min-width: 377px;
   margin-left: 8px;
   /* background-color: red; */
+  display: flex;
+  align-items: center;
   height: 96px;
 
   .first-line {
@@ -245,6 +322,7 @@ const GamePlayDataWrapper = styled.div`
 
   .second-line {
     display: flex;
+    margin-top: 8px;
 
     .most-kill-badge {
       height: 18px;
@@ -280,13 +358,39 @@ const Item = styled.div<{ isAccessaryItem?: boolean }>`
 const GameParticipantsWrapper = styled.div`
   min-width: 184px;
   margin-left: 12px;
-  background-color: papayawhip;
   height: 96px;
+
+  display: flex;
+  align-items: center;
+
+  .wrap {
+    display: flex;
+    gap: 8px;
+  }
+
+  .summoner-wrap {
+    width: 88px;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 1px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    p {
+      font-size: 12px;
+      text-overflow: ellipsis;
+      width: 60px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
 `
 
-const DetailButton = styled.button`
+const DetailButton = styled.button<{ isWin: boolean }>`
   min-width: 40px;
-  background-color: #2f426e;
+  border-radius: 0px 4px 4px 0px;
+  background-color: ${({ isWin }) => (isWin ? '#2f426e' : '#703c47')};
 `
 // const GameInfoWrapper = styled.div``
 
