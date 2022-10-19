@@ -6,12 +6,22 @@ interface SummonerProfileType {
   imageUrl: string
 }
 
+interface GameDataStatusType {
+  killParticipationRate: number
+  visionWardsBoughtInGame: number
+  totalMinionsKilled: number
+  minionsPerMinute: number
+}
+
 interface GameDataType {
   kills: number
   assists: number
   deaths: number
   kda: number
+  status: GameDataStatusType
+  mostMultiKills: string
   summonerName: string
+  teamId: number
   champion: {
     image_url: string
     championName: string
@@ -28,9 +38,6 @@ interface GameDataType {
     description: string
     gold_total: number
   } | null)[]
-  visionWardsBoughtInGame: number
-  totalMinionsKilled: number
-  minionsPerMinute: number
   summonerSpells: {
     image_url: string
     spell_id: number
@@ -48,5 +55,39 @@ interface SummonerMatchsType {
     name: string
     long_desc: string
     icon_path: string
+  }[]
+  teams: {
+    bans: {
+      championId: number
+      pickTurn: number
+    }[]
+    objectives: {
+      baron: {
+        first: boolean
+        kills: number
+      }
+      champion: {
+        first: boolean
+        kills: number
+      }
+      dragon: {
+        first: boolean
+        kills: number
+      }
+      inhibitor: {
+        first: boolean
+        kills: number
+      }
+      riftHerald: {
+        first: boolean
+        kills: number
+      }
+      tower: {
+        first: boolean
+        kills: number
+      }
+    }
+    teamId: number
+    win: boolean
   }[]
 }

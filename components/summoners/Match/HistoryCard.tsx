@@ -8,8 +8,24 @@ import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
   const { summonerName } = query
-  const { champion, champLevel, summonerSpells, kills, deaths, assists, subPerkStyleId, primaryPerkId, kda, items } =
-    match.gameDatas.find(data => data.summonerName === summonerName) as GameDataType
+  const { teams } = match
+  const {
+    champion,
+    champLevel,
+    summonerSpells,
+    kills,
+    deaths,
+    assists,
+    subPerkStyleId,
+    primaryPerkId,
+    status,
+    kda,
+    teamId,
+    items,
+    mostMultiKills,
+  } = match.gameDatas.find(data => data.summonerName === summonerName) as GameDataType
+
+  const { killParticipationRate, minionsPerMinute, totalMinionsKilled, visionWardsBoughtInGame } = status
 
   const getPrimaryPerk = (perkId: number) => {
     return match.primaryPerks?.find(perk => perk.perk_id === perkId)
@@ -18,7 +34,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
   const COMMUNITY_DRAGON_URL = 'https://raw.communitydragon.org/12.19/plugins/rcp-be-lol-game-data/global/default/v1'
   const primery = getPrimaryPerk(primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
 
-  console.log(match)
+  console.log(teams)
   console.log(COMMUNITY_DRAGON_URL + primery)
 
   return (
@@ -81,18 +97,46 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
               {`${kda}:1 평점`}
             </Text>
           </div>
+          <div className="status">
+            <Text size="11px" color="#e84057">
+              {`킬관여 ${killParticipationRate}%`}
+            </Text>
+            <Text size="11px" color="#9e9eb1">
+              {`제어 와드 ${visionWardsBoughtInGame}`}
+            </Text>
+            <Text size="11px" color="#9e9eb1">
+              {`CS ${totalMinionsKilled} (${minionsPerMinute})`}
+            </Text>
+            <Text size="11px" color="#9e9eb1" weight="bold">
+              Gold 4
+            </Text>
+          </div>
         </div>
-        <ItemsWrapper>
-          {items.map((item, idx) => {
-            if (!item) return <Item></Item>
+        <div className="second-line">
+          <ItemsWrapper>
+            {items.map((item, idx) => {
+              if (!item) return <Item></Item>
 
-            return (
-              <Item isAccessaryItem={idx === items.length - 1}>
-                <Image src={item.image_url} alt="item" width={22} height={22} />
-              </Item>
-            )
-          })}
-        </ItemsWrapper>
+              return (
+                <Item isAccessaryItem={idx === items.length - 1}>
+                  <Image src={item.image_url} alt="item" width={22} height={22} />
+                </Item>
+              )
+            })}
+          </ItemsWrapper>
+          {mostMultiKills && (
+            <div className="most-kill-badge">
+              <Text size="12px" color="#FFF">
+                {mostMultiKills}
+              </Text>
+            </div>
+          )}
+          {/* <div className="mvp-badge">
+            <Text size="12px" color="#FFF">
+              MVP
+            </Text>
+          </div> */}
+        </div>
       </GamePlayDataWrapper>
       <GameParticipantsWrapper />
       <DetailButton>+</DetailButton>
@@ -186,7 +230,9 @@ const GamePlayDataWrapper = styled.div`
   }
 
   .kda {
-    margin-left: 12px;
+    margin: 0 8px 0 12px;
+    width: 119px;
+    border-right: 1px solid #d5e3ff1a;
   }
 
   .death {
@@ -195,6 +241,26 @@ const GamePlayDataWrapper = styled.div`
 
   .slash {
     color: #7b7a8e;
+  }
+
+  .second-line {
+    display: flex;
+
+    .most-kill-badge {
+      height: 18px;
+      padding: 0px 8px;
+      margin-left: 8px;
+      border-radius: 9px;
+      background-color: #e84057;
+    }
+
+    .mvp-badge {
+      height: 18px;
+      padding: 0px 8px;
+      margin-left: 4px;
+      border-radius: 9px;
+      background-color: #eb9c00;
+    }
   }
 `
 
