@@ -130,10 +130,10 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <div className="second-line">
             <ItemsWrapper>
               {items.map((item, idx) => {
-                if (!item) return <Item></Item>
+                if (!item) return <Item isWin={win} />
 
                 return (
-                  <Item isAccessaryItem={idx === items.length - 1}>
+                  <Item isAccessaryItem={idx === items.length - 1} isWin={win}>
                     <Image src={item.image_url} alt="item" width={22} height={22} />
                   </Item>
                 )
@@ -158,7 +158,9 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
         <div className="wrap">
           <div>
             {gameDatas.map(data => {
-              if (data.teamId === 100)
+              if (data.teamId === 100) {
+                const isSearchUser = data.summonerName === summonerName
+
                 return (
                   <div className="summoner-wrap">
                     <Image
@@ -169,10 +171,11 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
                       height={16}
                     />
                     <div className="summoner-name">
-                      <Text color="#9e9eb1">{data.summonerName}</Text>
+                      <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
                     </div>
                   </div>
                 )
+              }
             })}
           </div>
           <div>
@@ -347,11 +350,11 @@ const ItemsWrapper = styled.div`
   gap: 2px;
 `
 
-const Item = styled.div<{ isAccessaryItem?: boolean }>`
+const Item = styled.div<{ isAccessaryItem?: boolean; isWin?: boolean }>`
   width: 22px;
   height: 22px;
   border-radius: ${({ isAccessaryItem }) => (isAccessaryItem ? '50%' : '4px')};
-  background-color: #2f436e;
+  background-color: ${({ isWin }) => (isWin ? '#2f436e' : '#703c47')};
   overflow: hidden;
 `
 
