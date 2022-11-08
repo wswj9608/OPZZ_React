@@ -6,6 +6,15 @@ interface SummonerProfileType {
   imageUrl: string
 }
 
+interface LeagueDataType {
+  queueType: 'RANKED_SOLO_5x5' | 'RANKED_FLEX_SR'
+  leaguePoints: number
+  tier: 'IRON' | 'BRONZE' | 'SILVER' | 'GOLD' | 'PLATINUM' | 'DIAMOND' | 'MASTER' | 'GRANDMASTER' | 'CHALLENGER'
+  rank: string
+  wins: number
+  losses: number
+}
+
 interface GameDataStatusType {
   killParticipationRate: number
   visionWardsBoughtInGame: number
@@ -91,4 +100,14 @@ interface SummonerMatchsType {
     teamId: number
     win: boolean
   }[]
+}
+
+interface SummonerInfoType {
+  name: string
+  id: string
+  puuid: string
+  summonerLevel: number
+  riotLeagueInfo: LeagueDataType[]
+  imageUrl: string
+  matchs: SummonerMatchsType[]
 }

@@ -130,10 +130,10 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <div className="second-line">
             <ItemsWrapper>
               {items.map((item, idx) => {
-                if (!item) return <Item isWin={win} />
+                if (!item) return <Item isWin={win} key={idx} />
 
                 return (
-                  <Item isAccessaryItem={idx === items.length - 1} isWin={win}>
+                  <Item isAccessaryItem={idx === items.length - 1} isWin={win} key={idx}>
                     <Image src={item.image_url} alt="item" width={22} height={22} />
                   </Item>
                 )
@@ -157,12 +157,12 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
       <GameParticipantsWrapper>
         <div className="wrap">
           <div>
-            {gameDatas.map(data => {
+            {gameDatas.map((data, idx) => {
               if (data.teamId === 100) {
                 const isSearchUser = data.summonerName === summonerName
 
                 return (
-                  <div className="summoner-wrap">
+                  <div className="summoner-wrap" key={idx}>
                     <Image
                       style={{ borderRadius: '4px' }}
                       src={data.champion.image_url}
@@ -179,12 +179,12 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             })}
           </div>
           <div>
-            {gameDatas.map(data => {
+            {gameDatas.map((data, idx) => {
               if (data.teamId === 200) {
                 const isSearchUser = data.summonerName === summonerName
 
                 return (
-                  <div className="summoner-wrap">
+                  <div className="summoner-wrap" key={idx}>
                     <Image
                       style={{ borderRadius: '4px' }}
                       src={data.champion.image_url}

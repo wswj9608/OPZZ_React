@@ -2,22 +2,25 @@ import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { getSummonerInfo } from '@/lib/api/summoner'
-import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
+import { useSummonerLeagues, useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
 import Profile from '@/components/summoners/Profile'
 import Match from '@/components/summoners/Match'
+import League from '@/components/summoners/League'
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
   const { summonerName } = query
   const [summonerProfile, setSummonerProfile] = useSummonerProfile()
   const [, setSummonerMatchs] = useSummonerMatchs()
+  const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
 
   const getSummoner = async () => {
     const res = await getSummonerInfo({ summonerName })
-    const { id, puuid, imageUrl, summonerLevel, name, matchs } = res
+    const { id, puuid, imageUrl, summonerLevel, name, matchs, riotLeagueInfo } = res
 
     setSummonerProfile({ id, puuid, imageUrl, summonerLevel, name })
     setSummonerMatchs(matchs)
+    setSummonerLeagues(riotLeagueInfo)
   }
 
   useEffect(() => {
@@ -33,7 +36,11 @@ const Summoners = () => {
     <SummonersWrapper>
       <Profile summonerProfile={summonerProfile} />
       <UserHistoryWrappser>
-        <div className="user-info" />
+        <div className="user-info">
+          {summonerLeagues?.map(league => (
+            <League data={league} />
+          ))}
+        </div>
         <Match />
       </UserHistoryWrappser>
     </SummonersWrapper>

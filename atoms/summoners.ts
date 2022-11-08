@@ -10,10 +10,19 @@ export const summonerMatchs = atom<SummonerMatchsType[] | null>({
   default: null,
 })
 
+const summonerLeagues = atom<LeagueDataType[] | null>({
+  key: 'summonerLeaugues',
+  default: null,
+})
+
 export const useSummonerProfile = () => {
   return useRecoilState(summonerProfile)
 }
 
 export const useSummonerMatchs = () => {
   return useRecoilState(summonerMatchs)
+}
+
+export const useSummonerLeagues = () => {
+  return useRecoilState(summonerLeagues)
 }
