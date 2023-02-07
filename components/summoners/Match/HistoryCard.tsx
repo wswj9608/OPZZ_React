@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
 import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
+import { main, red } from '@/styles/palette'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
@@ -64,7 +65,8 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <div className="first-line">
             <div className="champion">
               <div className="champ">
-                <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" />
+                <div className="champ-icon" />
+                {/* <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" /> */}
                 <div className="champ-level">
                   <Text size="10px" color="#FFF">
                     {champLevel}
@@ -163,13 +165,14 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 
                 return (
                   <div className="summoner-wrap" key={idx}>
-                    <Image
+                    <div className="icon" />
+                    {/* <Image
                       style={{ borderRadius: '4px' }}
                       src={data.champion.image_url}
                       alt="champ"
                       width={16}
                       height={16}
-                    />
+                    /> */}
                     <div className="summoner-name">
                       <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
                     </div>
@@ -185,13 +188,14 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 
                 return (
                   <div className="summoner-wrap" key={idx}>
-                    <Image
+                    {/* <Image
                       style={{ borderRadius: '4px' }}
                       src={data.champion.image_url}
                       alt="champ"
                       width={16}
                       height={16}
-                    />
+                    /> */}
+                    <div className="icon" />
                     <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
                   </div>
                 )
@@ -213,8 +217,8 @@ const HistoryCardWrapper = styled.div<{ isWin: boolean }>`
   border-radius: 4px;
   border-left-width: 6px;
   border-left-style: solid;
-  border-color: ${({ isWin }) => (isWin ? '#5383e8' : '#e84057')};
-  background-color: ${({ isWin }) => (isWin ? '#28344e' : '#59343b')};
+  border-color: ${({ isWin }) => (isWin ? main[500] : red[500])};
+  background-color: ${({ isWin }) => (isWin ? main[100] : red[100])};
   box-sizing: border-box;
   margin-bottom: 8px;
 
@@ -280,6 +284,8 @@ const GamePlayDataWrapper = styled.div`
     }
 
     .champ-icon {
+      height: 48px;
+      background-color: papayawhip;
       border-radius: 50%;
     }
 
@@ -376,6 +382,12 @@ const GameParticipantsWrapper = styled.div`
     display: flex;
     gap: 4px;
     margin-bottom: 1px;
+
+    .icon {
+      background-color: skyblue;
+      width: 16px;
+      height: 16px;
+    }
 
     &:last-child {
       margin-bottom: 0px;
