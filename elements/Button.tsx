@@ -1,25 +1,18 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
+import { ButtonProps } from './types'
 
-const Button = ({
-  className,
-  sx,
-  type,
-  color = "#4171d6",
-  fontColor = "#FFF",
-  onClick,
-  children,
-}: ButtonProps) => {
-  if (type === "A") {
+const Button = ({ buttonType, color = '#4171d6', fontColor = '#FFF', onClick, children }: ButtonProps) => {
+  if (buttonType === 'A') {
     return (
-      <ButtonA style={{ ...sx }} color={color} fontColor={fontColor}>
+      <ButtonA color={color} fontColor={fontColor}>
         {children}
       </ButtonA>
     )
   }
 
   return (
-    <ButtonB style={{ ...sx }} color={color} fontColor={fontColor}>
+    <ButtonB color={color} fontColor={fontColor}>
       {children}
     </ButtonB>
   )
