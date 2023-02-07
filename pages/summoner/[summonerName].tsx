@@ -6,6 +6,8 @@ import { useSummonerLeagues, useSummonerMatchs, useSummonerProfile } from '@/ato
 import Profile from '@/components/summoners/Profile'
 import Match from '@/components/summoners/Match'
 import League from '@/components/summoners/League'
+import matchDb from '@/@fake-db'
+import MatchStatistics from '@/components/summoners/MatchStatistics'
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
@@ -13,12 +15,13 @@ const Summoners = () => {
   const [summonerProfile, setSummonerProfile] = useSummonerProfile()
   const [, setSummonerMatchs] = useSummonerMatchs()
   const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
+  const matchData = matchDb()
 
   const getSummoner = async () => {
-    const res = await getSummonerInfo({ summonerName })
-    const { id, puuid, imageUrl, summonerLevel, name, matchs, riotLeagueInfo } = res
+    // const res = await getSummonerInfo({ summonerName })
+    const { summonerIconImageUrl, summonerLevel, name, matchs, riotLeagueInfo } = matchData
 
-    setSummonerProfile({ id, puuid, imageUrl, summonerLevel, name })
+    setSummonerProfile({ summonerIconImageUrl, summonerLevel, name })
     setSummonerMatchs(matchs)
     setSummonerLeagues(riotLeagueInfo)
   }
@@ -41,7 +44,10 @@ const Summoners = () => {
             <League data={league} />
           ))}
         </div>
-        <Match />
+        <div>
+          <MatchStatistics />
+          <Match />
+        </div>
       </UserHistoryWrappser>
     </SummonersWrapper>
   )

@@ -2,15 +2,16 @@ import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 import { Button, Text } from '@/elements'
+import { ProfileProps } from './types'
 
 const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
-  const { imageUrl, summonerLevel, name } = summonerProfile
+  const { summonerIconImageUrl, summonerLevel, name } = summonerProfile
 
   return (
     <ProfileWrapper>
       <div className="profile">
         <div className="image-box">
-          <Image className="icon" src={imageUrl} alt="profile" width="100" height="100" />
+          <Image className="icon" src={summonerIconImageUrl} alt="profile" width="100" height="100" />
           <div className="level">
             <Text size="12px" color="#FFF">
               {summonerLevel}
@@ -46,9 +47,9 @@ const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
             </Text>
           </div>
           <div className="button-wrap">
-            <Button type="A">전적 갱신</Button>
-            <Button type="B">티어 그래프</Button>
-            <Button type="A" color="#7d59ea">
+            <Button buttonType="A">전적 갱신</Button>
+            <Button buttonType="B">티어 그래프</Button>
+            <Button buttonType="A" color="#7d59ea">
               롤 몇 시간 했는지 궁금해?
             </Button>
           </div>

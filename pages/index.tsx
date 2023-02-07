@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   const searchSummonerName = () => {
     if (!summonerName) return
 
-    router.push(`/summoners/${summonerName}`)
+    router.push(`/summoner/${summonerName}`)
   }
 
   const onKeyDown = (event: React.KeyboardEvent) => {

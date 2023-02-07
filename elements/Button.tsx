@@ -19,6 +19,7 @@ const Button = ({ buttonType, color = '#4171d6', fontColor = '#FFF', onClick, ch
 }
 
 const ButtonA = styled.button<{ color: string; fontColor: string }>`
+  cursor: pointer;
   padding: 0 14px;
   height: 40px;
   border-radius: 4px;
@@ -29,6 +30,7 @@ const ButtonA = styled.button<{ color: string; fontColor: string }>`
 `
 
 const ButtonB = styled.button<{ color: string; fontColor: string }>`
+  cursor: pointer;
   padding: 0 14px;
   height: 40px;
   border-radius: 4px;

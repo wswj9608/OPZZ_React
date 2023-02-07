@@ -1,16 +1,14 @@
 interface SummonerProfileType {
   name: string
-  id: string
-  puuid: string
   summonerLevel: number
-  imageUrl: string
+  summonerIconImageUrl: string
 }
 
 interface LeagueDataType {
   queueType: 'RANKED_SOLO_5x5' | 'RANKED_FLEX_SR'
   leaguePoints: number
   tier: 'IRON' | 'BRONZE' | 'SILVER' | 'GOLD' | 'PLATINUM' | 'DIAMOND' | 'MASTER' | 'GRANDMASTER' | 'CHALLENGER'
-  rank: string
+  rank: 'I' | 'II' | 'III' | 'IV'
   wins: number
   losses: number
 }
@@ -102,12 +100,8 @@ interface SummonerMatchsType {
   }[]
 }
 
-interface SummonerInfoType {
-  name: string
-  id: string
-  puuid: string
+interface SummonerInfoType extends SummonerProfileType {
   summonerLevel: number
   riotLeagueInfo: LeagueDataType[]
-  imageUrl: string
   matchs: SummonerMatchsType[]
 }
