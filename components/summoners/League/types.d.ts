@@ -1,3 +1,0 @@
-interface LeagueProps {
-  data: LeagueDataType
-}
