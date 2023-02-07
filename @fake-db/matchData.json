@@ -1,0 +1,2135 @@
+{
+  "name": "한우석",
+  "id": "HckE4fg0kr6UrOOq_EdKmscKwfCil8WyRGi8ZmdJQqAgZw",
+  "puuid": "EYZrvM91SRTdTa5gOCmW6QVdn3G__nNUDEzw28iR02ns6LXVv7phVLTDyi-hhVz59waAaXWDFTZUdg",
+  "summonerLevel": 436,
+  "riotLeagueInfo": [
+    {
+      "queueType": "RANKED_FLEX_SR",
+      "leaguePoints": 76,
+      "tier": "GOLD",
+      "rank": "III",
+      "wins": 9,
+      "losses": 9
+    }
+  ],
+  "imageUrl": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/profileicon/1.png",
+  "matchs": [
+    {
+      "gameId": 6345956866,
+      "gameEndTimestamp": "2일전",
+      "gameDuration": "27:03",
+      "gameDatas": [
+        {
+          "summonerName": "한우종",
+          "kills": 4,
+          "assists": 11,
+          "deaths": 5,
+          "kda": 3,
+          "champion": {
+            "championName": "KSante"
+          },
+          "champLevel": 15,
+          "items": [
+            {
+              "icon_id": 9,
+              "item_id": 1029,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1029.png",
+              "file_name": "1029.png",
+              "name": "천 갑옷",
+              "description": "<mainText><stats>방어력 <attention>15</attention></stats></mainText><br>",
+              "gold_total": 300
+            },
+            {
+              "icon_id": 84,
+              "item_id": 3047,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3047.png",
+              "file_name": "3047.png",
+              "name": "판금 장화",
+              "description": "<mainText><stats>방어력 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>기본 공격으로 받는 피해량이 12% 감소합니다.</mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 148,
+              "item_id": 3193,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3193.png",
+              "file_name": "3193.png",
+              "name": "가고일 돌갑옷",
+              "description": "<mainText><stats>방어력 <attention>60</attention><br>마법 저항력 <attention>60</attention><br>스킬 가속 <attention>15</attention></stats><br><br><active>사용 시 -</active> <active>불굴:</active> 크기가 커지며 피해를 흡수하는 보호막을 얻습니다. 보호막은 점차 사라집니다.<br><li><passive>구축:</passive> 챔피언에게 피해를 받으면 중첩을 1회 얻어 <scaleArmor>방어력</scaleArmor>, <scaleMR>마법 저항력</scaleMR>이 증가합니다.<br><br><rules>챔피언당 하나씩 최대 5회까지 중첩됩니다.</rules></mainText><br>",
+              "gold_total": 3200
+            },
+            {
+              "icon_id": 211,
+              "item_id": 6660,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6660.png",
+              "file_name": "6660.png",
+              "name": "바미의 불씨",
+              "description": "<mainText><stats>체력 <attention>300</attention></stats><br><li><passive>불사르기:</passive> 피해를 받거나 입히면 주변 적들에게 매초 마법 피해를 입힙니다. (미니언 및 정글 몬스터 대상 증가)</mainText><br>",
+              "gold_total": 1000
+            },
+            {
+              "icon_id": 212,
+              "item_id": 6662,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6662.png",
+              "file_name": "6662.png",
+              "name": "서리불꽃 건틀릿",
+              "description": "<mainText><stats>체력 <attention>450</attention><br>방어력 <attention>25</attention><br>마법 저항력 <attention>25</attention><br>스킬 가속 <attention>20</attention></stats><br><li><passive>불사르기:</passive> 피해를 받거나 입히면 주변 적들에게 매초 피해를 입힙니다.<br><li><passive>고립:</passive> 기본 공격 시 서리 영역을 생성하고 영역 내 모든 적에게 마법 피해를 입힙니다. 서리 영역을 지나는 적들은 <status>둔화</status>됩니다.<br><br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 체력 및 크기</mainText><br>",
+              "gold_total": 2800
+            },
+            null,
+            {
+              "icon_id": 152,
+              "item_id": 3340,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3340.png",
+              "file_name": "3340.png",
+              "name": "투명 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 2개까지 보유할 수 있습니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": true,
+          "status": {
+            "killParticipationRate": 44,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 138,
+            "minionsPerMinute": 5.1
+          },
+          "primaryPerkId": 8437,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerTeleport.png",
+              "spell_id": 12,
+              "file_name": "SummonerTeleport.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "임효섭",
+          "kills": 9,
+          "assists": 11,
+          "deaths": 4,
+          "kda": 5,
+          "champion": {
+            "championName": "Shaco"
+          },
+          "champLevel": 14,
+          "items": [
+            {
+              "icon_id": 62,
+              "item_id": 2421,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2421.png",
+              "file_name": "2421.png",
+              "name": "망가진 초시계",
+              "description": "<mainText><stats></stats><br><li><passive>조각난 시간:</passive> 초시계가 망가졌지만, 업그레이드는 가능합니다.<br><br><rules>초시계를 하나 망가뜨린 후에는 상점에서 <rarityGeneric>망가진 초시계</rarityGeneric>만 살 수 있습니다.</rules></mainText><br>",
+              "gold_total": 750
+            },
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 147,
+              "item_id": 3191,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3191.png",
+              "file_name": "3191.png",
+              "name": "추적자의 팔목 보호대",
+              "description": "<mainText><stats>주문력 <attention>30</attention><br>방어력 <attention>15</attention></stats><br><li><passive>마법사의 길:</passive> 유닛을 처치하면 <scaleArmor>방어력이 0.5</scaleArmor> (최대 <scaleArmor>15</scaleArmor>) 증가합니다.</mainText><br>",
+              "gold_total": 1000
+            },
+            {
+              "icon_id": 192,
+              "item_id": 4637,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4637.png",
+              "file_name": "4637.png",
+              "name": "악마의 포옹",
+              "description": "<mainText><stats>주문력 <attention>60</attention><br>체력 <attention>450</attention></stats><br><li><passive>아자카나의 응시:</passive> 스킬 피해를 입히면 적을 불태워 매초 마법 피해를 입힙니다.<li><passive>어둠의 계약:</passive> <scaleHealth>추가 체력</scaleHealth>만큼 <scaleAP>주문력</scaleAP>을 얻습니다. </mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 208,
+              "item_id": 6653,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6653.png",
+              "file_name": "6653.png",
+              "name": "리안드리의 고뇌",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>마나 <attention>600</attention><br>스킬 가속 <attention>20</attention></stats><br><li><passive>고뇌:</passive> 대상의 추가 체력에 비례해 챔피언에게 추가 마법 피해를 입힙니다.<li><passive>고통:</passive> 스킬로 피해를 입히면 일정 시간 동안 적을 불태웁니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 스킬 가속.</mainText><br>",
+              "gold_total": 3200
+            },
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": true,
+          "status": {
+            "killParticipationRate": 59,
+            "visionWardsBoughtInGame": 1,
+            "totalMinionsKilled": 125,
+            "minionsPerMinute": 4.6
+          },
+          "primaryPerkId": 8128,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8200,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerSmite.png",
+              "spell_id": 11,
+              "file_name": "SummonerSmite.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerDot.png",
+              "spell_id": 14,
+              "file_name": "SummonerDot.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "한우석",
+          "kills": 10,
+          "assists": 12,
+          "deaths": 7,
+          "kda": 3.14,
+          "champion": {
+            "championName": "Ahri"
+          },
+          "champLevel": 15,
+          "items": [
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 139,
+              "item_id": 3157,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3157.png",
+              "file_name": "3157.png",
+              "name": "존야의 모래시계",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>방어력 <attention>45</attention><br>스킬 가속 <attention>15</attention></stats><br><br><active>사용 시 -</active> <active>경직:</active> 2.5초 동안 <status>무적</status> 및 <status>대상으로 지정할 수 없는 상태</status>가 되지만, 그동안 아무런 행동도 할 수 없습니다.</mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 198,
+              "item_id": 4645,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4645.png",
+              "file_name": "4645.png",
+              "name": "그림자불꽃",
+              "description": "<mainText><stats>주문력 <attention>100</attention><br>체력 <attention>200</attention></stats><br><li><passive>잿덩이꽃:</passive> 챔피언에게 입히는 피해에 의 추가 <keywordStealth>마법 관통력</keywordStealth>이 적용됩니다. 이 수치는 대상의 현재 <scaleHealth>체력</scaleHealth>이 낮을수록 증가합니다. 최근 보호막을 받은 대상에게 효과가 최대로 적용됩니다. </mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 210,
+              "item_id": 6656,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6656.png",
+              "file_name": "6656.png",
+              "name": "만년서리",
+              "description": "<mainText><stats>주문력 <attention>70</attention><br>체력 <attention>250</attention><br>마나 <attention>600</attention><br>스킬 가속 <attention>20</attention></stats><br><br><active>사용 시 -</active> <active>빙결:</active> 원뿔 범위 내의 적들에게 피해를 입히고 맞은 적들을 <status>둔화</status>시킵니다. 범위 중앙의 적들은 <status>속박</status>됩니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 주문력. <br></mainText><br>",
+              "gold_total": 2800
+            },
+            null,
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": true,
+          "status": {
+            "killParticipationRate": 65,
+            "visionWardsBoughtInGame": 2,
+            "totalMinionsKilled": 171,
+            "minionsPerMinute": 6.3
+          },
+          "primaryPerkId": 8112,
+          "mostMultiKills": "더블킬",
+          "subPerkStyleId": 8200,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerDot.png",
+              "spell_id": 14,
+              "file_name": "SummonerDot.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "드뤠이븐이라불러",
+          "kills": 7,
+          "assists": 11,
+          "deaths": 1,
+          "kda": 18,
+          "champion": {
+            "championName": "Ziggs"
+          },
+          "champLevel": 14,
+          "items": [
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 79,
+              "item_id": 3040,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3040.png",
+              "file_name": "3040.png",
+              "name": "대천사의 포옹",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>마나 <attention>860</attention><br>체력 <attention>250</attention></stats><br><li><passive>경탄:</passive> 마나에 따라 스킬 가속을 얻습니다.<li><passive>창공:</passive> 소모한 마나에 따라 체력을 회복합니다. 활성화/비활성화가 가능한 스킬은 초당 최대 같은 양의 체력을 회복합니다. </mainText><br>",
+              "gold_total": 2600
+            },
+            {
+              "icon_id": 134,
+              "item_id": 3145,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3145.png",
+              "file_name": "3145.png",
+              "name": "마법공학 교류 발전기",
+              "description": "<mainText><stats>주문력 <attention>25</attention><br>체력 <attention>150</attention></stats><br><li><passive>자극:</passive> 챔피언에게 피해를 입히면 추가 피해를 입힙니다.</mainText><br>",
+              "gold_total": 1050
+            },
+            {
+              "icon_id": 198,
+              "item_id": 4645,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4645.png",
+              "file_name": "4645.png",
+              "name": "그림자불꽃",
+              "description": "<mainText><stats>주문력 <attention>100</attention><br>체력 <attention>200</attention></stats><br><li><passive>잿덩이꽃:</passive> 챔피언에게 입히는 피해에 의 추가 <keywordStealth>마법 관통력</keywordStealth>이 적용됩니다. 이 수치는 대상의 현재 <scaleHealth>체력</scaleHealth>이 낮을수록 증가합니다. 최근 보호막을 받은 대상에게 효과가 최대로 적용됩니다. </mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 208,
+              "item_id": 6653,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6653.png",
+              "file_name": "6653.png",
+              "name": "리안드리의 고뇌",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>마나 <attention>600</attention><br>스킬 가속 <attention>20</attention></stats><br><li><passive>고뇌:</passive> 대상의 추가 체력에 비례해 챔피언에게 추가 마법 피해를 입힙니다.<li><passive>고통:</passive> 스킬로 피해를 입히면 일정 시간 동안 적을 불태웁니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 스킬 가속.</mainText><br>",
+              "gold_total": 3200
+            },
+            null,
+            {
+              "icon_id": 153,
+              "item_id": 3363,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3363.png",
+              "file_name": "3363.png",
+              "name": "망원형 개조",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 누구나 볼 수 있고 쉽게 파괴 가능한 와드를 설치해 주변 지역을 드러냅니다. 최대 4000유닛 거리까지 설치 가능합니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": true,
+          "status": {
+            "killParticipationRate": 53,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 205,
+            "minionsPerMinute": 7.6
+          },
+          "primaryPerkId": 8229,
+          "mostMultiKills": "더블킬",
+          "subPerkStyleId": 8000,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerTeleport.png",
+              "spell_id": 12,
+              "file_name": "SummonerTeleport.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "휴몬계정",
+          "kills": 4,
+          "assists": 15,
+          "deaths": 0,
+          "kda": null,
+          "champion": {
+            "championName": "Ashe"
+          },
+          "champLevel": 13,
+          "items": [
+            {
+              "icon_id": 81,
+              "item_id": 3042,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3042.png",
+              "file_name": "3042.png",
+              "name": "무라마나",
+              "description": "<mainText><stats>공격력 <attention>35</attention><br>마나 <attention>860</attention><br>스킬 가속 <attention>15</attention></stats><br><li><passive>경탄:</passive> 마나에 따라 추가 공격력을 얻습니다. <li><passive>충격:</passive> 기본 공격으로 챔피언에게 추가 물리 피해를 입힙니다.</mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 140,
+              "item_id": 3158,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3158.png",
+              "file_name": "3158.png",
+              "name": "명석함의 아이오니아 장화",
+              "description": "<mainText><stats>스킬 가속 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>소환사 주문 가속이 12 증가합니다.<br><br><flavorText>''CLE 20년 12월 10일 남부 지방의 패권을 두고 벌어진 녹서스와의 재경합에서 아이오니아의 승리를 기념하는 헌정 아이템입니다.''</flavorText></mainText><br>",
+              "gold_total": 950
+            },
+            {
+              "icon_id": 143,
+              "item_id": 3179,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3179.png",
+              "file_name": "3179.png",
+              "name": "그림자 검",
+              "description": "<mainText><stats>공격력 <attention>50</attention><br>물리 관통력 <attention>10</attention><br>스킬 가속 <attention>15</attention></stats><br><li><passive>암전:</passive> 적 와드에 발각되면 암전을 일으켜 근처의 투명한 덫과 와드를 드러내고, 추가로 와드를 무력화시킵니다. 모습이 드러난 덫은 기본 공격 시 즉시 파괴되며 와드는 세 배의 피해를 입습니다.</mainText><br>",
+              "gold_total": 2300
+            },
+            {
+              "icon_id": 177,
+              "item_id": 3864,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3864.png",
+              "file_name": "3864.png",
+              "name": "검은 안개 낫",
+              "description": "<mainText><stats>공격력 <attention>20</attention><br>체력 <attention>75</attention><br>기본 마나 재생 <attention>100%</attention><br>10초당 골드 <attention>3</attention></stats><br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 0개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. <br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 4개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. </mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 195,
+              "item_id": 4642,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4642.png",
+              "file_name": "4642.png",
+              "name": "밴들유리 거울",
+              "description": "<mainText><stats>주문력 <attention>20</attention><br>스킬 가속 <attention>10</attention><br>기본 마나 재생 <attention>50%</attention></stats></mainText><br>",
+              "gold_total": 950
+            },
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": true,
+          "status": {
+            "killParticipationRate": 56,
+            "visionWardsBoughtInGame": 5,
+            "totalMinionsKilled": 40,
+            "minionsPerMinute": 1.5
+          },
+          "primaryPerkId": 8229,
+          "mostMultiKills": "더블킬",
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerExhaust.png",
+              "spell_id": 3,
+              "file_name": "SummonerExhaust.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "klauebrt",
+          "kills": 5,
+          "assists": 1,
+          "deaths": 8,
+          "kda": 0.75,
+          "champion": {
+            "championName": "Vex"
+          },
+          "champLevel": 14,
+          "items": [
+            {
+              "icon_id": 24,
+              "item_id": 1056,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1056.png",
+              "file_name": "1056.png",
+              "name": "도란의 반지",
+              "description": "<mainText><stats>주문력 <attention>15</attention><br>체력 <attention>70</attention></stats><br><li><passive>집중:</passive> 기본 공격 시 미니언에게 추가 피해를 입힙니다. <li><passive>흡수:</passive> 매초 마나를 회복합니다. 적 챔피언에게 피해를 입히면 회복량이 증가합니다. 마나를 회복할 수 없으면 체력을 회복합니다. </mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 113,
+              "item_id": 3108,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3108.png",
+              "file_name": "3108.png",
+              "name": "악마의 마법서",
+              "description": "<mainText><stats>주문력 <attention>35</attention><br>스킬 가속 <attention>10</attention></stats></mainText><br>",
+              "gold_total": 900
+            },
+            {
+              "icon_id": 188,
+              "item_id": 4632,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4632.png",
+              "file_name": "4632.png",
+              "name": "신록의 장벽",
+              "description": "<mainText><stats>주문력 <attention>20</attention><br>마법 저항력 <attention>25</attention></stats><br><li><passive>적응:</passive> 유닛을 처치하면 <scaleMR>마법 저항력이 0.3</scaleMR> (최대 <scaleMR>9</scaleMR>) 증가합니다. <br><br></mainText><br>",
+              "gold_total": 1000
+            },
+            {
+              "icon_id": 198,
+              "item_id": 4645,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4645.png",
+              "file_name": "4645.png",
+              "name": "그림자불꽃",
+              "description": "<mainText><stats>주문력 <attention>100</attention><br>체력 <attention>200</attention></stats><br><li><passive>잿덩이꽃:</passive> 챔피언에게 입히는 피해에 의 추가 <keywordStealth>마법 관통력</keywordStealth>이 적용됩니다. 이 수치는 대상의 현재 <scaleHealth>체력</scaleHealth>이 낮을수록 증가합니다. 최근 보호막을 받은 대상에게 효과가 최대로 적용됩니다. </mainText><br>",
+              "gold_total": 3000
+            },
+            {
+              "icon_id": 209,
+              "item_id": 6655,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6655.png",
+              "file_name": "6655.png",
+              "name": "루덴의 폭풍",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>마법 관통력 <attention>6</attention><br>마나 <attention>600</attention><br>스킬 가속 <attention>20</attention></stats><br><li><passive>메아리:</passive> 스킬로 피해를 입히면 대상과 주변 3명의 적에게 마법 피해를 입히고 이동 속도가 상승합니다. 챔피언에게 스킬 피해를 입히면 이 아이템의 재사용 대기시간이 감소합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 마법 관통력. </mainText><br>",
+              "gold_total": 3200
+            },
+            {
+              "icon_id": 153,
+              "item_id": 3363,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3363.png",
+              "file_name": "3363.png",
+              "name": "망원형 개조",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 누구나 볼 수 있고 쉽게 파괴 가능한 와드를 설치해 주변 지역을 드러냅니다. 최대 4000유닛 거리까지 설치 가능합니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": false,
+          "status": {
+            "killParticipationRate": 35,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 171,
+            "minionsPerMinute": 6.3
+          },
+          "primaryPerkId": 8112,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8200,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerTeleport.png",
+              "spell_id": 12,
+              "file_name": "SummonerTeleport.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "뽀녕하세요",
+          "kills": 4,
+          "assists": 6,
+          "deaths": 9,
+          "kda": 1.11,
+          "champion": {
+            "championName": "Elise"
+          },
+          "champLevel": 12,
+          "items": [
+            {
+              "icon_id": 26,
+              "item_id": 1058,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1058.png",
+              "file_name": "1058.png",
+              "name": "쓸데없이 큰 지팡이",
+              "description": "<mainText><stats>주문력 <attention>60</attention></stats></mainText><br>",
+              "gold_total": 1250
+            },
+            {
+              "icon_id": 27,
+              "item_id": 1082,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1082.png",
+              "file_name": "1082.png",
+              "name": "암흑의 인장",
+              "description": "<mainText><stats>주문력 <attention>15</attention><br>체력 <attention>40</attention></stats><br><li><passive>영광:</passive> 적 챔피언을 처치할 때마다 중첩 2회, 어시스트를 올릴 때마다 중첩 1회가 쌓입니다. 최대 10회까지 쌓을 수 있으며 사망 시 중첩 5회가 사라집니다.<li><passive>두려움:</passive> <passive>영광</passive> 중첩 하나당 <scaleAP>주문력을 4</scaleAP> 얻습니다.<br><br><rules>획득한 <passive>영광</passive> 중첩은 이 아이템과 <rarityLegendary>메자이의 영혼약탈자</rarityLegendary>에 모두 적용됩니다.</rules></mainText><br>",
+              "gold_total": 350
+            },
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 135,
+              "item_id": 3152,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3152.png",
+              "file_name": "3152.png",
+              "name": "마법공학 로켓 벨트",
+              "description": "<mainText><stats>주문력 <attention>90</attention><br>마법 관통력 <attention>6</attention><br>체력 <attention>250</attention><br>스킬 가속 <attention>15</attention></stats><br><br><active>사용 시 -</active> <active>초음속:</active> 지정 방향으로 돌진하며 부채꼴 모양으로 피해를 입히는 마법 탄환을 발사합니다. 그리고 적 챔피언 방향으로 이동할 때 이동 속도가 상승합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 마법 관통력.</mainText><br>",
+              "gold_total": 3200
+            },
+            {
+              "icon_id": 198,
+              "item_id": 4645,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4645.png",
+              "file_name": "4645.png",
+              "name": "그림자불꽃",
+              "description": "<mainText><stats>주문력 <attention>100</attention><br>체력 <attention>200</attention></stats><br><li><passive>잿덩이꽃:</passive> 챔피언에게 입히는 피해에 의 추가 <keywordStealth>마법 관통력</keywordStealth>이 적용됩니다. 이 수치는 대상의 현재 <scaleHealth>체력</scaleHealth>이 낮을수록 증가합니다. 최근 보호막을 받은 대상에게 효과가 최대로 적용됩니다. </mainText><br>",
+              "gold_total": 3000
+            },
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": false,
+          "status": {
+            "killParticipationRate": 59,
+            "visionWardsBoughtInGame": 5,
+            "totalMinionsKilled": 93,
+            "minionsPerMinute": 3.4
+          },
+          "primaryPerkId": 8128,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8000,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerSmite.png",
+              "spell_id": 11,
+              "file_name": "SummonerSmite.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "강타하다",
+          "kills": 0,
+          "assists": 7,
+          "deaths": 3,
+          "kda": 2.33,
+          "champion": {
+            "championName": "Thresh"
+          },
+          "champLevel": 11,
+          "items": [
+            {
+              "icon_id": 54,
+              "item_id": 2055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2055.png",
+              "file_name": "2055.png",
+              "name": "제어 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 소모:</active> 주변 지역을 드러내 주는 강력한 제어 와드를 설치합니다. 근처의 <keywordStealth>투명</keywordStealth>한 덫과 <keywordStealth>위장</keywordStealth> 중인 적을 드러내고 적의 투명 와드를 감지해 무력화합니다. <br><br><rules>최대 2개의 제어 와드를 소지할 수 있습니다. 제어 와드로 다른 제어 와드를 무력화시킬 수 없습니다.</rules></mainText><br>",
+              "gold_total": 75
+            },
+            {
+              "icon_id": 73,
+              "item_id": 3024,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3024.png",
+              "file_name": "3024.png",
+              "name": "얼음 방패",
+              "description": "<mainText><stats>방어력 <attention>20</attention><br>마나 <attention>250</attention><br>스킬 가속 <attention>10</attention></stats></mainText><br>",
+              "gold_total": 900
+            },
+            {
+              "icon_id": 91,
+              "item_id": 3067,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3067.png",
+              "file_name": "3067.png",
+              "name": "점화석",
+              "description": "<mainText><stats>체력 <attention>200</attention><br>스킬 가속 <attention>10</attention></stats></mainText><br>",
+              "gold_total": 800
+            },
+            {
+              "icon_id": 122,
+              "item_id": 3117,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3117.png",
+              "file_name": "3117.png",
+              "name": "기동력의 장화",
+              "description": "<mainText><stats></stats>이동 속도 <attention>25</attention> <li>5초 동안 전투에서 벗어나 있으면 이동 속도가 <attention>115</attention> 상승합니다.</mainText><br>",
+              "gold_total": 1000
+            },
+            {
+              "icon_id": 146,
+              "item_id": 3190,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3190.png",
+              "file_name": "3190.png",
+              "name": "강철의 솔라리 펜던트",
+              "description": "<mainText><stats>체력 <attention>200</attention><br>스킬 가속 <attention>20</attention><br>방어력 <attention>30</attention><br>마법 저항력 <attention>30</attention></stats><br><br><active>사용 시 -</active> <active>헌신:</active> 주변 아군에게 <shield>보호막</shield>을 부여합니다. 보호막은 서서히 사라집니다.<br><li><passive>전념:</passive> 주변 아군 챔피언의 방어력과 <scaleMR>마법 저항력</scaleMR>을 증가시킵니다. <br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 방어력과 마법 저항력이 <passive>전념</passive> 효과만큼 상승합니다.<br><br></mainText><br>",
+              "gold_total": 2500
+            },
+            {
+              "icon_id": 171,
+              "item_id": 3857,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3857.png",
+              "file_name": "3857.png",
+              "name": "화이트록의 갑옷",
+              "description": "<mainText><stats>공격력 <attention>15</attention><br>체력 <attention>250</attention><br>기본 체력 재생 <attention>100%</attention><br>10초당 골드 <attention>3</attention></stats><br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 0개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. <br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 4개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. </mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": false,
+          "status": {
+            "killParticipationRate": 41,
+            "visionWardsBoughtInGame": 4,
+            "totalMinionsKilled": 32,
+            "minionsPerMinute": 1.2
+          },
+          "primaryPerkId": 8351,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8400,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerDot.png",
+              "spell_id": 14,
+              "file_name": "SummonerDot.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "신정백점맞음",
+          "kills": 1,
+          "assists": 3,
+          "deaths": 6,
+          "kda": 0.67,
+          "champion": {
+            "championName": "Sivir"
+          },
+          "champLevel": 13,
+          "items": [
+            {
+              "icon_id": 23,
+              "item_id": 1055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1055.png",
+              "file_name": "1055.png",
+              "name": "도란의 검",
+              "description": "<mainText><stats>공격력 <attention>8</attention><br>체력 <attention>80</attention></stats><br><li><passive>전쟁광:</passive> 모든 피해 흡혈 효과를 얻습니다.<br><br><rules>광역 피해를 입히거나 소환물을 통해 피해를 입힐 때는 모든 피해 흡혈이 33%로 감소합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 50,
+              "item_id": 2031,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2031.png",
+              "file_name": "2031.png",
+              "name": "충전형 물약",
+              "description": "<mainText><stats></stats><active>사용 시 - 소모:</active> 충전량을 1회 소모해 12초 동안 <healing>100의 체력</healing>을 회복합니다. 충전량은 최대 2회이며 상점 방문 시 다시 채워집니다.</mainText><br>",
+              "gold_total": 150
+            },
+            {
+              "icon_id": 83,
+              "item_id": 3046,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3046.png",
+              "file_name": "3046.png",
+              "name": "유령 무희",
+              "description": "<mainText><stats>공격력 <attention>20</attention><br>공격 속도 <attention>25%</attention><br>치명타 확률 <attention>20%</attention><br>이동 속도 <attention>7%</attention></stats><br><li><passive>망령의 왈츠:</passive> 기본 공격을 가하면 <status>유체화</status> 상태가 되어 이동 속도가 중첩되어 상승합니다. 또한 기본 공격을 4회 가하면 망령의 왈츠 효과가 공격 속도를 상승시킵니다.<br><br><rules><status>유체화</status> 상태인 유닛은 다른 유닛과 충돌하지 않습니다.</rules></mainText><br>",
+              "gold_total": 2600
+            },
+            {
+              "icon_id": 116,
+              "item_id": 3111,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3111.png",
+              "file_name": "3111.png",
+              "name": "헤르메스의 발걸음",
+              "description": "<mainText><stats>마법 저항력 <attention>25</attention><br>이동 속도 <attention>45</attention><br>강인함 <attention>30%</attention></stats><br><br><rules>강인함이 증가해 <status>기절</status>, <status>둔화</status>, <status>도발</status>, <status>공포</status>, <status>침묵</status>, <status>실명</status>, <status>변이</status> 및 <status>이동 불가</status> 효과의 지속시간이 감소합니다. <status>공중에 뜨거나</status> <status>제압</status> 당했을 때는 효과가 없습니다.</rules></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 216,
+              "item_id": 6672,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6672.png",
+              "file_name": "6672.png",
+              "name": "크라켄 학살자",
+              "description": "<mainText><stats>공격력 <attention>65</attention><br>공격 속도 <attention>25%</attention><br>치명타 확률 <attention>20%</attention></stats><br><li><passive>벼락:</passive> 세 번째 기본 공격을 가할 때마다 고정 피해를 추가로 입힙니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 공격 속도.</mainText><br>",
+              "gold_total": 3400
+            },
+            null,
+            {
+              "icon_id": 153,
+              "item_id": 3363,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3363.png",
+              "file_name": "3363.png",
+              "name": "망원형 개조",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 누구나 볼 수 있고 쉽게 파괴 가능한 와드를 설치해 주변 지역을 드러냅니다. 최대 4000유닛 거리까지 설치 가능합니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": false,
+          "status": {
+            "killParticipationRate": 24,
+            "visionWardsBoughtInGame": 1,
+            "totalMinionsKilled": 165,
+            "minionsPerMinute": 6.1
+          },
+          "primaryPerkId": 8008,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerHeal.png",
+              "spell_id": 7,
+              "file_name": "SummonerHeal.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "백크앙",
+          "kills": 7,
+          "assists": 2,
+          "deaths": 8,
+          "kda": 1.13,
+          "champion": {
+            "championName": "Jax"
+          },
+          "champLevel": 13,
+          "items": [
+            {
+              "icon_id": 9,
+              "item_id": 1029,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1029.png",
+              "file_name": "1029.png",
+              "name": "천 갑옷",
+              "description": "<mainText><stats>방어력 <attention>15</attention></stats></mainText><br>",
+              "gold_total": 300
+            },
+            {
+              "icon_id": 22,
+              "item_id": 1054,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1054.png",
+              "file_name": "1054.png",
+              "name": "도란의 방패",
+              "description": "<mainText><stats>체력 <attention>80</attention></stats><br><li><passive>집중:</passive> 기본 공격 시 미니언에게 추가 피해를 입힙니다.<li><passive>회복:</passive> 일정 시간 동안 체력이 회복됩니다.<li><passive>견디기:</passive> 챔피언, 대형 정글 몬스터, 에픽 정글 몬스터에게 피해를 입으면 체력을 회복합니다. 회복량은 체력이 낮을수록 증가합니다.<br><br><rules><passive>견디기</passive> 원거리 챔피언이 보유하거나 광역 또는 지속 피해를 입었을 때 기본 회복량의 66%만큼 회복합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 54,
+              "item_id": 2055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2055.png",
+              "file_name": "2055.png",
+              "name": "제어 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 소모:</active> 주변 지역을 드러내 주는 강력한 제어 와드를 설치합니다. 근처의 <keywordStealth>투명</keywordStealth>한 덫과 <keywordStealth>위장</keywordStealth> 중인 적을 드러내고 적의 투명 와드를 감지해 무력화합니다. <br><br><rules>최대 2개의 제어 와드를 소지할 수 있습니다. 제어 와드로 다른 제어 와드를 무력화시킬 수 없습니다.</rules></mainText><br>",
+              "gold_total": 75
+            },
+            {
+              "icon_id": 116,
+              "item_id": 3111,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3111.png",
+              "file_name": "3111.png",
+              "name": "헤르메스의 발걸음",
+              "description": "<mainText><stats>마법 저항력 <attention>25</attention><br>이동 속도 <attention>45</attention><br>강인함 <attention>30%</attention></stats><br><br><rules>강인함이 증가해 <status>기절</status>, <status>둔화</status>, <status>도발</status>, <status>공포</status>, <status>침묵</status>, <status>실명</status>, <status>변이</status> 및 <status>이동 불가</status> 효과의 지속시간이 감소합니다. <status>공중에 뜨거나</status> <status>제압</status> 당했을 때는 효과가 없습니다.</rules></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 136,
+              "item_id": 3153,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3153.png",
+              "file_name": "3153.png",
+              "name": "몰락한 왕의 검",
+              "description": "<mainText><stats>공격력 <attention>40</attention><br>공격 속도 <attention>25%</attention><br>생명력 흡수 <attention>8%</attention></stats><br><li><passive>안개의 검:</passive> 기본 공격 시 대상의 현재 체력에 비례한 물리 피해를 입힙니다. <li><passive>흡수:</passive> 챔피언에게 3회 기본 공격을 가하면 마법 피해를 입히고 이동 속도를 훔칩니다.<br><br>아이템 성능은 근접 챔피언과 원거리 챔피언에게 각각 다르게 적용됩니다.</mainText><br>",
+              "gold_total": 3300
+            },
+            {
+              "icon_id": 207,
+              "item_id": 6632,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6632.png",
+              "file_name": "6632.png",
+              "name": "신성한 파괴자",
+              "description": "<mainText><stats>공격력 <attention>40</attention><br>체력 <attention>300</attention><br>스킬 가속 <attention>20</attention></stats><li><passive>주문 검:</passive> 스킬을 사용하고 나면 다음 기본 공격 시 추가 피해(<OnHit>적중 시</OnHit> )를 입힙니다. 대상이 챔피언일 경우 체력을 회복합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 방어구 관통력 및 마법 관통력.<br></mainText><br>",
+              "gold_total": 3300
+            },
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": false,
+          "status": {
+            "killParticipationRate": 53,
+            "visionWardsBoughtInGame": 2,
+            "totalMinionsKilled": 113,
+            "minionsPerMinute": 4.2
+          },
+          "primaryPerkId": 8008,
+          "mostMultiKills": "더블킬",
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerTeleport.png",
+              "spell_id": 12,
+              "file_name": "SummonerTeleport.png"
+            }
+          ]
+        }
+      ],
+      "primaryPerks": [
+        {
+          "id": 9,
+          "perk_id": 8112,
+          "name": "감전",
+          "long_desc": "3초 동안 같은 챔피언에게 <b>개별</b> 공격 또는 스킬을 3회 적중시키면 추가 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>를 입힙니다.<br><br>피해량: 30~180 (+추가 공격력의 0.4, +주문력의 0.25)<br><br>재사용 대기시간: 25~20초<br><br><hr><i>'우리는 그들을 천둥군주라고 부른다. 그들의 번개를 입에 올리는 것은 재앙을 부르는 길이기 때문이다.'</i>",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Electrocute/Electrocute.png"
+        },
+        {
+          "id": 14,
+          "perk_id": 8128,
+          "name": "어둠의 수확",
+          "long_desc": "체력이 50%보다 낮은 챔피언에게 피해를 입히면 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>적응형 피해</lol-uikit-tooltipped-keyword>를 추가로 입히고 해당 챔피언의 영혼을 수확해 어둠의 수확 효과의 피해량이 영구적으로 5만큼 증가합니다.<br><br>어둠의 수확 피해량: 20~60 (레벨에 비례) (+영혼당 피해량 5) (+추가 공격력의 0.25) (+주문력의 0.15)<br>재사용 대기시간: 45초 (처치 관여 시 1.5초로 초기화)",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png"
+        },
+        {
+          "id": 22,
+          "perk_id": 8008,
+          "name": "치명적 속도",
+          "long_desc": "적 챔피언을 기본 공격하면 6초 동안 공격 속도가 [60%~90%] (근접) 또는 [30%~54%] (원거리) 상승합니다. 이 효과는 6회까지 중첩됩니다.<br><br>최대로 중첩되면 공격 속도가 2.5를 초과할 수 있으며 공격 사거리가 50 (근접) 또는 75 (원거리) 상승합니다.",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+        },
+        {
+          "id": 38,
+          "perk_id": 8351,
+          "name": "빙결 강화",
+          "long_desc": "적 챔피언을 이동 불가 상태로 만들면 대상에게서 3줄기의 빙결 광선이 자신과 근처 다른 챔피언을 향해 뻗어 나와 3초(+이동 불가 효과 지속시간의 100%) 동안 적들을 30%(+회복 및 보호막 효과 10%당 9%)(+주문력 100당 3%)(+추가 공격력 100당 4%) 둔화하고 자신을 제외한 아군에게 입히는 피해를 15% 감소시키는 빙결 영역을 생성합니다. <br><br>재사용 대기시간: 25초",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png"
+        },
+        {
+          "id": 83,
+          "perk_id": 8437,
+          "name": "착취의 손아귀",
+          "long_desc": "전투 중 4초마다 챔피언에 대한 기본 공격 시 다음 효과를 얻습니다.<li>자신 최대 체력의 3.5%에 해당하는 추가 마법 피해</li><li>자신 최대 체력의 1.7%에 해당하는 체력 회복</li><li>영구적으로 체력 5 증가</li><br><rules><i>원거리 챔피언:</i> 피해량, 회복량, 체력 영구 증가량이 40% 감소합니다.</rules><br>",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png"
+        },
+        {
+          "id": 93,
+          "perk_id": 8229,
+          "name": "신비로운 유성",
+          "long_desc": "챔피언에게 스킬로 피해를 주면 해당 위치에 유성을 불러옵니다. 신비로운 유성이 재사용 대기 중일 경우 남은 재사용 대기시간이 감소합니다.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>: 레벨에 따라 30 ~ 100 (<scaleAP>+주문력의 0.2</scaleAP> 및 <scaleAD>+추가 공격력의 0.35</scaleAD>)<br>재사용 대기시간: 20 ~ 8초<br><rules><br>재사용 대기시간 감소:<br>단일 대상 스킬: 20%<br>광역 스킬: 10%<br>지속 피해 스킬: 5%<br></rules>",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+        }
+      ],
+      "teams": [
+        {
+          "bans": [
+            {
+              "championId": 53,
+              "pickTurn": 1
+            },
+            {
+              "championId": 517,
+              "pickTurn": 2
+            },
+            {
+              "championId": 238,
+              "pickTurn": 3
+            },
+            {
+              "championId": 114,
+              "pickTurn": 4
+            },
+            {
+              "championId": 74,
+              "pickTurn": 5
+            }
+          ],
+          "objectives": {
+            "baron": {
+              "first": false,
+              "kills": 0
+            },
+            "champion": {
+              "first": true,
+              "kills": 34
+            },
+            "dragon": {
+              "first": true,
+              "kills": 3
+            },
+            "inhibitor": {
+              "first": true,
+              "kills": 2
+            },
+            "riftHerald": {
+              "first": false,
+              "kills": 0
+            },
+            "tower": {
+              "first": true,
+              "kills": 9
+            }
+          },
+          "teamId": 100,
+          "win": true
+        },
+        {
+          "bans": [
+            {
+              "championId": 99,
+              "pickTurn": 6
+            },
+            {
+              "championId": 57,
+              "pickTurn": 7
+            },
+            {
+              "championId": 36,
+              "pickTurn": 8
+            },
+            {
+              "championId": 360,
+              "pickTurn": 9
+            },
+            {
+              "championId": -1,
+              "pickTurn": 10
+            }
+          ],
+          "objectives": {
+            "baron": {
+              "first": false,
+              "kills": 0
+            },
+            "champion": {
+              "first": false,
+              "kills": 17
+            },
+            "dragon": {
+              "first": false,
+              "kills": 0
+            },
+            "inhibitor": {
+              "first": false,
+              "kills": 0
+            },
+            "riftHerald": {
+              "first": true,
+              "kills": 1
+            },
+            "tower": {
+              "first": false,
+              "kills": 1
+            }
+          },
+          "teamId": 200,
+          "win": false
+        }
+      ]
+    },
+    {
+      "gameId": 6345929104,
+      "gameEndTimestamp": "2일전",
+      "gameDuration": "19:02",
+      "gameDatas": [
+        {
+          "summonerName": "Tender창대잦이",
+          "kills": 4,
+          "assists": 2,
+          "deaths": 7,
+          "kda": 0.86,
+          "champion": {
+            "championName": "Warwick"
+          },
+          "champLevel": 12,
+          "items": [
+            {
+              "icon_id": 9,
+              "item_id": 1029,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1029.png",
+              "file_name": "1029.png",
+              "name": "천 갑옷",
+              "description": "<mainText><stats>방어력 <attention>15</attention></stats></mainText><br>",
+              "gold_total": 300
+            },
+            {
+              "icon_id": 11,
+              "item_id": 1033,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1033.png",
+              "file_name": "1033.png",
+              "name": "마법무효화의 망토",
+              "description": "<mainText><stats>마법 저항력 <attention>25</attention></stats></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 24,
+              "item_id": 1056,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1056.png",
+              "file_name": "1056.png",
+              "name": "도란의 반지",
+              "description": "<mainText><stats>주문력 <attention>15</attention><br>체력 <attention>70</attention></stats><br><li><passive>집중:</passive> 기본 공격 시 미니언에게 추가 피해를 입힙니다. <li><passive>흡수:</passive> 매초 마나를 회복합니다. 적 챔피언에게 피해를 입히면 회복량이 증가합니다. 마나를 회복할 수 없으면 체력을 회복합니다. </mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 84,
+              "item_id": 3047,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3047.png",
+              "file_name": "3047.png",
+              "name": "판금 장화",
+              "description": "<mainText><stats>방어력 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>기본 공격으로 받는 피해량이 12% 감소합니다.</mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 99,
+              "item_id": 3077,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3077.png",
+              "file_name": "3077.png",
+              "name": "티아맷",
+              "description": "<mainText><stats>공격력 <attention>25</attention></stats><br><li><passive>쪼개기:</passive> 기본 공격 시 주변 적들에게 물리 피해를 입힙니다. <br><br><br>구조물에는 쪼개기가 발동되지 않습니다.</mainText><br>",
+              "gold_total": 1200
+            },
+            {
+              "icon_id": 136,
+              "item_id": 3153,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3153.png",
+              "file_name": "3153.png",
+              "name": "몰락한 왕의 검",
+              "description": "<mainText><stats>공격력 <attention>40</attention><br>공격 속도 <attention>25%</attention><br>생명력 흡수 <attention>8%</attention></stats><br><li><passive>안개의 검:</passive> 기본 공격 시 대상의 현재 체력에 비례한 물리 피해를 입힙니다. <li><passive>흡수:</passive> 챔피언에게 3회 기본 공격을 가하면 마법 피해를 입히고 이동 속도를 훔칩니다.<br><br>아이템 성능은 근접 챔피언과 원거리 챔피언에게 각각 다르게 적용됩니다.</mainText><br>",
+              "gold_total": 3300
+            },
+            {
+              "icon_id": 152,
+              "item_id": 3340,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3340.png",
+              "file_name": "3340.png",
+              "name": "투명 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 2개까지 보유할 수 있습니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": false,
+          "status": {
+            "killParticipationRate": 60,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 127,
+            "minionsPerMinute": 6.7
+          },
+          "primaryPerkId": 8008,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8400,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerBarrier.png",
+              "spell_id": 21,
+              "file_name": "SummonerBarrier.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "남해오네뜨",
+          "kills": 2,
+          "assists": 4,
+          "deaths": 4,
+          "kda": 1.5,
+          "champion": {
+            "championName": "Sejuani"
+          },
+          "champLevel": 10,
+          "items": [
+            {
+              "icon_id": 8,
+              "item_id": 1028,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1028.png",
+              "file_name": "1028.png",
+              "name": "루비 수정",
+              "description": "<mainText><stats>체력 <attention>150</attention></stats></mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 84,
+              "item_id": 3047,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3047.png",
+              "file_name": "3047.png",
+              "name": "판금 장화",
+              "description": "<mainText><stats>방어력 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>기본 공격으로 받는 피해량이 12% 감소합니다.</mainText><br>",
+              "gold_total": 1100
+            },
+            null,
+            null,
+            null,
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": false,
+          "status": {
+            "killParticipationRate": 60,
+            "visionWardsBoughtInGame": 1,
+            "totalMinionsKilled": 92,
+            "minionsPerMinute": 4.8
+          },
+          "primaryPerkId": 8439,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8000,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerSmite.png",
+              "spell_id": 11,
+              "file_name": "SummonerSmite.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "마법공학로켓자지",
+          "kills": 0,
+          "assists": 1,
+          "deaths": 5,
+          "kda": 0.2,
+          "champion": {
+            "championName": "Cassiopeia"
+          },
+          "champLevel": 11,
+          "items": [
+            {
+              "icon_id": 20,
+              "item_id": 1052,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1052.png",
+              "file_name": "1052.png",
+              "name": "증폭의 고서",
+              "description": "<mainText><stats>주문력 <attention>20</attention></stats></mainText><br>",
+              "gold_total": 435
+            },
+            {
+              "icon_id": 50,
+              "item_id": 2031,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2031.png",
+              "file_name": "2031.png",
+              "name": "충전형 물약",
+              "description": "<mainText><stats></stats><active>사용 시 - 소모:</active> 충전량을 1회 소모해 12초 동안 <healing>100의 체력</healing>을 회복합니다. 충전량은 최대 2회이며 상점 방문 시 다시 채워집니다.</mainText><br>",
+              "gold_total": 150
+            },
+            {
+              "icon_id": 93,
+              "item_id": 3070,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3070.png",
+              "file_name": "3070.png",
+              "name": "여신의 눈물",
+              "description": "<mainText><stats>마나 <attention>240</attention></stats><br><li><passive>집중:</passive> 기본 공격 시 미니언에게 추가 물리 피해를 입힙니다.<li><passive>마나 충전:</passive> 대상에게 스킬을 적중시키면 중첩을 하나 소모해 <scaleMana>3의 추가 마나</scaleMana>를 얻습니다. 챔피언 대상으로는 두 배로 적용됩니다. 추가 마나는 최대 360까지 얻을 수 있습니다.<br><br><rules>8초마다 새로운 <passive>마나 충전</passive> 중첩을 얻습니다. (최대 4)</rules></mainText><br>",
+              "gold_total": 400
+            },
+            null,
+            null,
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": false,
+          "status": {
+            "killParticipationRate": 10,
+            "visionWardsBoughtInGame": 2,
+            "totalMinionsKilled": 122,
+            "minionsPerMinute": 6.4
+          },
+          "primaryPerkId": 8010,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8200,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerHaste.png",
+              "spell_id": 6,
+              "file_name": "SummonerHaste.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "퐈라오",
+          "kills": 1,
+          "assists": 2,
+          "deaths": 3,
+          "kda": 1,
+          "champion": {
+            "championName": "Karma"
+          },
+          "champLevel": 9,
+          "items": [
+            {
+              "icon_id": 55,
+              "item_id": 2065,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2065.png",
+              "file_name": "2065.png",
+              "name": "슈렐리아의 군가",
+              "description": "<mainText><stats>주문력 <attention>40</attention><br>체력 <attention>200</attention><br>스킬 가속 <attention>20</attention><br>기본 마나 재생 <attention>100%</attention></stats><br><br><active>사용 시 -</active> <active>고무:</active> 주변 아군들의 이동 속도가 상승합니다.<li><passive>동기 부여:</passive> 다른 아군 챔피언을 강화하거나 보호하면 둘 다 이동 속도가 증가합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 스킬 가속.<br></mainText><br>",
+              "gold_total": 2500
+            },
+            {
+              "icon_id": 140,
+              "item_id": 3158,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3158.png",
+              "file_name": "3158.png",
+              "name": "명석함의 아이오니아 장화",
+              "description": "<mainText><stats>스킬 가속 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>소환사 주문 가속이 12 증가합니다.<br><br><flavorText>''CLE 20년 12월 10일 남부 지방의 패권을 두고 벌어진 녹서스와의 재경합에서 아이오니아의 승리를 기념하는 헌정 아이템입니다.''</flavorText></mainText><br>",
+              "gold_total": 950
+            },
+            {
+              "icon_id": 167,
+              "item_id": 3851,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3851.png",
+              "file_name": "3851.png",
+              "name": "얼음 송곳니",
+              "description": "<mainText><stats>주문력 <attention>15</attention><br>체력 <attention>70</attention><br>기본 마나 재생 <attention>75%</attention><br>10초당 골드 <attention>3</attention></stats><br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 0개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. <br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 3개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. <br><br><br><br><li><passive>헌납:</passive> 아군 챔피언 근처에 있을 때, 챔피언과 구조물에 피해를 입히는 스킬을 사용하거나 기본 공격 시 20골드를 획득합니다. 30초당 최대 3번까지만 발동합니다.<li><passive>퀘스트:</passive> 이 아이템으로 1000골드를 획득하면 <rarityLegendary>얼음 정수의 파편</rarityLegendary>으로 변합니다.</mainText><br>",
+              "gold_total": 400
+            },
+            null,
+            null,
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": false,
+          "status": {
+            "killParticipationRate": 30,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 9,
+            "minionsPerMinute": 0.5
+          },
+          "primaryPerkId": 8229,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerExhaust.png",
+              "spell_id": 3,
+              "file_name": "SummonerExhaust.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "나래부인",
+          "kills": 3,
+          "assists": 1,
+          "deaths": 6,
+          "kda": 0.67,
+          "champion": {
+            "championName": "MissFortune"
+          },
+          "champLevel": 10,
+          "items": [
+            {
+              "icon_id": 13,
+              "item_id": 1036,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1036.png",
+              "file_name": "1036.png",
+              "name": "롱소드",
+              "description": "<mainText><stats>공격력 <attention>10</attention></stats></mainText><br>",
+              "gold_total": 350
+            },
+            {
+              "icon_id": 18,
+              "item_id": 1042,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1042.png",
+              "file_name": "1042.png",
+              "name": "단검",
+              "description": "<mainText><stats>공격 속도 <attention>12%</attention></stats></mainText><br>",
+              "gold_total": 300
+            },
+            {
+              "icon_id": 23,
+              "item_id": 1055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1055.png",
+              "file_name": "1055.png",
+              "name": "도란의 검",
+              "description": "<mainText><stats>공격력 <attention>8</attention><br>체력 <attention>80</attention></stats><br><li><passive>전쟁광:</passive> 모든 피해 흡혈 효과를 얻습니다.<br><br><rules>광역 피해를 입히거나 소환물을 통해 피해를 입힐 때는 모든 피해 흡혈이 33%로 감소합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 69,
+              "item_id": 3006,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3006.png",
+              "file_name": "3006.png",
+              "name": "광전사의 군화",
+              "description": "<mainText><stats>공격 속도 <attention>35%</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 95,
+              "item_id": 3072,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3072.png",
+              "file_name": "3072.png",
+              "name": "피바라기",
+              "description": "<mainText><stats>공격력 <attention>55</attention><br>치명타 확률 <attention>20%</attention><br>생명력 흡수 <attention>18%</attention></stats><br><li><passive>영액의 보호막:</passive> 기본 공격으로 최대 체력 이상 생명력 흡수가 가능합니다. 체력 회복 초과분은 보호막으로 전환되며 피해를 주거나 입지 않으면 서서히 사라집니다.</mainText><br>",
+              "gold_total": 3400
+            },
+            null,
+            {
+              "icon_id": 152,
+              "item_id": 3340,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3340.png",
+              "file_name": "3340.png",
+              "name": "투명 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 2개까지 보유할 수 있습니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 100,
+          "win": false,
+          "status": {
+            "killParticipationRate": 40,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 111,
+            "minionsPerMinute": 5.8
+          },
+          "primaryPerkId": 8005,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerHaste.png",
+              "spell_id": 6,
+              "file_name": "SummonerHaste.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "한우종",
+          "kills": 7,
+          "assists": 5,
+          "deaths": 0,
+          "kda": null,
+          "champion": {
+            "championName": "Sylas"
+          },
+          "champLevel": 13,
+          "items": [
+            {
+              "icon_id": 26,
+              "item_id": 1058,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1058.png",
+              "file_name": "1058.png",
+              "name": "쓸데없이 큰 지팡이",
+              "description": "<mainText><stats>주문력 <attention>60</attention></stats></mainText><br>",
+              "gold_total": 1250
+            },
+            {
+              "icon_id": 72,
+              "item_id": 3020,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3020.png",
+              "file_name": "3020.png",
+              "name": "마법사의 신발",
+              "description": "<mainText><stats>마법 관통력 <attention>18</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 80,
+              "item_id": 3041,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3041.png",
+              "file_name": "3041.png",
+              "name": "메자이의 영혼약탈자",
+              "description": "<mainText><stats>주문력 <attention>20</attention><br>체력 <attention>100</attention></stats><br><li><passive>영광:</passive> 적 챔피언을 처치할 때마다 중첩 4회, 어시스트를 올릴 때마다 중첩 2회가 쌓입니다. 최대 25회까지 쌓을 수 있으며 사망 시 중첩 10회가 사라집니다.<li><passive>두려움:</passive> <passive>영광</passive> 중첩 하나당 <scaleAP>주문력을 5</scaleAP> 얻습니다. 10중첩 이상일 때 <speed>이동 속도가 10%</speed> 상승합니다.<br><br><rules>획득한 <passive>영광</passive> 중첩은 이 아이템과 <rarityGeneric>암흑의 인장</rarityGeneric>에 모두 적용됩니다.</rules></mainText><br>",
+              "gold_total": 1600
+            },
+            {
+              "icon_id": 134,
+              "item_id": 3145,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3145.png",
+              "file_name": "3145.png",
+              "name": "마법공학 교류 발전기",
+              "description": "<mainText><stats>주문력 <attention>25</attention><br>체력 <attention>150</attention></stats><br><li><passive>자극:</passive> 챔피언에게 피해를 입히면 추가 피해를 입힙니다.</mainText><br>",
+              "gold_total": 1050
+            },
+            {
+              "icon_id": 191,
+              "item_id": 4636,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/4636.png",
+              "file_name": "4636.png",
+              "name": "밤의 수확자",
+              "description": "<mainText><stats>주문력 <attention>90</attention><br>체력 <attention>300</attention><br>스킬 가속 <attention>25</attention></stats><br><li><passive>영혼 찢기:</passive> 챔피언에게 피해를 입히면 추가 마법 피해를 입히고 이동 속도가 상승합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 스킬 가속.</mainText><br>",
+              "gold_total": 3200
+            },
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": true,
+          "status": {
+            "killParticipationRate": 48,
+            "visionWardsBoughtInGame": 1,
+            "totalMinionsKilled": 139,
+            "minionsPerMinute": 7.3
+          },
+          "primaryPerkId": 8128,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerSmite.png",
+              "spell_id": 11,
+              "file_name": "SummonerSmite.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "임효섭",
+          "kills": 4,
+          "assists": 5,
+          "deaths": 5,
+          "kda": 1.8,
+          "champion": {
+            "championName": "Rengar"
+          },
+          "champLevel": 12,
+          "items": [
+            {
+              "icon_id": 8,
+              "item_id": 1028,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1028.png",
+              "file_name": "1028.png",
+              "name": "루비 수정",
+              "description": "<mainText><stats>체력 <attention>150</attention></stats></mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 23,
+              "item_id": 1055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1055.png",
+              "file_name": "1055.png",
+              "name": "도란의 검",
+              "description": "<mainText><stats>공격력 <attention>8</attention><br>체력 <attention>80</attention></stats><br><li><passive>전쟁광:</passive> 모든 피해 흡혈 효과를 얻습니다.<br><br><rules>광역 피해를 입히거나 소환물을 통해 피해를 입힐 때는 모든 피해 흡혈이 33%로 감소합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 54,
+              "item_id": 2055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/2055.png",
+              "file_name": "2055.png",
+              "name": "제어 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 소모:</active> 주변 지역을 드러내 주는 강력한 제어 와드를 설치합니다. 근처의 <keywordStealth>투명</keywordStealth>한 덫과 <keywordStealth>위장</keywordStealth> 중인 적을 드러내고 적의 투명 와드를 감지해 무력화합니다. <br><br><rules>최대 2개의 제어 와드를 소지할 수 있습니다. 제어 와드로 다른 제어 와드를 무력화시킬 수 없습니다.</rules></mainText><br>",
+              "gold_total": 75
+            },
+            {
+              "icon_id": 84,
+              "item_id": 3047,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3047.png",
+              "file_name": "3047.png",
+              "name": "판금 장화",
+              "description": "<mainText><stats>방어력 <attention>20</attention><br>이동 속도 <attention>45</attention></stats><br><li>기본 공격으로 받는 피해량이 12% 감소합니다.</mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 125,
+              "item_id": 3123,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3123.png",
+              "file_name": "3123.png",
+              "name": "처형인의 대검",
+              "description": "<mainText><stats>공격력 <attention>20</attention></stats><br><li><passive>뽑아 찢기:</passive> 챔피언에게 물리 피해를 입히면 3초 동안 <status>25%의 고통스러운 상처</status>를 남깁니다. <br><br><rules><status>고통스러운 상처</status>는 치유 및 회복 효과를 감소시킵니다.</rules></mainText><br>",
+              "gold_total": 800
+            },
+            {
+              "icon_id": 207,
+              "item_id": 6632,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6632.png",
+              "file_name": "6632.png",
+              "name": "신성한 파괴자",
+              "description": "<mainText><stats>공격력 <attention>40</attention><br>체력 <attention>300</attention><br>스킬 가속 <attention>20</attention></stats><li><passive>주문 검:</passive> 스킬을 사용하고 나면 다음 기본 공격 시 추가 피해(<OnHit>적중 시</OnHit> )를 입힙니다. 대상이 챔피언일 경우 체력을 회복합니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 방어구 관통력 및 마법 관통력.<br></mainText><br>",
+              "gold_total": 3300
+            },
+            {
+              "icon_id": 152,
+              "item_id": 3340,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3340.png",
+              "file_name": "3340.png",
+              "name": "투명 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 2개까지 보유할 수 있습니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": true,
+          "status": {
+            "killParticipationRate": 36,
+            "visionWardsBoughtInGame": 1,
+            "totalMinionsKilled": 91,
+            "minionsPerMinute": 4.8
+          },
+          "primaryPerkId": 8021,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8400,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerDot.png",
+              "spell_id": 14,
+              "file_name": "SummonerDot.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "한우석",
+          "kills": 5,
+          "assists": 8,
+          "deaths": 2,
+          "kda": 6.5,
+          "champion": {
+            "championName": "Yone"
+          },
+          "champLevel": 13,
+          "items": [
+            {
+              "icon_id": 5,
+              "item_id": 1018,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1018.png",
+              "file_name": "1018.png",
+              "name": "민첩성의 망토",
+              "description": "<mainText><stats>치명타 확률 <attention>15%</attention></stats></mainText><br>",
+              "gold_total": 600
+            },
+            {
+              "icon_id": 14,
+              "item_id": 1037,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1037.png",
+              "file_name": "1037.png",
+              "name": "곡괭이",
+              "description": "<mainText><stats>공격력 <attention>25</attention></stats></mainText><br>",
+              "gold_total": 875
+            },
+            {
+              "icon_id": 15,
+              "item_id": 1038,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1038.png",
+              "file_name": "1038.png",
+              "name": "B.F. 대검",
+              "description": "<mainText><stats>공격력 <attention>40</attention></stats></mainText><br>",
+              "gold_total": 1300
+            },
+            {
+              "icon_id": 23,
+              "item_id": 1055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1055.png",
+              "file_name": "1055.png",
+              "name": "도란의 검",
+              "description": "<mainText><stats>공격력 <attention>8</attention><br>체력 <attention>80</attention></stats><br><li><passive>전쟁광:</passive> 모든 피해 흡혈 효과를 얻습니다.<br><br><rules>광역 피해를 입히거나 소환물을 통해 피해를 입힐 때는 모든 피해 흡혈이 33%로 감소합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 69,
+              "item_id": 3006,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3006.png",
+              "file_name": "3006.png",
+              "name": "광전사의 군화",
+              "description": "<mainText><stats>공격 속도 <attention>35%</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 217,
+              "item_id": 6673,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6673.png",
+              "file_name": "6673.png",
+              "name": "불멸의 철갑궁",
+              "description": "<mainText><stats>공격력 <attention>50</attention><br>공격 속도 <attention>20%</attention><br>치명타 확률 <attention>20%</attention><br>생명력 흡수 <attention>7%</attention></stats><br><li><passive>생명선:</passive> 피해를 받아 체력이 30% 아래가 될 경우 피해를 흡수하는 보호막을 얻습니다. 또한 공격력을 얻습니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 공격력 및 체력.</mainText><br>",
+              "gold_total": 3400
+            },
+            {
+              "icon_id": 152,
+              "item_id": 3340,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3340.png",
+              "file_name": "3340.png",
+              "name": "투명 와드",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 2개까지 보유할 수 있습니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": true,
+          "status": {
+            "killParticipationRate": 52,
+            "visionWardsBoughtInGame": 2,
+            "totalMinionsKilled": 145,
+            "minionsPerMinute": 7.6
+          },
+          "primaryPerkId": 8008,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8400,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerDot.png",
+              "spell_id": 14,
+              "file_name": "SummonerDot.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "드뤠이븐이라불러",
+          "kills": 8,
+          "assists": 4,
+          "deaths": 0,
+          "kda": null,
+          "champion": {
+            "championName": "Kaisa"
+          },
+          "champLevel": 11,
+          "items": [
+            {
+              "icon_id": 14,
+              "item_id": 1037,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1037.png",
+              "file_name": "1037.png",
+              "name": "곡괭이",
+              "description": "<mainText><stats>공격력 <attention>25</attention></stats></mainText><br>",
+              "gold_total": 875
+            },
+            {
+              "icon_id": 23,
+              "item_id": 1055,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1055.png",
+              "file_name": "1055.png",
+              "name": "도란의 검",
+              "description": "<mainText><stats>공격력 <attention>8</attention><br>체력 <attention>80</attention></stats><br><li><passive>전쟁광:</passive> 모든 피해 흡혈 효과를 얻습니다.<br><br><rules>광역 피해를 입히거나 소환물을 통해 피해를 입힐 때는 모든 피해 흡혈이 33%로 감소합니다.</rules></mainText><br>",
+              "gold_total": 450
+            },
+            {
+              "icon_id": 69,
+              "item_id": 3006,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3006.png",
+              "file_name": "3006.png",
+              "name": "광전사의 군화",
+              "description": "<mainText><stats>공격 속도 <attention>35%</attention><br>이동 속도 <attention>45</attention></stats></mainText><br>",
+              "gold_total": 1100
+            },
+            {
+              "icon_id": 83,
+              "item_id": 3046,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3046.png",
+              "file_name": "3046.png",
+              "name": "유령 무희",
+              "description": "<mainText><stats>공격력 <attention>20</attention><br>공격 속도 <attention>25%</attention><br>치명타 확률 <attention>20%</attention><br>이동 속도 <attention>7%</attention></stats><br><li><passive>망령의 왈츠:</passive> 기본 공격을 가하면 <status>유체화</status> 상태가 되어 이동 속도가 중첩되어 상승합니다. 또한 기본 공격을 4회 가하면 망령의 왈츠 효과가 공격 속도를 상승시킵니다.<br><br><rules><status>유체화</status> 상태인 유닛은 다른 유닛과 충돌하지 않습니다.</rules></mainText><br>",
+              "gold_total": 2600
+            },
+            {
+              "icon_id": 216,
+              "item_id": 6672,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6672.png",
+              "file_name": "6672.png",
+              "name": "크라켄 학살자",
+              "description": "<mainText><stats>공격력 <attention>65</attention><br>공격 속도 <attention>25%</attention><br>치명타 확률 <attention>20%</attention></stats><br><li><passive>벼락:</passive> 세 번째 기본 공격을 가할 때마다 고정 피해를 추가로 입힙니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 공격 속도.</mainText><br>",
+              "gold_total": 3400
+            },
+            null,
+            {
+              "icon_id": 153,
+              "item_id": 3363,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3363.png",
+              "file_name": "3363.png",
+              "name": "망원형 개조",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 누구나 볼 수 있고 쉽게 파괴 가능한 와드를 설치해 주변 지역을 드러냅니다. 최대 4000유닛 거리까지 설치 가능합니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": true,
+          "status": {
+            "killParticipationRate": 48,
+            "visionWardsBoughtInGame": 0,
+            "totalMinionsKilled": 154,
+            "minionsPerMinute": 8.1
+          },
+          "primaryPerkId": 8008,
+          "mostMultiKills": "더블킬",
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerHeal.png",
+              "spell_id": 7,
+              "file_name": "SummonerHeal.png"
+            }
+          ]
+        },
+        {
+          "summonerName": "휴몬계정",
+          "kills": 1,
+          "assists": 10,
+          "deaths": 3,
+          "kda": 3.67,
+          "champion": {
+            "championName": "Seraphine"
+          },
+          "champLevel": 10,
+          "items": [
+            {
+              "icon_id": 1,
+              "item_id": 1001,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/1001.png",
+              "file_name": "1001.png",
+              "name": "장화",
+              "description": "<mainText><stats>이동 속도 <attention>25</attention></stats></mainText><br>",
+              "gold_total": 300
+            },
+            {
+              "icon_id": 168,
+              "item_id": 3853,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3853.png",
+              "file_name": "3853.png",
+              "name": "얼음 정수의 파편",
+              "description": "<mainText><stats>주문력 <attention>40</attention><br>체력 <attention>75</attention><br>기본 마나 재생 <attention>115%</attention><br>10초당 골드 <attention>3</attention></stats><br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 0개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. <br><br><active>사용 시 -</active> <active>와드:</active> 아군 모두에게 주변 지역을 밝혀 주는 <keywordStealth>투명</keywordStealth> 와드 하나를 지면에 설치합니다. 투명 와드는 최대 4개까지 보유할 수 있으며 상점 방문 시 다시 채워집니다. </mainText><br>",
+              "gold_total": 400
+            },
+            {
+              "icon_id": 208,
+              "item_id": 6653,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/6653.png",
+              "file_name": "6653.png",
+              "name": "리안드리의 고뇌",
+              "description": "<mainText><stats>주문력 <attention>80</attention><br>마나 <attention>600</attention><br>스킬 가속 <attention>20</attention></stats><br><li><passive>고뇌:</passive> 대상의 추가 체력에 비례해 챔피언에게 추가 마법 피해를 입힙니다.<li><passive>고통:</passive> 스킬로 피해를 입히면 일정 시간 동안 적을 불태웁니다.<br><br><rarityMythic>신화급 기본 지속 효과:</rarityMythic> 다른 모든 <rarityLegendary>전설급</rarityLegendary> 아이템에 스킬 가속.</mainText><br>",
+              "gold_total": 3200
+            },
+            null,
+            null,
+            null,
+            {
+              "icon_id": 154,
+              "item_id": 3364,
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/itemIcon/3364.png",
+              "file_name": "3364.png",
+              "name": "예언자의 렌즈",
+              "description": "<mainText><stats></stats><active>사용 시 - 장신구:</active> 근처를 수색해 적 유닛이 숨어 있으면 경고를 보내며 주변의 투명한 덫을 드러냅니다. 또한 적의 투명 와드를 드러내고 잠시 무력화시킵니다.</mainText><br>",
+              "gold_total": 0
+            }
+          ],
+          "teamId": 200,
+          "win": true,
+          "status": {
+            "killParticipationRate": 44,
+            "visionWardsBoughtInGame": 4,
+            "totalMinionsKilled": 12,
+            "minionsPerMinute": 0.6
+          },
+          "primaryPerkId": 8214,
+          "mostMultiKills": null,
+          "subPerkStyleId": 8300,
+          "summonerSpells": [
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerExhaust.png",
+              "spell_id": 3,
+              "file_name": "SummonerExhaust.png"
+            },
+            {
+              "image_url": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/spellIcon/SummonerFlash.png",
+              "spell_id": 4,
+              "file_name": "SummonerFlash.png"
+            }
+          ]
+        }
+      ],
+      "primaryPerks": [
+        {
+          "id": 14,
+          "perk_id": 8128,
+          "name": "어둠의 수확",
+          "long_desc": "체력이 50%보다 낮은 챔피언에게 피해를 입히면 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>적응형 피해</lol-uikit-tooltipped-keyword>를 추가로 입히고 해당 챔피언의 영혼을 수확해 어둠의 수확 효과의 피해량이 영구적으로 5만큼 증가합니다.<br><br>어둠의 수확 피해량: 20~60 (레벨에 비례) (+영혼당 피해량 5) (+추가 공격력의 0.25) (+주문력의 0.15)<br>재사용 대기시간: 45초 (처치 관여 시 1.5초로 초기화)",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png"
+        },
+        {
+          "id": 19,
+          "perk_id": 8214,
+          "name": "콩콩이 소환",
+          "long_desc": "적 챔피언을 기본 공격 또는 스킬로 공격하면 콩콩이를 보내 레벨에 따라 10~40(+<scaleAP>주문력의 0.1</scaleAP>)(+<scaleAD>추가 공격력의 0.15</scaleAD>)만큼 피해를 입힙니다.<br><br>아군에게 스킬로 강화 효과 또는 보호막을 적용하면 콩콩이를 보내 레벨에 따라 30~75(+<scaleAP>주문력의 0.22</scaleAP>)(+<scaleAD>추가 공격력의 0.35</scaleAD>)만큼 피해를 흡수하는 보호막을 씌웁니다.<br><br>콩콩이는 자신에게 돌아오기 전까지 다른 대상에게 보낼 수 없습니다.",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/SummonAery/SummonAery.png"
+        },
+        {
+          "id": 22,
+          "perk_id": 8008,
+          "name": "치명적 속도",
+          "long_desc": "적 챔피언을 기본 공격하면 6초 동안 공격 속도가 [60%~90%] (근접) 또는 [30%~54%] (원거리) 상승합니다. 이 효과는 6회까지 중첩됩니다.<br><br>최대로 중첩되면 공격 속도가 2.5를 초과할 수 있으며 공격 사거리가 50 (근접) 또는 75 (원거리) 상승합니다.",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+        },
+        {
+          "id": 24,
+          "perk_id": 8010,
+          "name": "정복자",
+          "long_desc": "적 챔피언에게 기본 공격 또는 스킬로 피해를 입히면 5초 동안 정복자 중첩을 2만큼 얻어 중첩마다 2~4.5의 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>적응형 능력치</font></lol-uikit-tooltipped-keyword>를 얻습니다. 최대 12회까지 중첩됩니다. 원거리 챔피언은 기본 공격으로 중첩을 1만 획득할 수 있습니다.<br><br>최대로 중첩되면 챔피언에게 입힌 피해량의 8%만큼 체력을 회복합니다. (원거리 챔피언은 5%)",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Precision/Conqueror/Conqueror.png"
+        },
+        {
+          "id": 29,
+          "perk_id": 8005,
+          "name": "집중 공격",
+          "long_desc": "적 챔피언에게 연속으로 3회 기본 공격을 가하면 레벨에 따라 40 ~ 180의 추가 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>를 입히고 적의 약점을 노출시킵니다. 약점이 노출된 적은 6초 동안 모든 상대에게서 8 ~ 12%의 추가 피해를 받습니다.",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png"
+        },
+        {
+          "id": 46,
+          "perk_id": 8439,
+          "name": "여진",
+          "long_desc": "적을 이동 불가 상태로 만들면 2.5초 동안 35+추가 방어력 및 마법 저항력의 80%만큼 방어력과 마법 저항력이 증가하며 폭발이 일어나 근처 적에게 마법 피해를 줍니다.<br><br>피해량: 25~120 (+추가 체력의 8%)<br>재사용 대기시간: 20초<br><br>여진 추가 저항력: 80~150 (레벨에 비례)<br>",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png"
+        },
+        {
+          "id": 57,
+          "perk_id": 8021,
+          "name": "기민한 발놀림",
+          "long_desc": "공격 또는 이동 시 충전 중첩이 쌓입니다. 중첩이 100회에 도달하면 충전 상태로 다음 공격을 할 수 있습니다.<br><br>충전 상태로 공격 시 10~100(+추가 공격력의 0.3, +주문력의 0.2)에 해당하는 체력이 회복되며 1초 동안 <speed>이동 속도가 20%</speed> 증가합니다.<br><br>미니언으로부터 받는 회복 효과는 원거리 챔피언의 경우 10%, 근접 챔피언의 경우 20% 적용됩니다.",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png"
+        },
+        {
+          "id": 93,
+          "perk_id": 8229,
+          "name": "신비로운 유성",
+          "long_desc": "챔피언에게 스킬로 피해를 주면 해당 위치에 유성을 불러옵니다. 신비로운 유성이 재사용 대기 중일 경우 남은 재사용 대기시간이 감소합니다.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>: 레벨에 따라 30 ~ 100 (<scaleAP>+주문력의 0.2</scaleAP> 및 <scaleAD>+추가 공격력의 0.35</scaleAD>)<br>재사용 대기시간: 20 ~ 8초<br><rules><br>재사용 대기시간 감소:<br>단일 대상 스킬: 20%<br>광역 스킬: 10%<br>지속 피해 스킬: 5%<br></rules>",
+          "icon_path": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png"
+        }
+      ],
+      "teams": [
+        {
+          "bans": [
+            {
+              "championId": 57,
+              "pickTurn": 1
+            },
+            {
+              "championId": 360,
+              "pickTurn": 2
+            },
+            {
+              "championId": -1,
+              "pickTurn": 3
+            },
+            {
+              "championId": 7,
+              "pickTurn": 4
+            },
+            {
+              "championId": 875,
+              "pickTurn": 5
+            }
+          ],
+          "objectives": {
+            "baron": {
+              "first": false,
+              "kills": 0
+            },
+            "champion": {
+              "first": true,
+              "kills": 10
+            },
+            "dragon": {
+              "first": false,
+              "kills": 0
+            },
+            "inhibitor": {
+              "first": false,
+              "kills": 0
+            },
+            "riftHerald": {
+              "first": false,
+              "kills": 0
+            },
+            "tower": {
+              "first": false,
+              "kills": 0
+            }
+          },
+          "teamId": 100,
+          "win": false
+        },
+        {
+          "bans": [
+            {
+              "championId": 114,
+              "pickTurn": 6
+            },
+            {
+              "championId": 238,
+              "pickTurn": 7
+            },
+            {
+              "championId": 53,
+              "pickTurn": 8
+            },
+            {
+              "championId": 122,
+              "pickTurn": 9
+            },
+            {
+              "championId": 74,
+              "pickTurn": 10
+            }
+          ],
+          "objectives": {
+            "baron": {
+              "first": false,
+              "kills": 0
+            },
+            "champion": {
+              "first": false,
+              "kills": 25
+            },
+            "dragon": {
+              "first": true,
+              "kills": 1
+            },
+            "inhibitor": {
+              "first": true,
+              "kills": 1
+            },
+            "riftHerald": {
+              "first": true,
+              "kills": 2
+            },
+            "tower": {
+              "first": true,
+              "kills": 5
+            }
+          },
+          "teamId": 200,
+          "win": true
+        }
+      ]
+    }
+  ]
+}
