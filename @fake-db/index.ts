@@ -1,7 +1,7 @@
-import MATCH from './matchData.json'
+import MATCH from './data.json'
 
 const matchDb = () => {
-  return MATCH as SummonerInfoType
+  // return MATCH as SummonerInfoType
 }
 
 export default matchDb

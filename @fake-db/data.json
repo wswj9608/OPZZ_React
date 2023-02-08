@@ -1,7 +1,11 @@
 {
-  "name": "한우석",
-  "summonerLevel": 436,
-  "riotLeagueInfo": [
+  "summoner": {
+    "id": 0,
+    "name": "한우석",
+    "summonerLevel": 436,
+    "summonerIconImageUrl": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/profileicon/1.png"
+  },
+  "leagues": [
     {
       "queueType": "RANKED_SOLO_5x5",
       "leaguePoints": 75,
@@ -19,7 +23,107 @@
       "losses": 90
     }
   ],
-  "summonerIconImageUrl": "https://s3.ap-northeast-2.amazonaws.com/opzz.back/profileicon/1.png",
+  "champions": [
+    {
+      "id": 1,
+      "championName": "Ahri",
+      "championIcon": "",
+      "totalMinionsKilled": 181.9,
+      "minionsPerMinute": 6.7,
+      "kda": 1.81,
+      "averageKills": 6.4,
+      "averageDeaths": 7.2,
+      "averageAssists": 6.8,
+      "winningRate": 55,
+      "totalMatchNumber": 94
+    },
+    {
+      "id": 2,
+      "championName": "Ashe",
+      "championIcon": "",
+      "totalMinionsKilled": 181.9,
+      "minionsPerMinute": 6.7,
+      "kda": 1.81,
+      "averageKills": 6.4,
+      "averageDeaths": 7.2,
+      "averageAssists": 6.8,
+      "winningRate": 55,
+      "totalMatchNumber": 94
+    },
+    {
+      "id": 3,
+      "championName": "Cassiopeia",
+      "championIcon": "",
+      "totalMinionsKilled": 181.9,
+      "minionsPerMinute": 6.7,
+      "kda": 1.81,
+      "averageKills": 6.4,
+      "averageDeaths": 7.2,
+      "averageAssists": 6.8,
+      "winningRate": 55,
+      "totalMatchNumber": 94
+    },
+    {
+      "id": 4,
+      "championName": "Elise",
+      "championIcon": "",
+      "totalMinionsKilled": 181.9,
+      "minionsPerMinute": 6.7,
+      "kda": 1.81,
+      "averageKills": 6.4,
+      "averageDeaths": 7.2,
+      "averageAssists": 6.8,
+      "winningRate": 55,
+      "totalMatchNumber": 94
+    }
+  ],
+  "statistics": {
+    "totalMatchNumber": 20,
+    "totalWins": 10,
+    "totalLosses": 9,
+    "averageKills": 5.1,
+    "averageDeaths": 6.1,
+    "averageAssists": 7.2,
+    "averageKda": 2.02,
+    "killParticipationRate": 48,
+    "playedChampion": [
+      {
+        "championName": "KSante",
+        "championIcon": "",
+        "winningRate": 50,
+        "wins": 3,
+        "losses": 3,
+        "kda": 1.4
+      }
+    ],
+    "preferredPosition": [
+      {
+        "line": "top",
+        "lineIcon": "",
+        "selectionRate": 10
+      },
+      {
+        "line": "jungle",
+        "lineIcon": "",
+        "selectionRate": 20
+      },
+      {
+        "line": "mid",
+        "lineIcon": "",
+        "selectionRate": 60
+      },
+      {
+        "line": "adc",
+        "lineIcon": "",
+        "selectionRate": 10
+      },
+      {
+        "line": "sup",
+        "lineIcon": "",
+        "selectionRate": 0
+      }
+    ]
+  },
   "matchs": [
     {
       "gameId": 6345956866,

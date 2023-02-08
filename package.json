@@ -6,7 +6,8 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "npx json-server ./@fake-db/data.json --port 4000"
   },
   "dependencies": {
     "axios": "^0.27.2",
