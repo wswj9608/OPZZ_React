@@ -13,9 +13,7 @@ const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
         <div className="image-box">
           <Image className="icon" src={summonerIconImageUrl} alt="profile" width="100" height="100" />
           <div className="level">
-            <Text size="12px" color="#FFF">
-              {summonerLevel}
-            </Text>
+            <Text color="#FFF">{summonerLevel}</Text>
           </div>
         </div>
         <div className="profile-state">
@@ -42,7 +40,7 @@ const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
             </Text>
           </div>
           <div className="ranking">
-            <Text size="12px" color="#7b7a8e">
+            <Text color="#7b7a8e">
               래더 랭킹 <span>156,676</span> 위 (상위 3.71%)
             </Text>
           </div>
@@ -53,9 +51,7 @@ const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
               롤 몇 시간 했는지 궁금해?
             </Button>
           </div>
-          <Text size="12px" color="#7b7a8e">
-            최근 업데이트: 5일 전
-          </Text>
+          <Text color="#7b7a8e">최근 업데이트: 5일 전</Text>
         </div>
       </div>
     </ProfileWrapper>

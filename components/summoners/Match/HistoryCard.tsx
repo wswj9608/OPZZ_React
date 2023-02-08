@@ -110,9 +110,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
                 {kills} <span className="slash">/</span> <span className="death">{deaths}</span>{' '}
                 <span className="slash">/</span> {assists}
               </Text>
-              <Text size="12px" color="#7b7a8e">
-                {`${kda}:1 평점`}
-              </Text>
+              <Text color="#7b7a8e">{`${kda}:1 평점`}</Text>
             </div>
             <div className="status">
               <Text size="11px" color="#e84057">
@@ -143,13 +141,11 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             </ItemsWrapper>
             {mostMultiKills && (
               <div className="most-kill-badge">
-                <Text size="12px" color="#FFF">
-                  {mostMultiKills}
-                </Text>
+                <Text color="#FFF">{mostMultiKills}</Text>
               </div>
             )}
             {/* <div className="mvp-badge">
-            <Text size="12px" color="#FFF">
+            <Text   color="#FFF">
               MVP
             </Text>
           </div> */}

@@ -48,9 +48,7 @@ const League = ({ data }: LeagueProps) => {
           <Text color={gray[900]} size={isSoloRank ? '20px' : '14px'} weight="bold">
             {getLeagueString()}
           </Text>
-          <Text color={gray[500]} size="12px">
-            {`${leaguePoints}LP`}
-          </Text>
+          <Text>{`${leaguePoints}LP`}</Text>
         </div>
         <div className="win-lose">
           <Text>{`${wins}승 ${losses}패`}</Text>

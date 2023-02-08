@@ -1,3 +1,4 @@
+import { gray } from '@/styles/palette'
 import React from 'react'
 import styled from 'styled-components'
 import { TextProps } from './types'
@@ -6,9 +7,9 @@ import { TextProps } from './types'
 // type DisplaySizeType = 'regular32' | 'bold32'
 
 const Text = ({
-  size = '14px',
+  size = '12px',
   weight = 'regular',
-  color = '#000',
+  color = gray[500],
   children,
   ...rest
 }: TextProps): JSX.Element | null => {
