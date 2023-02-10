@@ -1,10 +1,32 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Button, Text } from '@/elements'
 import { ProfileProps } from './types'
+import { getSummonerProfileToAxios } from '@/lib/api/summoner'
+import { useSummonerProfile } from '@/atoms/summoners'
+import { useRouter } from 'next/router'
 
-const Profile = ({ summonerProfile: summonerProfile }: ProfileProps) => {
+const SummonerProfile = () => {
+  const { query, isReady } = useRouter()
+  const { summonerName } = query
+  const [summonerProfile, setSummonerProfile] = useSummonerProfile()
+
+  const getSummonerProfile = async () => {
+    const summonerProfile = await getSummonerProfileToAxios({ summonerName })
+
+    setSummonerProfile(summonerProfile)
+  }
+
+  useEffect(() => {
+    if (!summonerName) return
+    if (!isReady) return
+
+    getSummonerProfile()
+  }, [summonerName, isReady])
+
+  if (!summonerProfile) return null
+
   const { summonerIconImageUrl, summonerLevel, name } = summonerProfile
 
   return (
@@ -128,4 +150,4 @@ const ProfileWrapper = styled.div`
   }
 `
 
-export default Profile
+export default SummonerProfile

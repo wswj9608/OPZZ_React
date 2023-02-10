@@ -100,8 +100,26 @@ interface SummonerMatchsType {
   }[]
 }
 
-interface SummonerInfoType extends SummonerProfileType {
-  summonerLevel: number
-  riotLeagueInfo: LeagueDataType[]
-  matchs: SummonerMatchsType[]
+interface MatchStatisticsType {
+  totalMatchNumber: number
+  totalWins: number
+  totalLosses: number
+  averageKills: number
+  averageDeaths: number
+  averageAssists: number
+  averageKda: number
+  killParticipationRate: number
+  playedChampions: {
+    championName: string
+    championIcon: string
+    winningRate: number
+    wins: number
+    losses: number
+    kda: number
+  }[]
+  preferredPositions: {
+    line: string
+    lineIcon: string
+    selectionRate: number
+  }[]
 }

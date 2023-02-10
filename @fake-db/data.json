@@ -86,17 +86,33 @@
     "averageAssists": 7.2,
     "averageKda": 2.02,
     "killParticipationRate": 48,
-    "playedChampion": [
+    "playedChampions": [
       {
         "championName": "KSante",
         "championIcon": "",
         "winningRate": 50,
         "wins": 3,
         "losses": 3,
+        "kda": 6.4
+      },
+      {
+        "championName": "Ahri",
+        "championIcon": "",
+        "winningRate": 70,
+        "wins": 3,
+        "losses": 3,
         "kda": 1.4
+      },
+      {
+        "championName": "Ashe",
+        "championIcon": "",
+        "winningRate": 90,
+        "wins": 3,
+        "losses": 3,
+        "kda": 10.4
       }
     ],
-    "preferredPosition": [
+    "preferredPositions": [
       {
         "line": "top",
         "lineIcon": "",

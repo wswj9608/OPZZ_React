@@ -10,6 +10,8 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
   const { summonerName } = query
   const { gameDuration, gameDatas, gameEndTimestamp } = match
+
+  console.log(match.gameDatas.find(data => data.summonerName === summonerName))
   const {
     champion,
     champLevel,

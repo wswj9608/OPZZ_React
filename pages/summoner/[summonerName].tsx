@@ -1,47 +1,36 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
-import { getSummonerInfo } from '@/lib/api/summoner'
-import { useSummonerLeagues, useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
-import Profile from '@/components/summoners/Profile'
+import { getSummonerProfileToAxios } from '@/lib/api/summoner'
+import { useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
+import SummonerProfile from '@/components/summoners/SummonerProfile'
 import Match from '@/components/summoners/Match'
 import League from '@/components/summoners/League'
 import matchDb from '@/@fake-db'
 import MatchStatistics from '@/components/summoners/MatchStatistics'
+import { getLeaguesToAxios } from '@/lib/api/leauges'
 
 const Summoners = () => {
-  const { query, isReady } = useRouter()
-  const { summonerName } = query
-  const [summonerProfile, setSummonerProfile] = useSummonerProfile()
   const [, setSummonerMatchs] = useSummonerMatchs()
   const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
-  const matchData = matchDb()
 
-  const getSummoner = async () => {
-    // const res = await getSummonerInfo({ summonerName })
-    const { summonerIconImageUrl, summonerLevel, name, matchs, riotLeagueInfo } = matchData
-
-    setSummonerProfile({ summonerIconImageUrl, summonerLevel, name })
-    setSummonerMatchs(matchs)
-    setSummonerLeagues(riotLeagueInfo)
+  const getLeagues = async () => {
+    const res = await getLeaguesToAxios()
+    setSummonerLeagues(res)
   }
 
   useEffect(() => {
-    if (!summonerName) return
-    if (!isReady) return
-
-    getSummoner()
-  }, [summonerName, isReady])
-
-  if (!summonerProfile) return null
+    getLeagues()
+  }, [])
+  // const matchData = matchDb()
 
   return (
     <SummonersWrapper>
-      <Profile summonerProfile={summonerProfile} />
+      <SummonerProfile />
       <UserHistoryWrappser>
         <div className="user-info">
           {summonerLeagues?.map(league => (
-            <League data={league} />
+            <League key={league.queueType} data={league} />
           ))}
         </div>
         <div>

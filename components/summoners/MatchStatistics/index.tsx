@@ -1,77 +1,82 @@
+import { useSummonerMatchStatistics } from '@/atoms/summoners'
 import { Text } from '@/elements'
+import { getStatisticsToAxios } from '@/lib/api/statistics'
 import { blue, gray, red } from '@/styles/palette'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 
 const MatchStatistics = () => {
+  const [statistics, setStatistics] = useSummonerMatchStatistics()
+
+  const getStatistics = async () => {
+    const res = await getStatisticsToAxios()
+    setStatistics(res)
+  }
+
+  useEffect(() => {
+    getStatistics()
+  }, [])
+
+  if (!statistics) return null
+
+  const {
+    totalMatchNumber,
+    totalWins,
+    totalLosses,
+    averageKills,
+    averageDeaths,
+    averageAssists,
+    averageKda,
+    killParticipationRate,
+    playedChampions,
+    preferredPositions,
+  } = statistics
+
   return (
     <StatisticsWrapper>
       <RecordStatistics>
-        <Text>20전 10승 9패</Text>
+        <Text>
+          {totalMatchNumber}전 {totalWins}승 {totalLosses}패
+        </Text>
         <div className="statistics">
           <div className="chart" />
           <div className="kda-statistics">
             <Text>
-              5.1 / <span style={{ color: red[600] }}>6.1</span> / 7.2
+              {averageKills} / <span style={{ color: red[600] }}>{averageDeaths}</span> / {averageAssists}
             </Text>
             <Text size="20px" weight="bold" color={gray[900]}>
-              2.02:1
+              {averageKda}:1
             </Text>
-            <Text color={red[600]}>킬관여 48%</Text>
+            <Text color={red[600]}>킬관여 {killParticipationRate}%</Text>
           </div>
         </div>
       </RecordStatistics>
       <PlayedChampion>
-        <Text>플레이한 챔피언 (최근 20게임)</Text>
+        <Text>플레이한 챔피언 (최근 {totalMatchNumber}게임)</Text>
         <div className="container">
-          <ChampStatistics>
-            <div className="champ-icon" />
-            <div className="statistics">
-              <Text color={red[600]}>50%</Text>
-              <Text color={gray[400]}>(3승 3패)</Text>
-              <Text>1.4 평점</Text>
-            </div>
-          </ChampStatistics>
-          <ChampStatistics>
-            <div className="champ-icon" />
-            <div className="statistics">
-              <Text color={red[600]}>50%</Text>
-              <Text color={gray[400]}>(3승 3패)</Text>
-              <Text>1.4 평점</Text>
-            </div>
-          </ChampStatistics>
-          <ChampStatistics>
-            <div className="champ-icon" />
-            <div className="statistics">
-              <Text color={red[600]}>50%</Text>
-              <Text color={gray[400]}>(3승 3패)</Text>
-              <Text>1.4 평점</Text>
-            </div>
-          </ChampStatistics>
+          {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
+            <ChampStatistics key={idx}>
+              <div className="champ-icon" />
+              <div className="statistics">
+                <Text color={red[600]}>{winningRate}%</Text>
+                <Text color={gray[400]}>
+                  ({wins}승 {losses}패)
+                </Text>
+                <Text>{kda} 평점</Text>
+              </div>
+            </ChampStatistics>
+          ))}
         </div>
       </PlayedChampion>
       <PreferredPosition>
         <Text>선호 포지션 (랭크)</Text>
         <div className="container">
-          <div>
-            <div className="bar" />
-            <div className="line-icon" />
-          </div>
-          <div>
-            <div className="bar" />
-            <div className="line-icon" />
-          </div>
-          <div>
-            <div className="bar" />
-            <div className="line-icon" />
-          </div>
-          <div>
-            <div className="bar" />
-            <div className="line-icon" />
-          </div>
-          <div>
-            <div className="bar" />
-            <div className="line-icon" />
-          </div>
+          {preferredPositions?.map(position => (
+            <div>
+              <div className="bar" />
+              <div className="line-icon" />
+            </div>
+          ))}
         </div>
       </PreferredPosition>
     </StatisticsWrapper>
