@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
 import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
-import { main, red } from '@/styles/palette'
+import { gray, main, red } from '@/styles/palette'
+import { blueArrowIcon, redArrowIcon } from '@/assets/images'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
@@ -202,7 +203,9 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           </div>
         </div>
       </GameParticipantsWrapper>
-      <DetailButton isWin={win}></DetailButton>
+      <DetailButton isWin={win}>
+        <Image src={win ? blueArrowIcon : redArrowIcon} width={24} height={24} />
+      </DetailButton>
     </HistoryCardWrapper>
   )
 }
@@ -403,7 +406,14 @@ const GameParticipantsWrapper = styled.div`
 const DetailButton = styled.button<{ isWin: boolean }>`
   min-width: 40px;
   border-radius: 0px 4px 4px 0px;
-  background-color: ${({ isWin }) => (isWin ? '#2f426e' : '#703c47')};
+  background-color: ${({ isWin }) => (isWin ? main[200] : red[200])};
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+
+  &:hover {
+    background-color: ${({ isWin }) => (isWin ? main[100] : red[100])};
+  }
 `
 // const GameInfoWrapper = styled.div``
 

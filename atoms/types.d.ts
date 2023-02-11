@@ -123,3 +123,17 @@ interface MatchStatisticsType {
     selectionRate: number
   }[]
 }
+
+interface ChampionStatisticsType {
+  id: number
+  championName: string
+  championIcon: string
+  totalMinionsKilled: number
+  minionsPerMinute: number
+  kda: number
+  averageKills: number
+  averageDeaths: number
+  averageAssists: number
+  winningRate: number
+  totalMatchNumber: number
+}

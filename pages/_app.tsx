@@ -1,8 +1,9 @@
-import type { AppProps } from "next/app"
-import styled from "styled-components"
-import React from "react"
-import Head from "next/head"
-import { RecoilRoot } from "recoil"
+import type { AppProps } from 'next/app'
+import styled from 'styled-components'
+import React from 'react'
+import Head from 'next/head'
+import { RecoilRoot } from 'recoil'
+import '@/styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

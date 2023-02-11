@@ -1,27 +1,48 @@
+import { gray } from '@/styles/palette'
 import React from 'react'
 import styled from 'styled-components'
 import { ButtonProps } from './types'
 
-const Button = ({ buttonType, color = '#4171d6', fontColor = '#FFF', onClick, children }: ButtonProps) => {
-  if (buttonType === 'A') {
+const Button = ({ buttonType, color = '#4171d6', fontColor = '#FFF', children, ...rest }: ButtonProps) => {
+  if (buttonType === 'category') {
     return (
-      <ButtonA color={color} fontColor={fontColor}>
+      <CategoryButton color={color} fontColor={fontColor} {...rest}>
         {children}
-      </ButtonA>
+      </CategoryButton>
+    )
+  }
+
+  if (buttonType === 'fill') {
+    return (
+      <FillButton color={color} fontColor={fontColor} {...rest}>
+        {children}
+      </FillButton>
     )
   }
 
   return (
-    <ButtonB color={color} fontColor={fontColor}>
+    <LineButton color={color} fontColor={fontColor} {...rest}>
       {children}
-    </ButtonB>
+    </LineButton>
   )
 }
 
-const ButtonA = styled.button<{ color: string; fontColor: string }>`
+const CategoryButton = styled.button<{ color: string; fontColor: string }>`
   cursor: pointer;
-  padding: 0 14px;
+  color: ${({ fontColor }) => fontColor};
+  padding: 0 12px;
+  border-radius: 4px;
+  background: none;
+
+  &:hover {
+    background-color: ${gray[100]};
+  }
+`
+
+const FillButton = styled.button<{ color: string; fontColor: string }>`
+  cursor: pointer;
   height: 40px;
+  padding: 0 14px;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
@@ -29,7 +50,7 @@ const ButtonA = styled.button<{ color: string; fontColor: string }>`
   color: ${({ fontColor }) => fontColor};
 `
 
-const ButtonB = styled.button<{ color: string; fontColor: string }>`
+const LineButton = styled.button<{ color: string; fontColor: string }>`
   cursor: pointer;
   padding: 0 14px;
   height: 40px;

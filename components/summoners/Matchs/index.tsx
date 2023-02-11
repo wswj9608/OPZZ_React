@@ -5,7 +5,7 @@ import { useSummonerMatchs } from '@/atoms/summoners'
 import { getMatchsToAxios } from '@/lib/api/matchs'
 import { useRouter } from 'next/router'
 
-const Match = () => {
+const Matchs = () => {
   const { isReady } = useRouter()
   const [matchs, setMatchs] = useSummonerMatchs()
 
@@ -35,4 +35,4 @@ const MatchWrapper = styled.div`
   margin-top: 8px;
 `
 
-export default Match
+export default Matchs

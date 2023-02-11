@@ -5,7 +5,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  buttonType: 'A' | 'B'
+  buttonType: 'fill' | 'line' | 'category'
   color?: string
   fontColor?: string
 }

@@ -67,9 +67,9 @@ const SummonerProfile = () => {
             </Text>
           </div>
           <div className="button-wrap">
-            <Button buttonType="A">전적 갱신</Button>
-            <Button buttonType="B">티어 그래프</Button>
-            <Button buttonType="A" color="#7d59ea">
+            <Button buttonType="fill">전적 갱신</Button>
+            <Button buttonType="line">티어 그래프</Button>
+            <Button buttonType="fill" color="#7d59ea">
               롤 몇 시간 했는지 궁금해?
             </Button>
           </div>

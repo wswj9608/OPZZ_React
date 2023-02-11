@@ -5,3 +5,9 @@ export const getStatisticsToAxios = async () => {
 
   return res.data
 }
+
+export const getChampionStatisticsToAxios = async () => {
+  const res = await client.get('champions')
+
+  return res.data
+}

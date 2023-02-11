@@ -20,6 +20,11 @@ const summonerMatchStatistics = atom<MatchStatisticsType | null>({
   default: null,
 })
 
+const summonerChampionStatistics = atom<ChampionStatisticsType[] | null>({
+  key: 'summonerChampionStatistics',
+  default: null,
+})
+
 export const useSummonerProfile = () => {
   return useRecoilState(summonerProfile)
 }
@@ -34,4 +39,8 @@ export const useSummonerLeagues = () => {
 
 export const useSummonerMatchStatistics = () => {
   return useRecoilState(summonerMatchStatistics)
+}
+
+export const useSummonerChampionStatistics = () => {
+  return useRecoilState(summonerChampionStatistics)
 }

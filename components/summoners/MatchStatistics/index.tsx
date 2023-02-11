@@ -4,6 +4,7 @@ import { getStatisticsToAxios } from '@/lib/api/statistics'
 import { blue, gray, red } from '@/styles/palette'
 import { useEffect } from 'react'
 import styled from 'styled-components'
+import MatchHeader from '../Matchs/MatchHeader'
 
 const MatchStatistics = () => {
   const [statistics, setStatistics] = useSummonerMatchStatistics()
@@ -33,53 +34,55 @@ const MatchStatistics = () => {
   } = statistics
 
   return (
-    <StatisticsWrapper>
-      <RecordStatistics>
-        <Text>
-          {totalMatchNumber}전 {totalWins}승 {totalLosses}패
-        </Text>
-        <div className="statistics">
-          <div className="chart" />
-          <div className="kda-statistics">
-            <Text>
-              {averageKills} / <span style={{ color: red[600] }}>{averageDeaths}</span> / {averageAssists}
-            </Text>
-            <Text size="20px" weight="bold" color={gray[900]}>
-              {averageKda}:1
-            </Text>
-            <Text color={red[600]}>킬관여 {killParticipationRate}%</Text>
-          </div>
-        </div>
-      </RecordStatistics>
-      <PlayedChampion>
-        <Text>플레이한 챔피언 (최근 {totalMatchNumber}게임)</Text>
-        <div className="container">
-          {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
-            <ChampStatistics key={idx}>
-              <div className="champ-icon" />
-              <div className="statistics">
-                <Text color={red[600]}>{winningRate}%</Text>
-                <Text color={gray[400]}>
-                  ({wins}승 {losses}패)
-                </Text>
-                <Text>{kda} 평점</Text>
-              </div>
-            </ChampStatistics>
-          ))}
-        </div>
-      </PlayedChampion>
-      <PreferredPosition>
-        <Text>선호 포지션 (랭크)</Text>
-        <div className="container">
-          {preferredPositions?.map(position => (
-            <div>
-              <div className="bar" />
-              <div className="line-icon" />
+    <>
+      <StatisticsWrapper>
+        <RecordStatistics>
+          <Text>
+            {totalMatchNumber}전 {totalWins}승 {totalLosses}패
+          </Text>
+          <div className="statistics">
+            <div className="chart" />
+            <div className="kda-statistics">
+              <Text>
+                {averageKills} / <span style={{ color: red[600] }}>{averageDeaths}</span> / {averageAssists}
+              </Text>
+              <Text size="20px" weight="bold" color={gray[900]}>
+                {averageKda}:1
+              </Text>
+              <Text color={red[600]}>킬관여 {killParticipationRate}%</Text>
             </div>
-          ))}
-        </div>
-      </PreferredPosition>
-    </StatisticsWrapper>
+          </div>
+        </RecordStatistics>
+        <PlayedChampion>
+          <Text>플레이한 챔피언 (최근 {totalMatchNumber}게임)</Text>
+          <div className="container">
+            {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
+              <ChampStatistics key={idx}>
+                <div className="champ-icon" />
+                <div className="statistics">
+                  <Text color={red[600]}>{winningRate}%</Text>
+                  <Text color={gray[400]}>
+                    ({wins}승 {losses}패)
+                  </Text>
+                  <Text>{kda} 평점</Text>
+                </div>
+              </ChampStatistics>
+            ))}
+          </div>
+        </PlayedChampion>
+        <PreferredPosition>
+          <Text>선호 포지션 (랭크)</Text>
+          <div className="container">
+            {preferredPositions?.map(position => (
+              <div key={position.line}>
+                <div className="bar" />
+                <div className="line-icon" />
+              </div>
+            ))}
+          </div>
+        </PreferredPosition>
+      </StatisticsWrapper>
+    </>
   )
 }
 

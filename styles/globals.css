@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
+  background-color: #1c1c1f;
 }
 
 a {
@@ -13,6 +14,18 @@ a {
 
 input {
   vertical-align: middle;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+input::placeholder {
+  color: #7b7a8d;
 }
 
 @media (prefers-color-scheme: dark) {

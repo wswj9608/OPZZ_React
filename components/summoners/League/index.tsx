@@ -64,6 +64,7 @@ const LeagueWrapper = styled.div`
   box-sizing: border-box;
   border-radius: 4px;
   background-color: #31313c;
+  margin-bottom: 8px;
 
   .header {
     height: 35px;

@@ -4,14 +4,15 @@ import { useRouter } from 'next/router'
 import { getSummonerProfileToAxios } from '@/lib/api/summoner'
 import { useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
 import SummonerProfile from '@/components/summoners/SummonerProfile'
-import Match from '@/components/summoners/Match'
+import Matchs from '@/components/summoners/Matchs'
 import League from '@/components/summoners/League'
 import matchDb from '@/@fake-db'
 import MatchStatistics from '@/components/summoners/MatchStatistics'
-import { getLeaguesToAxios } from '@/lib/api/leauges'
+import { getLeaguesToAxios } from '@/lib/api/leagues'
+import ChampionStatistics from '@/components/summoners/ChampionStatistics'
+import MatchHeader from '@/components/summoners/Matchs/MatchHeader'
 
 const Summoners = () => {
-  const [, setSummonerMatchs] = useSummonerMatchs()
   const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
 
   const getLeagues = async () => {
@@ -32,10 +33,12 @@ const Summoners = () => {
           {summonerLeagues?.map(league => (
             <League key={league.queueType} data={league} />
           ))}
+          <ChampionStatistics />
         </div>
         <div>
+          <MatchHeader />
           <MatchStatistics />
-          <Match />
+          <Matchs />
         </div>
       </UserHistoryWrappser>
     </SummonersWrapper>
@@ -44,12 +47,13 @@ const Summoners = () => {
 
 const SummonersWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 40px;
   background: #1c1c1f;
 
   .user-info {
     width: 332px;
-    background-color: papayawhip;
   }
 `
 
