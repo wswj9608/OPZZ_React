@@ -13,6 +13,14 @@ interface LeagueDataType {
   losses: number
 }
 
+interface PrimaryPerkType {
+  id: number
+  perk_id: number
+  name: string
+  long_desc: string
+  icon_path: string
+}
+
 interface GameDataStatusType {
   killParticipationRate: number
   visionWardsBoughtInGame: number
@@ -57,13 +65,7 @@ interface SummonerMatchsType {
   gameDuration: string
   gameEndTimestamp: string
   gameId: number
-  primaryPerks: {
-    id: number
-    perk_id: number
-    name: string
-    long_desc: string
-    icon_path: string
-  }[]
+  primaryPerks: PrimaryPerkType[]
   teams: {
     bans: {
       championId: number

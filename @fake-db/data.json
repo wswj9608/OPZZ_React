@@ -344,7 +344,7 @@
             }
           ],
           "teamId": 100,
-          "win": true,
+          "win": false,
           "status": {
             "killParticipationRate": 59,
             "visionWardsBoughtInGame": 1,

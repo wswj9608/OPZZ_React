@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
@@ -9,6 +9,7 @@ import { blueArrowIcon, redArrowIcon } from '@/assets/images'
 import { HistoryCardProps } from './types'
 import ItemsBox from './ItemsBox'
 import MatchDetail from './MatchDetail'
+import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
@@ -35,12 +36,8 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 
   const { killParticipationRate, minionsPerMinute, totalMinionsKilled, visionWardsBoughtInGame } = status
 
-  const getPrimaryPerk = (perkId: number) => {
-    return match.primaryPerks?.find(perk => perk.perk_id === perkId)
-  }
-
-  const COMMUNITY_DRAGON_URL = 'https://raw.communitydragon.org/12.19/plugins/rcp-be-lol-game-data/global/default/v1'
-  const primery = getPrimaryPerk(primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
+  const primeryPerk =
+    COMMUNITY_DRAGON_URL + getPrimaryPerk(match.primaryPerks, primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
 
   const handleMatchDetail = () => {
     setIsShowDetail(!isShowDetail)
@@ -92,21 +89,14 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
                   ))}
                 </div>
                 <div className="runes">
-                  <Image
-                    className="rune-icon"
-                    src={(COMMUNITY_DRAGON_URL + primery) as string}
-                    alt="champ"
-                    width="22"
-                    height="22"
-                    layout="responsive"
-                  />
+                  <Image className="rune-icon" src={primeryPerk} alt="champ" width="22" height="22" layout="fixed" />
                   <Image
                     className="rune-icon"
                     src={getSubPerkIcon(subPerkStyleId)}
                     alt="champ"
                     width="22"
                     height="22"
-                    layout="responsive"
+                    layout="fixed"
                   />
                 </div>
               </div>
@@ -199,7 +189,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <Image src={win ? blueArrowIcon : redArrowIcon} width={24} height={24} />
         </DetailButton>
       </HistoryCardWrapper>
-      {isShowDetail && <MatchDetail />}
+      {isShowDetail && <MatchDetail gameDatas={match.gameDatas} primaryPerks={match.primaryPerks} teamId={teamId} />}
     </>
   )
 }

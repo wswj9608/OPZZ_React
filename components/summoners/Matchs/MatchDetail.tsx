@@ -1,58 +1,61 @@
 import { Text } from '@/elements'
+import { blue, gray, main, red, teal, yellow } from '@/styles/palette'
 import styled from 'styled-components'
+import GameDetail from './GameDetail'
+import GameDetailHeader from './GameDetailHeader'
 import ItemsBox from './ItemsBox'
+import { MatchDetailProps } from './types'
 
-const MatchDetail = () => {
+const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
+  const friendlyTeam = gameDatas.filter(data => data.teamId === teamId)
+  const enemyTeam = gameDatas.filter(data => data.teamId !== teamId)
+
+  console.log(friendlyTeam)
   return (
     <DetailWrapper>
-      <div className="header"></div>
-      <div className="champ">
-        <div className="icon" />
-        <div className="level" />
-      </div>
-      <div className="spells">
-        <div className="spell-icon" />
-        <div className="spell-icon" />
-      </div>
-      <div className="runes">
-        <div className="rune-icon" />
-        <div className="rune-icon" />
-      </div>
-      <div className="summoner">
-        <Text>한우종</Text>
-        <Text>Gold 2</Text>
-      </div>
-      <div className="score">
-        <Text>7.6</Text>
-        <Text>MVP</Text>
-      </div>
-      <div className="kda">
-        <Text>10 / 1 / 1 (40%)</Text>
-        <Text>10.0 : 1</Text>
-      </div>
-      <div className="damage">
-        <div>
-          <Text>11111</Text>
-          <div className="bar" />
-        </div>
-        <div>
-          <Text>11111</Text>
-          <div className="bar" />
-        </div>
-      </div>
-      <div className="ward">
-        <Text>0</Text>
-        <Text>7 / 1</Text>
-      </div>
-      <div className="cs">
-        <Text>138</Text>
-        <Text>분당 1.5</Text>
-      </div>
-      <div className="items">{/* <ItemsBox /> */}</div>
+      <GameDetailHeader isWin={friendlyTeam[0].win} teamId={teamId} />
+      {friendlyTeam.map(data => (
+        <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
+      ))}
+
+      <GameDetailHeader isWin={enemyTeam[0].win} teamId={enemyTeam[0].teamId} />
+      {enemyTeam.map(data => (
+        <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
+      ))}
     </DetailWrapper>
   )
 }
 
-const DetailWrapper = styled.div``
+const DetailWrapper = styled.div`
+  .summoner-container {
+    padding-left: 10px;
+    width: 175px;
+    box-sizing: border-box;
+  }
+
+  .score-container {
+    width: 68px;
+  }
+
+  .kda-container {
+    width: 98px;
+  }
+
+  .damage-container {
+    width: 120px;
+  }
+
+  .ward-container {
+    width: 48px;
+  }
+
+  .minion-container {
+    width: 56px;
+  }
+
+  .items-container {
+    width: 175px;
+  }
+`
 
 export default MatchDetail

@@ -1,5 +1,6 @@
-import { atom, useRecoilState } from 'recoil'
+import { atom, selector, useRecoilState } from 'recoil'
 
+// atoms
 const summonerProfile = atom<SummonerProfileType | null>({
   key: 'summonerProfile',
   default: null,
@@ -25,6 +26,9 @@ const summonerChampionStatistics = atom<ChampionStatisticsType[] | null>({
   default: null,
 })
 
+// selectors
+
+// hooks
 export const useSummonerProfile = () => {
   return useRecoilState(summonerProfile)
 }

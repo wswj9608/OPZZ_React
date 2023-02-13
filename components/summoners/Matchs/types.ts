@@ -18,3 +18,19 @@ export interface ItemsBoxProps {
   } | null)[]
   isWin: boolean
 }
+
+export interface MatchDetailProps {
+  gameDatas: GameDataType[]
+  primaryPerks: PrimaryPerkType[]
+  teamId: number
+}
+
+export interface GameDetailHeaderProps {
+  isWin: boolean
+  teamId: number
+}
+
+export interface GameDetailProps {
+  gameData: GameDataType
+  primaryPerks: PrimaryPerkType[]
+}
