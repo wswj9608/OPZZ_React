@@ -122,7 +122,7 @@ interface MatchStatisticsType {
   preferredPositions: {
     line: string
     lineIcon: string
-    selectionRate: number
+    playedGameCount: number
   }[]
 }
 

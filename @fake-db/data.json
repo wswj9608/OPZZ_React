@@ -155,27 +155,27 @@
       {
         "line": "top",
         "lineIcon": "",
-        "selectionRate": 10
+        "playedGameCount": 3
       },
       {
         "line": "jungle",
         "lineIcon": "",
-        "selectionRate": 20
+        "playedGameCount": 0
       },
       {
         "line": "mid",
         "lineIcon": "",
-        "selectionRate": 60
+        "playedGameCount": 15
       },
       {
         "line": "adc",
         "lineIcon": "",
-        "selectionRate": 10
+        "playedGameCount": 1
       },
       {
-        "line": "sup",
+        "line": "support",
         "lineIcon": "",
-        "selectionRate": 0
+        "playedGameCount": 1
       }
     ]
   },
