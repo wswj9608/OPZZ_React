@@ -9,3 +9,10 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   color?: string
   fontColor?: string
 }
+
+export interface ProgressBarProps {
+  width: number
+  height: number
+  bgColor?: string
+  fill?: string
+}
