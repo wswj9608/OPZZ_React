@@ -1,7 +1,7 @@
 import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
 import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
-import { Text } from '@/elements'
-import { gray, main, red, teal, yellow } from '@/styles/palette'
+import { ProgressBar, Text } from '@/elements'
+import { gray, main, orange, red, teal, yellow } from '@/styles/palette'
 import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
 import Image from 'next/image'
 import styled from 'styled-components'
@@ -44,6 +44,12 @@ const GameDetail = ({ gameData, primaryPerks }: GameDetailProps) => {
         return red[100]
       }
     }
+  }
+
+  const kdaColor = () => {
+    if (!kda || kda > 4) return orange[600]
+    if (kda < 3) return gray[600]
+    return teal[600]
   }
 
   return (
@@ -92,18 +98,18 @@ const GameDetail = ({ gameData, primaryPerks }: GameDetailProps) => {
         <Text>
           {kills} / {deaths} / {assists} ({status.killParticipationRate}%)
         </Text>
-        <Text weight="bold" color={teal[600]}>
+        <Text weight="bold" color={kdaColor()}>
           {kda ? `${kda} : 1` : 'perfect'}
         </Text>
       </div>
       <div className="damage damage-container">
-        <div>
+        <div className="total-damage">
           <Text>11,111</Text>
-          <div className="bar chmap-damage" />
+          <ProgressBar width={40} height={6} fill={red[500]} />
         </div>
-        <div>
+        <div className="total-taken">
           <Text>11,111</Text>
-          <div className="bar total-damage" />
+          <ProgressBar width={40} height={6} />
         </div>
       </div>
       <div className="ward ward-container">
@@ -214,14 +220,13 @@ const GameDetailWrapper = styled.div<{ bgColor: string }>`
     gap: 8px;
     justify-content: center;
 
-    .bar {
+    .total-damage,
+    .total-taken {
       width: 50px;
-      height: 6px;
-      background-color: ${red[600]};
-    }
 
-    .total-damage {
-      background-color: ${gray[400]};
+      p {
+        margin-bottom: 4px;
+      }
     }
 
     div {

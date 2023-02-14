@@ -1,13 +1,17 @@
 import { useSummonerMatchStatistics } from '@/atoms/summoners'
 import { Text } from '@/elements'
 import { getStatisticsToAxios } from '@/lib/api/statistics'
-import { blue, gray, red } from '@/styles/palette'
+import { blue, gray, main, red } from '@/styles/palette'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import MatchHeader from '../Matchs/MatchHeader'
+import { PieChart, Pie, Cell } from 'recharts'
+import { IconPosition } from '@/assets/images/icons'
 
 const MatchStatistics = () => {
   const [statistics, setStatistics] = useSummonerMatchStatistics()
+
+  const COLORS = [red[500], main[500]]
 
   const getStatistics = async () => {
     const res = await getStatisticsToAxios()
@@ -33,6 +37,11 @@ const MatchStatistics = () => {
     preferredPositions,
   } = statistics
 
+  const data = [
+    { name: 'losses', value: totalLosses },
+    { name: 'wins', value: totalWins },
+  ]
+
   return (
     <>
       <StatisticsWrapper>
@@ -41,7 +50,27 @@ const MatchStatistics = () => {
             {totalMatchNumber}전 {totalWins}승 {totalLosses}패
           </Text>
           <div className="statistics">
-            <div className="chart" />
+            <div className="chart">
+              <PieChart width={88} height={88}>
+                <Pie
+                  data={data}
+                  startAngle={90}
+                  endAngle={450}
+                  labelLine={false}
+                  innerRadius={29}
+                  outerRadius={43}
+                  stroke="none"
+                  dataKey="value"
+                >
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+              </PieChart>
+              <Text className="percent" size="14px" color={main[500]}>
+                <strong>{Math.round((totalWins / totalMatchNumber) * 100)}</strong>%
+              </Text>
+            </div>
             <div className="kda-statistics">
               <Text>
                 {averageKills} / <span style={{ color: red[600] }}>{averageDeaths}</span> / {averageAssists}
@@ -75,8 +104,10 @@ const MatchStatistics = () => {
           <div className="container">
             {preferredPositions?.map(position => (
               <div key={position.line}>
-                <div className="bar" />
-                <div className="line-icon" />
+                <Bar height={Math.round((position.playedGameCount / totalMatchNumber) * 100)}>
+                  <div className="played-line" />
+                </Bar>
+                <IconPosition line={position.line} />
               </div>
             ))}
           </div>
@@ -117,10 +148,16 @@ const RecordStatistics = styled.div`
   }
 
   .chart {
+    position: relative;
     width: 88px;
     height: 88px;
-    border-radius: 50%;
-    background-color: ${blue[500]};
+
+    .percent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 `
 
@@ -176,11 +213,22 @@ const PreferredPosition = styled.div`
     background-color: ${blue[600]};
     margin-top: 8px;
   }
+`
 
-  .bar {
+const Bar = styled.div<{ height: number }>`
+  position: relative;
+  width: 16px;
+  height: 64px;
+  background-color: ${gray[250]};
+  margin-bottom: 8px;
+
+  .played-line {
     width: 16px;
-    height: 64px;
-    background-color: ${red[500]};
+    height: ${({ height }) => height}%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: ${blue[500]};
   }
 `
 

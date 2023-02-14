@@ -6,7 +6,7 @@ import { GameDetailHeaderProps } from './types'
 const GameDetailHeader = ({ isWin, teamId }: GameDetailHeaderProps) => {
   const team = teamId === 100 ? '블루팀' : '레드팀'
   return (
-    <DetailHeader>
+    <DetailHeader isWin={isWin}>
       <div className="summoner-container">
         <Text>
           <span style={{ color: isWin ? main[600] : red[600] }}>{isWin ? '승리' : '패배'}</span> ({team})
@@ -34,12 +34,13 @@ const GameDetailHeader = ({ isWin, teamId }: GameDetailHeaderProps) => {
   )
 }
 
-const DetailHeader = styled.div`
+const DetailHeader = styled.div<{ isWin: boolean }>`
   display: flex;
   text-align: center;
   height: 32px;
   background-color: ${gray[0]};
-  border-bottom: 1px solid ${main[200]};
+  border-bottom: 1px solid;
+  border-color: ${({ isWin }) => (isWin ? main[200] : red[200])};
   align-items: center;
 
   .summoner-container {

@@ -1,4 +1,4 @@
-import { Text } from '@/elements'
+import { ProgressBar, Text } from '@/elements'
 import { blue, gray, main, red, teal, yellow } from '@/styles/palette'
 import styled from 'styled-components'
 import GameDetail from './GameDetail'
@@ -12,12 +12,16 @@ import IconTower from '@/assets/images/icons/icon-tower.svg'
 const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
   const friendlyTeam = gameDatas.filter(data => data.teamId === teamId)
   const enemyTeam = gameDatas.filter(data => data.teamId !== teamId)
-  const friendlyIconColor = friendlyTeam[0].win ? blue[500] : red[500]
-  const enemyIconColor = enemyTeam[0].win ? blue[500] : red[500]
+
+  const isWin = friendlyTeam[0].win
+  const isEnemyTeamWin = !isWin
+
+  const friendlyIconColor = isWin ? blue[500] : red[500]
+  const enemyIconColor = isEnemyTeamWin ? blue[500] : red[500]
 
   return (
     <DetailWrapper>
-      <GameDetailHeader isWin={friendlyTeam[0].win} teamId={teamId} />
+      <GameDetailHeader isWin={isWin} teamId={teamId} />
       {friendlyTeam.map(data => (
         <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
       ))}
@@ -38,8 +42,32 @@ const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
           </div>
         </div>
         <div className="total">
-          <div className="bar" />
-          <div className="bar" />
+          <div>
+            <ProgressBar
+              width={60}
+              height={16}
+              bgColor={isWin ? red[500] : main[500]}
+              fill={isWin ? main[500] : red[500]}
+            />
+            <div className="text-wrap">
+              <Text>34</Text>
+              <Text>Total Kill</Text>
+              <Text>17</Text>
+            </div>
+          </div>
+          <div>
+            <ProgressBar
+              width={30}
+              height={16}
+              bgColor={isWin ? red[500] : main[500]}
+              fill={isWin ? main[500] : red[500]}
+            />
+            <div className="text-wrap">
+              <Text>53,099</Text>
+              <Text>Total Gold</Text>
+              <Text>42,587</Text>
+            </div>
+          </div>
         </div>
         <div className="object">
           <div>
@@ -57,7 +85,7 @@ const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
         </div>
       </TotalMatchStatus>
 
-      <GameDetailHeader isWin={enemyTeam[0].win} teamId={enemyTeam[0].teamId} />
+      <GameDetailHeader isWin={isEnemyTeamWin} teamId={enemyTeam[0].teamId} />
       {enemyTeam.map(data => (
         <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
       ))}
@@ -124,19 +152,44 @@ const TotalMatchStatus = styled.div`
   }
 
   .total {
+    width: 389px;
     padding: 8px;
+
+    > div {
+      position: relative;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .text-wrap {
+        position: absolute;
+        width: 389px;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+        box-sizing: border-box;
+
+        p {
+          font-size: 10px;
+          color: ${gray[900]};
+        }
+      }
+    }
   }
 
-  .bar {
-    width: 389px;
+  /* .bar {
     height: 16px;
-    background-color: ${red[500]};
     margin-bottom: 8px;
+    background-color: ${red[500]};
 
     &:last-child {
       margin-bottom: 0;
     }
-  }
+  } */
 `
 
 export default MatchDetail
