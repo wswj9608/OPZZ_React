@@ -1,5 +1,5 @@
 import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
-import { useSummonerMatchs } from '@/atoms/summoners'
+import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
 import { Text } from '@/elements'
 import { gray, main, red, teal, yellow } from '@/styles/palette'
 import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
@@ -27,8 +27,27 @@ const GameDetail = ({ gameData, primaryPerks }: GameDetailProps) => {
   const primeryPerk =
     COMMUNITY_DRAGON_URL + getPrimaryPerk(primaryPerks, primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
 
+  const [summonerProfile] = useSummonerProfile()
+  const isMe = summonerProfile?.name === summonerName
+
+  const bgColor = () => {
+    if (win) {
+      if (isMe) {
+        return main[300]
+      } else {
+        return main[100]
+      }
+    } else {
+      if (isMe) {
+        return red[300]
+      } else {
+        return red[100]
+      }
+    }
+  }
+
   return (
-    <GameDetailWrapper>
+    <GameDetailWrapper bgColor={bgColor()}>
       <div className="summoner summoner-container">
         <div className="champion">
           <div className="icon" />
@@ -102,8 +121,8 @@ const GameDetail = ({ gameData, primaryPerks }: GameDetailProps) => {
   )
 }
 
-const GameDetailWrapper = styled.div`
-  background-color: ${main[100]};
+const GameDetailWrapper = styled.div<{ bgColor: string }>`
+  background-color: ${({ bgColor }) => bgColor};
   padding: 4px 0 3px;
   display: flex;
   align-items: center;

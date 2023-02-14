@@ -2,7 +2,7 @@ import { Button } from '@/elements'
 import { gray } from '@/styles/palette'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { searchIcon } from '@/assets/images'
+import { IconSearchSvg } from '@/assets/images/icons'
 
 const categories = [
   {
@@ -31,7 +31,7 @@ const MatchHeader = () => {
         <Button buttonType="category">큐타입</Button>
       </div>
       <ChampionSearchInput>
-        <Image className="icon" src={searchIcon} width={24} height={24} />
+        <IconSearchSvg />
         <input placeholder="챔피언 검색" />
       </ChampionSearchInput>
     </HeaderWrapper>

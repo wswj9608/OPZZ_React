@@ -32,7 +32,6 @@ const Matchs = () => {
 
 const MatchWrapper = styled.div`
   width: 740px;
-  margin-top: 8px;
 `
 
 export default Matchs

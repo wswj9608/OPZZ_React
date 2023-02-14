@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
 import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
-import { gray, main, red } from '@/styles/palette'
-import { blueArrowIcon, redArrowIcon } from '@/assets/images'
+import { blue, gray, main, red } from '@/styles/palette'
 import { HistoryCardProps } from './types'
 import ItemsBox from './ItemsBox'
 import MatchDetail from './MatchDetail'
 import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
+import { IconArrowDownSvg } from '@/assets/images/icons'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
@@ -185,8 +185,8 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             </div>
           </div>
         </GameParticipantsWrapper>
-        <DetailButton isWin={win} onClick={handleMatchDetail}>
-          <Image src={win ? blueArrowIcon : redArrowIcon} width={24} height={24} />
+        <DetailButton isWin={win} onClick={handleMatchDetail} isShowDetail={isShowDetail}>
+          <IconArrowDownSvg fill={win ? blue[500] : red[500]} />
         </DetailButton>
       </HistoryCardWrapper>
       {isShowDetail && <MatchDetail gameDatas={match.gameDatas} primaryPerks={match.primaryPerks} teamId={teamId} />}
@@ -197,6 +197,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 const HistoryCardWrapper = styled.div<{ isWin: boolean }>`
   width: 100%;
   background-color: lightcoral;
+  margin-top: 8px;
   display: flex;
   height: 96px;
   border-radius: 4px;
@@ -374,13 +375,18 @@ const GameParticipantsWrapper = styled.div`
   }
 `
 
-const DetailButton = styled.button<{ isWin: boolean }>`
+const DetailButton = styled.button<{ isWin: boolean; isShowDetail: boolean }>`
+  cursor: pointer;
   min-width: 40px;
   border-radius: 0px 4px 4px 0px;
   background-color: ${({ isWin }) => (isWin ? main[200] : red[200])};
   display: flex;
   align-items: flex-end;
   padding-bottom: 8px;
+
+  svg {
+    ${({ isShowDetail }) => isShowDetail && 'transform:rotate(180deg)'};
+  }
 
   &:hover {
     background-color: ${({ isWin }) => (isWin ? main[100] : red[100])};
