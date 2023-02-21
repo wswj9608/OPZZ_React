@@ -9,7 +9,7 @@ export interface SummonerProfile {
 export interface League {
   queueType: 'RANKED_SOLO_5x5' | 'RANKED_FLEX_SR'
   leaguePoints: number
-  tier: string
+  tier: 'IRON' | 'BRONZE' | 'SILVER' | 'GOLD' | 'PLATINUM' | 'DIAMOND' | 'MASTER' | 'GRANDMASTER' | 'CHALLENGER'
   rank: string
   wins: number
   losses: number

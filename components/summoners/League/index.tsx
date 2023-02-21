@@ -1,4 +1,4 @@
-import { useSummonerLeagues } from '@/atoms/summoners'
+import { useLeaguesSelector, useSummonerLeagues } from '@/atoms/summoners'
 import React from 'react'
 import styled from 'styled-components'
 import { emblems } from '@/assets/images'
@@ -13,18 +13,28 @@ const emblemGenerator = <K extends keyof ModuleType>(tier: K): ModuleType[K] => 
   return emblems[tier]
 }
 
-const League = ({ data }: LeagueProps) => {
-  const { wins, losses, leaguePoints, queueType } = data
-  const winningRate = ((wins / (wins + losses)) * 100).toFixed()
+const League = ({ queueType }: LeagueProps) => {
+  const leagues = useLeaguesSelector()
+
+  if (!leagues) return null
+
+  const idx = leagues.findIndex(league => league.queueType === queueType)
+
+  const targetLeague = leagues[idx]
+  // const { tier, rank, leaguePoints, wins, losses } = leagues[idx]
 
   const isSoloRank = queueType === 'RANKED_SOLO_5x5'
+  // const { wins, losses, leaguePoints, queueType } = data
+  const winningRate = ((targetLeague?.wins / (targetLeague?.wins + targetLeague?.losses)) * 100).toFixed()
+
   const imageSize = isSoloRank ? 72 : 40
 
   const getLeagueString = () => {
-    const { tier, rank } = data
-    const tierString = tier.toLowerCase().replace(/^[a-z]/, char => char.toUpperCase())
+    const tierString = targetLeague?.tier.toLowerCase().replace(/^[a-z]/, char => char.toUpperCase())
 
     const rankString = () => {
+      const { rank } = targetLeague
+
       if (rank === 'I') return '1'
       if (rank === 'II') return '2'
       if (rank === 'III') return '3'
@@ -37,24 +47,31 @@ const League = ({ data }: LeagueProps) => {
   return (
     <LeagueWrapper>
       <div className="header">
-        <Text>{isSoloRank ? '솔로랭크' : '자유랭크'}</Text>
-      </div>
-      <LeagueState imageSize={imageSize} isSoloRank={isSoloRank}>
-        <div className="emblem">
-          <Image src={emblemGenerator(data.tier)} width={imageSize} height={imageSize} />
-        </div>
-
-        <div className="tier">
-          <Text color={gray[900]} size={isSoloRank ? '20px' : '14px'} weight="bold">
-            {getLeagueString()}
+        <Text color={gray[900]}>{isSoloRank ? '솔로랭크' : '자유랭크'}</Text>
+        {!targetLeague && (
+          <Text color={gray[300]} weight="bold">
+            Unranked
           </Text>
-          <Text>{`${leaguePoints}LP`}</Text>
-        </div>
-        <div className="win-lose">
-          <Text>{`${wins}승 ${losses}패`}</Text>
-          <Text>{`승률 ${winningRate}%`}</Text>
-        </div>
-      </LeagueState>
+        )}
+      </div>
+      {targetLeague && (
+        <LeagueState imageSize={imageSize} isSoloRank={isSoloRank}>
+          <div className="emblem">
+            <Image src={emblemGenerator(targetLeague.tier)} width={imageSize} height={imageSize} />
+          </div>
+
+          <div className="tier">
+            <Text color={gray[900]} size={isSoloRank ? '20px' : '14px'} weight="bold">
+              {getLeagueString()}
+            </Text>
+            <Text>{`${targetLeague.leaguePoints}LP`}</Text>
+          </div>
+          <div className="win-lose">
+            <Text>{`${targetLeague.wins}승 ${targetLeague.losses}패`}</Text>
+            <Text>{`승률 ${winningRate}%`}</Text>
+          </div>
+        </LeagueState>
+      )}
     </LeagueWrapper>
   )
 }
@@ -69,11 +86,12 @@ const LeagueWrapper = styled.div`
   .header {
     height: 35px;
     padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
 
     p {
       line-height: 35px;
-      font-size: 12px;
-      color: ${gray[900]};
+      font-size: 14px;
     }
   }
 

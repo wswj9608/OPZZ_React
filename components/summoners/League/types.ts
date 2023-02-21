@@ -1,5 +1,6 @@
 export interface LeagueProps {
-  data: LeagueDataType
+  // data: LeagueDataType
+  queueType: 'RANKED_SOLO_5x5' | 'RANKED_FLEX_SR'
 }
 
 export type TierType =

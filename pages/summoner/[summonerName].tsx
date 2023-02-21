@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { getSearchSummoner, getSummonerProfileToAxios } from '@/lib/api/summoner'
-import { useSearchSummonerState, useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
+import { useLeaguesSelector, useSearchSummonerState, useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
 import SummonerProfile from '@/components/summoners/SummonerProfile'
 import Matchs from '@/components/summoners/Matchs'
 import League from '@/components/summoners/League'
@@ -41,9 +41,8 @@ const Summoners = () => {
       <SummonerProfile />
       <UserHistoryWrappser>
         <div className="user-info">
-          {/* {summonerLeagues?.map(league => (
-            <League key={league.queueType} data={league} />
-          ))} */}
+          <League queueType="RANKED_SOLO_5x5" />
+          <League queueType="RANKED_FLEX_SR" />
           <ChampionStatistics />
         </div>
         <div>
