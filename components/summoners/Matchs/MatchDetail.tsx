@@ -9,7 +9,7 @@ import IconBaron from '@/assets/images/icons/icon-baron.svg'
 import IconDragon from '@/assets/images/icons/icon-dragon.svg'
 import IconTower from '@/assets/images/icons/icon-tower.svg'
 
-const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
+const MatchDetail = ({ gameDatas, teamId }: MatchDetailProps) => {
   const friendlyTeam = gameDatas.filter(data => data.teamId === teamId)
   const enemyTeam = gameDatas.filter(data => data.teamId !== teamId)
 
@@ -23,7 +23,7 @@ const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
     <DetailWrapper>
       <GameDetailHeader isWin={isWin} teamId={teamId} />
       {friendlyTeam.map(data => (
-        <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
+        <GameDetail key={data.summonerName} gameData={data} />
       ))}
 
       <TotalMatchStatus>
@@ -87,7 +87,7 @@ const MatchDetail = ({ gameDatas, primaryPerks, teamId }: MatchDetailProps) => {
 
       <GameDetailHeader isWin={isEnemyTeamWin} teamId={enemyTeam[0].teamId} />
       {enemyTeam.map(data => (
-        <GameDetail key={data.summonerName} gameData={data} primaryPerks={primaryPerks} />
+        <GameDetail key={data.summonerName} gameData={data} />
       ))}
       <div className="bottom" />
     </DetailWrapper>

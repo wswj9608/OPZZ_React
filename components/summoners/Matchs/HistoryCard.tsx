@@ -7,7 +7,6 @@ import { blue, gray, main, red } from '@/styles/palette'
 import { HistoryCardProps } from './types'
 import ItemsBox from './ItemsBox'
 import MatchDetail from './MatchDetail'
-import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
 import { IconArrowDownSvg } from '@/assets/images/icons'
 import { PlayerMatchData } from '@/lib/api/types'
 import { perkIcons } from '@/assets/images/perkIcons'
@@ -21,7 +20,6 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
   const {
     champion,
     challenges,
-    // champLevel,
     summonerSpells,
     kills,
     deaths,
@@ -29,8 +27,6 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     win,
     primaryPerkId,
     subPerkStyleId,
-    // status,
-    // kda,
     teamId,
     items,
     visionWardsBoughtInGame,
@@ -39,6 +35,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     // mostMultiKills,
   } = match.playerMatchDatas.find(data => data.summonerName === summonerName) as PlayerMatchData
 
+  const { championIcon, championLevel, championName } = champion
   const { kda, killParticipation } = challenges
 
   const perkIcon = (perkId: number) => {
@@ -73,12 +70,11 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             <div className="first-line">
               <div className="champion">
                 <div className="champ">
-                  <div className="champ-icon" />
-                  {/* <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" /> */}
+                  <Image className="champ-icon" src={championIcon} alt="champ" width="48" height="48" />
                   <div className="champ-level">
-                    {/* <Text size="10px" color="#FFF">
-                      {champLevel}
-                    </Text> */}
+                    <Text size="10px" color="#FFF">
+                      {championLevel}
+                    </Text>
                   </div>
                 </div>
                 <div className="spells">
@@ -159,14 +155,13 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 
                   return (
                     <div className="summoner-wrap" key={idx}>
-                      <div className="icon" />
-                      {/* <Image
-                      style={{ borderRadius: '4px' }}
-                      src={data.champion.image_url}
-                      alt="champ"
-                      width={16}
-                      height={16}
-                    /> */}
+                      <Image
+                        style={{ borderRadius: '4px' }}
+                        src={data.champion.championIcon}
+                        alt="champ"
+                        width={16}
+                        height={16}
+                      />
                       <div className="summoner-name">
                         <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
                       </div>
@@ -182,14 +177,13 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
 
                   return (
                     <div className="summoner-wrap" key={idx}>
-                      {/* <Image
-                      style={{ borderRadius: '4px' }}
-                      src={data.champion.image_url}
-                      alt="champ"
-                      width={16}
-                      height={16}
-                    /> */}
-                      <div className="icon" />
+                      <Image
+                        style={{ borderRadius: '4px' }}
+                        src={data.champion.championIcon}
+                        alt="champ"
+                        width={16}
+                        height={16}
+                      />
                       <Text color={isSearchUser ? '#FFF' : '#9e9eb1'}>{data.summonerName}</Text>
                     </div>
                   )
@@ -202,7 +196,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <IconArrowDownSvg fill={win ? blue[500] : red[500]} />
         </DetailButton>
       </HistoryCardWrapper>
-      {/* {isShowDetail && <MatchDetail gameDatas={match.gameDatas} primaryPerks={match.primaryPerks} teamId={teamId} />} */}
+      {isShowDetail && <MatchDetail gameDatas={match.playerMatchDatas} teamId={teamId} />}
     </>
   )
 }
@@ -284,7 +278,6 @@ const GamePlayDataWrapper = styled.div`
 
     .champ-icon {
       height: 48px;
-      background-color: papayawhip;
       border-radius: 50%;
     }
 

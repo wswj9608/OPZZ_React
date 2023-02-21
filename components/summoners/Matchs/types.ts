@@ -1,4 +1,4 @@
-import { Item, Match } from '@/lib/api/types'
+import { Item, Match, PlayerMatchData } from '@/lib/api/types'
 
 export interface MatchProps {
   matchData: any[]
@@ -14,8 +14,7 @@ export interface ItemsBoxProps {
 }
 
 export interface MatchDetailProps {
-  gameDatas: GameDataType[]
-  primaryPerks: PrimaryPerkType[]
+  gameDatas: PlayerMatchData[]
   teamId: number
 }
 
@@ -25,6 +24,5 @@ export interface GameDetailHeaderProps {
 }
 
 export interface GameDetailProps {
-  gameData: GameDataType
-  primaryPerks: PrimaryPerkType[]
+  gameData: PlayerMatchData
 }

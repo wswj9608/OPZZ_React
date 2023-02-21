@@ -6,7 +6,7 @@ export interface SummonerProfile {
   leagues: League[]
 }
 
-interface League {
+export interface League {
   queueType: 'RANKED_SOLO_5x5' | 'RANKED_FLEX_SR'
   leaguePoints: number
   tier: string
@@ -22,10 +22,11 @@ export interface Champion {
 }
 
 export interface Item {
-  item_id: number
+  itemId: number
   name: string
+  iconImageUrl: string
   description: string
-  total_gold: number
+  totalGold: number
 }
 
 export interface Challenges {
@@ -57,6 +58,11 @@ export interface PlayerMatchData {
   primaryPerkId: number
   subPerkStyleId: number
   summonerSpells: Spell[]
+  totalDamageDealt: number
+  totalDamageDealtToChampion: number
+  totalDamageTaken: number
+  damageDealtToChampionPercent: number
+  damageTakenPercent: number
 }
 
 export interface Match {

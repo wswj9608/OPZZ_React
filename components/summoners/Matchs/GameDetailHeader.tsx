@@ -12,9 +12,7 @@ const GameDetailHeader = ({ isWin, teamId }: GameDetailHeaderProps) => {
           <span style={{ color: isWin ? main[600] : red[600] }}>{isWin ? '승리' : '패배'}</span> ({team})
         </Text>
       </div>
-      <div className="score-container">
-        <Text>OP Score</Text>
-      </div>
+      <div className="score-container">{/* <Text>OP Score</Text> */}</div>
       <div className="kda-container">
         <Text>KDA</Text>
       </div>
