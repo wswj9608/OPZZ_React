@@ -13,14 +13,14 @@ const MatchStatistics = () => {
 
   const COLORS = [red[500], main[500]]
 
-  const getStatistics = async () => {
-    const res = await getStatisticsToAxios()
-    setStatistics(res)
-  }
+  // const getStatistics = async () => {
+  //   const res = await getStatisticsToAxios()
+  //   setStatistics(res)
+  // }
 
-  useEffect(() => {
-    getStatistics()
-  }, [])
+  // useEffect(() => {
+  //   getStatistics()
+  // }, [])
 
   if (!statistics) return null
 

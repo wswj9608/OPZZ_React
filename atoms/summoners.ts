@@ -1,6 +1,12 @@
-import { atom, selector, useRecoilState } from 'recoil'
+import { SearchSummoner } from '@/lib/api/types'
+import { atom, selector, useRecoilState, useRecoilValue } from 'recoil'
 
 // atoms
+const searchSummonerState = atom<SearchSummoner | null>({
+  key: 'searchSummonerState',
+  default: null,
+})
+
 const summonerProfile = atom<SummonerProfileType | null>({
   key: 'summonerProfile',
   default: null,
@@ -27,8 +33,26 @@ const summonerChampionStatistics = atom<ChampionStatisticsType[] | null>({
 })
 
 // selectors
+const profileSelector = selector({
+  key: 'profileSelector',
+  get: ({ get }) => get(searchSummonerState)?.summonerProfile,
+})
 
-// hooks
+const leaguesSelector = selector({
+  key: 'leaguesSelector',
+  get: ({ get }) => get(searchSummonerState)?.summonerProfile.leagues,
+})
+
+const matchesSelector = selector({
+  key: 'matchesSelector',
+  get: ({ get }) => get(searchSummonerState)?.matches,
+})
+
+// atom hooks
+export const useSearchSummonerState = () => {
+  return useRecoilState(searchSummonerState)
+}
+
 export const useSummonerProfile = () => {
   return useRecoilState(summonerProfile)
 }
@@ -47,4 +71,17 @@ export const useSummonerMatchStatistics = () => {
 
 export const useSummonerChampionStatistics = () => {
   return useRecoilState(summonerChampionStatistics)
+}
+
+// selector hooks
+export const useSummonerProfileSelector = () => {
+  return useRecoilValue(profileSelector)
+}
+
+export const useLeaguesSelector = () => {
+  return useRecoilValue(leaguesSelector)
+}
+
+export const useMatchesSelector = () => {
+  return useRecoilValue(matchesSelector)
 }

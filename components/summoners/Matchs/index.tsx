@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import HistoryCard from './HistoryCard'
-import { useSummonerMatchs } from '@/atoms/summoners'
+import { useMatchesSelector, useSummonerMatchs } from '@/atoms/summoners'
 import { getMatchsToAxios } from '@/lib/api/matchs'
 import { useRouter } from 'next/router'
 
 const Matchs = () => {
   const { isReady } = useRouter()
-  const [matchs, setMatchs] = useSummonerMatchs()
+  const matchs = useMatchesSelector()
 
-  const getMatchs = async () => {
-    const res = await getMatchsToAxios()
-    setMatchs(res)
-  }
+  // const getMatchs = async () => {
+  //   const res = await getMatchsToAxios()
+  //   setMatchs(res)
+  // }
 
-  useEffect(() => {
-    getMatchs()
-  }, [])
+  // useEffect(() => {
+  //   getMatchs()
+  // }, [])
 
   if (!matchs) return null
   if (!isReady) return null

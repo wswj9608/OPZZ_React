@@ -3,41 +3,47 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
-import { getSubPerkIcon } from '@/assets/images/subPerkIcons'
 import { blue, gray, main, red } from '@/styles/palette'
 import { HistoryCardProps } from './types'
 import ItemsBox from './ItemsBox'
 import MatchDetail from './MatchDetail'
 import { COMMUNITY_DRAGON_URL, getPrimaryPerk } from '@/utils'
 import { IconArrowDownSvg } from '@/assets/images/icons'
+import { PlayerMatchData } from '@/lib/api/types'
+import { perkIcons } from '@/assets/images/perkIcons'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
   const { summonerName } = query
-  const { gameDuration, gameDatas, gameEndTimestamp } = match
+  const { gameDuration, playerMatchDatas, gameEndTimestamp } = match
   const [isShowDetail, setIsShowDetail] = useState(false)
 
   const {
     champion,
-    champLevel,
+    challenges,
+    // champLevel,
     summonerSpells,
     kills,
     deaths,
     assists,
     win,
-    subPerkStyleId,
     primaryPerkId,
-    status,
-    kda,
+    subPerkStyleId,
+    // status,
+    // kda,
     teamId,
     items,
-    mostMultiKills,
-  } = match.gameDatas.find(data => data.summonerName === summonerName) as GameDataType
+    visionWardsBoughtInGame,
+    totalMinionsKilled,
+    minionsPerMinute,
+    // mostMultiKills,
+  } = match.playerMatchDatas.find(data => data.summonerName === summonerName) as PlayerMatchData
 
-  const { killParticipationRate, minionsPerMinute, totalMinionsKilled, visionWardsBoughtInGame } = status
+  const { kda, killParticipation } = challenges
 
-  const primeryPerk =
-    COMMUNITY_DRAGON_URL + getPrimaryPerk(match.primaryPerks, primaryPerkId)?.icon_path.split('v1')[1].toLowerCase()
+  const perkIcon = (perkId: number) => {
+    return perkIcons[perkId]
+  }
 
   const handleMatchDetail = () => {
     setIsShowDetail(!isShowDetail)
@@ -70,9 +76,9 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
                   <div className="champ-icon" />
                   {/* <Image className="champ-icon" src={champion.image_url} alt="champ" width="48" height="48" /> */}
                   <div className="champ-level">
-                    <Text size="10px" color="#FFF">
+                    {/* <Text size="10px" color="#FFF">
                       {champLevel}
-                    </Text>
+                    </Text> */}
                   </div>
                 </div>
                 <div className="spells">
@@ -89,10 +95,17 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
                   ))}
                 </div>
                 <div className="runes">
-                  <Image className="rune-icon" src={primeryPerk} alt="champ" width="22" height="22" layout="fixed" />
                   <Image
                     className="rune-icon"
-                    src={getSubPerkIcon(subPerkStyleId)}
+                    src={perkIcon(primaryPerkId)}
+                    alt="champ"
+                    width="22"
+                    height="22"
+                    layout="fixed"
+                  />
+                  <Image
+                    className="rune-icon"
+                    src={perkIcon(subPerkStyleId)}
                     alt="champ"
                     width="22"
                     height="22"
@@ -109,7 +122,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
               </div>
               <div className="status">
                 <Text size="11px" color="#e84057">
-                  {`킬관여 ${killParticipationRate}%`}
+                  {`킬관여 ${killParticipation}%`}
                 </Text>
                 <Text size="11px" color="#9e9eb1">
                   {`제어 와드 ${visionWardsBoughtInGame}`}
@@ -124,11 +137,11 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             </div>
             <div className="second-line">
               <ItemsBox items={items} isWin={win} />
-              {mostMultiKills && (
+              {/* {mostMultiKills && (
                 <div className="most-kill-badge">
                   <Text color="#FFF">{mostMultiKills}</Text>
                 </div>
-              )}
+              )} */}
               {/* <div className="mvp-badge">
             <Text   color="#FFF">
               MVP
@@ -140,7 +153,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
         <GameParticipantsWrapper>
           <div className="wrap">
             <div>
-              {gameDatas.map((data, idx) => {
+              {playerMatchDatas.map((data, idx) => {
                 if (data.teamId === 100) {
                   const isSearchUser = data.summonerName === summonerName
 
@@ -163,7 +176,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
               })}
             </div>
             <div>
-              {gameDatas.map((data, idx) => {
+              {playerMatchDatas.map((data, idx) => {
                 if (data.teamId === 200) {
                   const isSearchUser = data.summonerName === summonerName
 
@@ -189,7 +202,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <IconArrowDownSvg fill={win ? blue[500] : red[500]} />
         </DetailButton>
       </HistoryCardWrapper>
-      {isShowDetail && <MatchDetail gameDatas={match.gameDatas} primaryPerks={match.primaryPerks} teamId={teamId} />}
+      {/* {isShowDetail && <MatchDetail gameDatas={match.gameDatas} primaryPerks={match.primaryPerks} teamId={teamId} />} */}
     </>
   )
 }

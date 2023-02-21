@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
-import { getSummonerProfileToAxios } from '@/lib/api/summoner'
-import { useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
+import { getSearchSummoner, getSummonerProfileToAxios } from '@/lib/api/summoner'
+import { useSearchSummonerState, useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
 import SummonerProfile from '@/components/summoners/SummonerProfile'
 import Matchs from '@/components/summoners/Matchs'
 import League from '@/components/summoners/League'
@@ -13,16 +13,27 @@ import ChampionStatistics from '@/components/summoners/ChampionStatistics'
 import MatchHeader from '@/components/summoners/Matchs/MatchHeader'
 
 const Summoners = () => {
-  const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
+  const { query, isReady } = useRouter()
+  const { summonerName } = query
+  // const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
+  const [, setSearchSummonerState] = useSearchSummonerState()
 
-  const getLeagues = async () => {
-    const res = await getLeaguesToAxios()
-    setSummonerLeagues(res)
+  // const getLeagues = async () => {
+  //   const res = await getLeaguesToAxios()
+  //   setSummonerLeagues(res)
+  // }
+  console.log(summonerName)
+
+  const searchSummoner = async () => {
+    const res = await getSearchSummoner(summonerName as string)
+    setSearchSummonerState(res)
   }
 
   useEffect(() => {
-    getLeagues()
-  }, [])
+    if (!isReady) return
+
+    searchSummoner()
+  }, [isReady])
   // const matchData = matchDb()
 
   return (
@@ -30,9 +41,9 @@ const Summoners = () => {
       <SummonerProfile />
       <UserHistoryWrappser>
         <div className="user-info">
-          {summonerLeagues?.map(league => (
+          {/* {summonerLeagues?.map(league => (
             <League key={league.queueType} data={league} />
-          ))}
+          ))} */}
           <ChampionStatistics />
         </div>
         <div>

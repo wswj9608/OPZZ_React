@@ -9,14 +9,14 @@ import ChampStatisticsHeader from './ChampStatisticsHeader'
 const ChampionStatistics = () => {
   const [championStatistics, setChampionStatistics] = useSummonerChampionStatistics()
 
-  const getChampionStatistics = async () => {
-    const res = await getChampionStatisticsToAxios()
-    setChampionStatistics(res)
-  }
+  // const getChampionStatistics = async () => {
+  //   const res = await getChampionStatisticsToAxios()
+  //   setChampionStatistics(res)
+  // }
 
-  useEffect(() => {
-    getChampionStatistics()
-  }, [])
+  // useEffect(() => {
+  //   getChampionStatistics()
+  // }, [])
 
   if (!championStatistics) return null
   console.log(championStatistics)

@@ -10,7 +10,7 @@ const ItemsBox = ({ items, isWin }: ItemsBoxProps) => {
 
         return (
           <Item isAccessaryItem={idx === items.length - 1} isWin={isWin} key={idx}>
-            <Image src={item.image_url} alt="item" width={22} height={22} />
+            {/* <Image src={item.image_url} alt="item" width={22} height={22} /> */}
           </Item>
         )
       })}
