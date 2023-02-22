@@ -25,11 +25,13 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
     minionsPerMinute,
     wardsPlaced,
     wradsKilled,
-    totalDamageDealtToChampion,
+    totalDamageDealtToChampions,
     damageDealtToChampionPercent,
     totalDamageTaken,
     damageTakenPercent,
   } = gameData
+
+  console.log('data =========>', totalDamageDealtToChampions)
 
   const { championLevel, championIcon } = champion
   const { kda, killParticipation } = challenges
@@ -113,7 +115,7 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
       </div>
       <div className="damage damage-container">
         <div className="total-damage">
-          <Text>{totalDamageDealtToChampion.toLocaleString()}</Text>
+          <Text>{totalDamageDealtToChampions.toLocaleString()}</Text>
           <ProgressBar width={damageDealtToChampionPercent} height={6} fill={red[500]} />
         </div>
         <div className="total-taken">

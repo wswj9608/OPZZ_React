@@ -48,6 +48,22 @@ const matchesSelector = selector({
   get: ({ get }) => get(searchSummonerState)?.matches,
 })
 
+const teamsSelector = selector({
+  key: 'teamsSelector',
+  get: ({ get }) => {
+    const matches = get(searchSummonerState)?.matches
+    if (!matches) return
+
+    const allMatchTeamData = matches.map(match => ({
+      gameId: match.gameId,
+      friendlyTeam: match.friendlyTeam,
+      enemyTeam: match.enemyTeam,
+    }))
+
+    return allMatchTeamData
+  },
+})
+
 // atom hooks
 export const useSearchSummonerState = () => {
   return useRecoilState(searchSummonerState)
@@ -84,4 +100,8 @@ export const useLeaguesSelector = () => {
 
 export const useMatchesSelector = () => {
   return useRecoilValue(matchesSelector)
+}
+
+export const useTeamsSelector = () => {
+  return useRecoilValue(teamsSelector)
 }

@@ -59,10 +59,45 @@ export interface PlayerMatchData {
   subPerkStyleId: number
   summonerSpells: Spell[]
   totalDamageDealt: number
-  totalDamageDealtToChampion: number
+  totalDamageDealtToChampions: number
   totalDamageTaken: number
   damageDealtToChampionPercent: number
   damageTakenPercent: number
+}
+
+export interface Team {
+  bans: {
+    championId: number
+    pickTurn: number
+  }[]
+  objectives: {
+    baron: {
+      first: boolean
+      kills: number
+    }
+    champion: {
+      first: boolean
+      kills: number
+    }
+    dragon: {
+      first: boolean
+      kills: number
+    }
+    inhibitor: {
+      first: boolean
+      kills: number
+    }
+    riftHerald: {
+      first: boolean
+      kills: number
+    }
+    tower: {
+      first: boolean
+      kills: number
+    }
+  }
+  teamId: number
+  win: boolean
 }
 
 export interface Match {
@@ -70,6 +105,8 @@ export interface Match {
   gameEndTimestamp: string
   gameId: number
   playerMatchDatas: PlayerMatchData[]
+  friendlyTeam: Team
+  enemyTeam: Team
 }
 
 export interface SearchSummoner {

@@ -196,7 +196,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <IconArrowDownSvg fill={win ? blue[500] : red[500]} />
         </DetailButton>
       </HistoryCardWrapper>
-      {isShowDetail && <MatchDetail gameDatas={match.playerMatchDatas} teamId={teamId} />}
+      {isShowDetail && <MatchDetail gameDatas={match.playerMatchDatas} teamId={teamId} gameId={match.gameId} />}
     </>
   )
 }

@@ -16,6 +16,7 @@ export interface ItemsBoxProps {
 export interface MatchDetailProps {
   gameDatas: PlayerMatchData[]
   teamId: number
+  gameId: number
 }
 
 export interface GameDetailHeaderProps {
