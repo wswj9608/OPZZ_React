@@ -27,7 +27,7 @@ const MatchDetail = ({ gameDatas, teamId, gameId }: MatchDetailProps) => {
         <GameDetail key={data.summonerName} gameData={data} />
       ))}
 
-      <TotalMatchStatus gameId={gameId} teamId={teamId} />
+      <TotalMatchStatus gameId={gameId} />
 
       <GameDetailHeader isWin={isEnemyTeamWin} teamId={enemyTeam[0].teamId} />
       {enemyTeam.map(data => (

@@ -27,3 +27,7 @@ export interface GameDetailHeaderProps {
 export interface GameDetailProps {
   gameData: PlayerMatchData
 }
+
+export interface TotalMatchStatusProps {
+  gameId: number
+}

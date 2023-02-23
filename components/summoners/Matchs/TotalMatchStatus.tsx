@@ -6,13 +6,10 @@ import IconTower from '@/assets/images/icons/icon-tower.svg'
 import { ProgressBar, Text } from '@/elements'
 import { useTeamsSelector } from '@/atoms/summoners'
 import { blue, gray, main, red } from '@/styles/palette'
+import { getPercentage } from '@/utils'
+import { TotalMatchStatusProps } from './types'
 
-interface TotalMatchStatusProps {
-  gameId: number
-  teamId: number
-}
-
-const TotalMatchStatus = ({ gameId, teamId }: TotalMatchStatusProps) => {
+const TotalMatchStatus = ({ gameId }: TotalMatchStatusProps) => {
   const teams = useTeamsSelector()
   const targetTeams = teams?.find(team => team.gameId === gameId)
 
@@ -26,8 +23,6 @@ const TotalMatchStatus = ({ gameId, teamId }: TotalMatchStatusProps) => {
 
   const friendlyTeamObj = friendlyTeam.objectives
   const enemyTeamObj = enemyTeam.objectives
-  const killProgressPercent =
-    (friendlyTeamObj.champion.kills / (friendlyTeamObj.champion.kills + enemyTeamObj.champion.kills)) * 100
 
   return (
     <MatchStatusWrapper>
@@ -48,7 +43,7 @@ const TotalMatchStatus = ({ gameId, teamId }: TotalMatchStatusProps) => {
       <div className="total">
         <div>
           <ProgressBar
-            width={killProgressPercent}
+            width={getPercentage(friendlyTeamObj.champion.kills, enemyTeamObj.champion.kills)}
             height={16}
             bgColor={isWin ? red[500] : main[500]}
             fill={isWin ? main[500] : red[500]}
@@ -61,15 +56,15 @@ const TotalMatchStatus = ({ gameId, teamId }: TotalMatchStatusProps) => {
         </div>
         <div>
           <ProgressBar
-            width={30}
+            width={getPercentage(friendlyTeam.totalGold, enemyTeam.totalGold)}
             height={16}
             bgColor={isWin ? red[500] : main[500]}
             fill={isWin ? main[500] : red[500]}
           />
           <div className="text-wrap">
-            <Text>53,099</Text>
+            <Text>{friendlyTeam.totalGold.toLocaleString()}</Text>
             <Text>Total Gold</Text>
-            <Text>42,587</Text>
+            <Text>{enemyTeam.totalGold.toLocaleString()}</Text>
           </div>
         </div>
       </div>

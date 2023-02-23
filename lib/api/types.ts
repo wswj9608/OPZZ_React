@@ -98,6 +98,7 @@ export interface Team {
   }
   teamId: number
   win: boolean
+  totalGold: number
 }
 
 export interface Match {

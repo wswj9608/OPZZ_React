@@ -6,3 +6,7 @@ export const COMMUNITY_DRAGON_URL =
 export const perkIcon = (perkId: number) => {
   return perkIcons[perkId]
 }
+
+export const getPercentage = (a: number, b: number) => {
+  return Math.round((a / (a + b)) * 100)
+}
