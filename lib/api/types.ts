@@ -110,7 +110,21 @@ export interface Match {
   enemyTeam: Team
 }
 
+interface Statistics {
+  totalMatchNumber: number
+  totalWins: number
+  totalLosses: number
+  averageKills: number
+  averageDeaths: number
+  averageAssists: number
+  averageKda: string
+  killParticipationRate: number
+}
+
 export interface SearchSummoner {
   summonerProfile: SummonerProfile
-  matches: Match[]
+  matchHistory: {
+    matches: Match[]
+    statistics: Statistics
+  }
 }

@@ -1,4 +1,4 @@
-import { useSummonerMatchStatistics } from '@/atoms/summoners'
+import { useMatchStatisticsSelector, useSummonerMatchStatistics } from '@/atoms/summoners'
 import { Text } from '@/elements'
 import { getStatisticsToAxios } from '@/lib/api/statistics'
 import { blue, gray, main, red } from '@/styles/palette'
@@ -9,7 +9,7 @@ import { PieChart, Pie, Cell } from 'recharts'
 import { IconPosition } from '@/assets/images/icons'
 
 const MatchStatistics = () => {
-  const [statistics, setStatistics] = useSummonerMatchStatistics()
+  const statistics = useMatchStatisticsSelector()
 
   const COLORS = [red[500], main[500]]
 
@@ -33,8 +33,8 @@ const MatchStatistics = () => {
     averageAssists,
     averageKda,
     killParticipationRate,
-    playedChampions,
-    preferredPositions,
+    // playedChampions,
+    // preferredPositions,
   } = statistics
 
   const data = [
@@ -85,7 +85,7 @@ const MatchStatistics = () => {
         <PlayedChampion>
           <Text>플레이한 챔피언 (최근 {totalMatchNumber}게임)</Text>
           <div className="container">
-            {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
+            {/* {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
               <ChampStatistics key={idx}>
                 <div className="champ-icon" />
                 <div className="statistics">
@@ -96,20 +96,20 @@ const MatchStatistics = () => {
                   <Text>{kda} 평점</Text>
                 </div>
               </ChampStatistics>
-            ))}
+            ))} */}
           </div>
         </PlayedChampion>
         <PreferredPosition>
           <Text>선호 포지션 (랭크)</Text>
           <div className="container">
-            {preferredPositions?.map(position => (
+            {/* {preferredPositions?.map(position => (
               <div key={position.line}>
                 <Bar height={Math.round((position.playedGameCount / totalMatchNumber) * 100)}>
                   <div className="played-line" />
                 </Bar>
                 <IconPosition line={position.line} />
               </div>
-            ))}
+            ))} */}
           </div>
         </PreferredPosition>
       </StatisticsWrapper>

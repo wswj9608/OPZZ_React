@@ -45,13 +45,18 @@ const leaguesSelector = selector({
 
 const matchesSelector = selector({
   key: 'matchesSelector',
-  get: ({ get }) => get(searchSummonerState)?.matches,
+  get: ({ get }) => get(searchSummonerState)?.matchHistory.matches,
+})
+
+const matchStatisticsSelector = selector({
+  key: 'matchStatisticsSelector',
+  get: ({ get }) => get(searchSummonerState)?.matchHistory.statistics,
 })
 
 const teamsSelector = selector({
   key: 'teamsSelector',
   get: ({ get }) => {
-    const matches = get(searchSummonerState)?.matches
+    const matches = get(searchSummonerState)?.matchHistory.matches
     if (!matches) return
 
     const allMatchTeamData = matches.map(match => ({
@@ -100,6 +105,10 @@ export const useLeaguesSelector = () => {
 
 export const useMatchesSelector = () => {
   return useRecoilValue(matchesSelector)
+}
+
+export const useMatchStatisticsSelector = () => {
+  return useRecoilValue(matchStatisticsSelector)
 }
 
 export const useTeamsSelector = () => {
