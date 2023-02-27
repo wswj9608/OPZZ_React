@@ -16,6 +16,7 @@ export interface League {
 }
 
 export interface Champion {
+  championId: number
   championName: string
   championLevel: number
   championIcon: string
@@ -105,6 +106,7 @@ export interface Match {
   gameDuration: string
   gameEndTimestamp: string
   gameId: number
+  queueType: string
   playerMatchDatas: PlayerMatchData[]
   friendlyTeam: Team
   enemyTeam: Team

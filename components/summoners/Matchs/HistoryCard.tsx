@@ -14,7 +14,7 @@ import { perkIcons } from '@/assets/images/perkIcons'
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
   const { summonerName } = query
-  const { gameDuration, playerMatchDatas, gameEndTimestamp } = match
+  const { gameDuration, playerMatchDatas, gameEndTimestamp, queueType } = match
   const [isShowDetail, setIsShowDetail] = useState(false)
 
   const {
@@ -53,7 +53,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
           <div className="wrap">
             <div>
               <Text color={win ? '#5383e8' : '#e84057'} weight="bold">
-                자유 5:5랭크
+                {queueType}
               </Text>
               <Text color="#9e9eb1">{gameEndTimestamp}</Text>
             </div>
