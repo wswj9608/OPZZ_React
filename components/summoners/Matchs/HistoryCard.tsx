@@ -13,9 +13,10 @@ import { perkIcons } from '@/assets/images/perkIcons'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
-  const { summonerName } = query
+  const summonerName = query.summonerName as string
   const { gameDuration, playerMatchDatas, gameEndTimestamp, queueType } = match
   const [isShowDetail, setIsShowDetail] = useState(false)
+  console.log(match)
 
   const {
     champion,
@@ -33,7 +34,9 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     totalMinionsKilled,
     minionsPerMinute,
     // mostMultiKills,
-  } = match.playerMatchDatas.find(data => data.summonerName === summonerName) as PlayerMatchData
+  } = match.playerMatchDatas.find(
+    data => data.summonerName.toLowerCase() === summonerName.toLowerCase()
+  ) as PlayerMatchData
 
   const { championIcon, championLevel, championName } = champion
   const { kda, killParticipation } = challenges
