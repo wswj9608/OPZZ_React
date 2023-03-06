@@ -1,7 +1,7 @@
 import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
 import { ProgressBar, Text } from '@/elements'
 import { blue, gray, main, orange, red, teal, yellow } from '@/styles/palette'
-import { perkIcon } from '@/utils'
+import { kdaColor, perkIcon } from '@/utils'
 import Image from 'next/image'
 import styled from 'styled-components'
 import ItemsBox from './ItemsBox'
@@ -55,14 +55,6 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
     }
   }
 
-  const kdaColor = () => {
-    if (kda < 3) return gray[600]
-    if (kda < 4) return teal[600]
-    if (kda < 5) return blue[600]
-    return orange[600]
-    // return teal[600]
-  }
-
   return (
     <GameDetailWrapper bgColor={bgColor()}>
       <div className="summoner summoner-container">
@@ -109,7 +101,7 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
         <Text>
           {kills} / {deaths} / {assists} ({killParticipation}%)
         </Text>
-        <Text weight="bold" color={kdaColor()}>
+        <Text weight="bold" color={kdaColor(kda)}>
           {kda ? `${kda} : 1` : 'perfect'}
         </Text>
       </div>

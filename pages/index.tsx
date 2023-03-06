@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   const router = useRouter()
-  const [summonerName, setSummonerName] = useState<string>()
+  const [summonerName, setSummonerName] = useState<string>('')
   const logoImageUrl =
     'https://opgg-static.akamaized.net/logo/20230206131423.df67f1f7a3094bf28afbee32ed4cd362.png?image=q_auto,f_webp,w_auto&v=1675746334392'
   const searchButtonImageUrl = 'https://s-lol-web.op.gg/images/icon/icon-gg.svg'

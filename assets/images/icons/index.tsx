@@ -30,9 +30,9 @@ export const IconTowerSvg = ({ fill }: { fill: string }) => {
 }
 
 export const IconPosition = ({ line }: { line: string }) => {
-  if (line === 'top') return <IconPositionTop />
-  if (line === 'jungle') return <IconPositionJungle />
-  if (line === 'mid') return <IconPositionMid />
-  if (line === 'adc') return <IconPositionAdc />
+  if (line === 'TOP') return <IconPositionTop />
+  if (line === 'JUNGLE') return <IconPositionJungle />
+  if (line === 'MIDDLE') return <IconPositionMid />
+  if (line === 'ADC') return <IconPositionAdc />
   return <IconPositionSupport />
 }

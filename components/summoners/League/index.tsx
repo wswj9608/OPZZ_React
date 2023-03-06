@@ -115,6 +115,9 @@ const LeagueState = styled.div<{ imageSize: number; isSoloRank: boolean }>`
     background-color: ${gray[100]};
     padding: ${({ isSoloRank }) => (isSoloRank ? '12px' : '4px')};
     box-sizing: border-box;
+
+    img {
+    }
   }
 
   .tier {

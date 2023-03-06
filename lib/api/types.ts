@@ -46,6 +46,7 @@ export interface PlayerMatchData {
   kills: number
   assists: number
   deaths: number
+  line: string
   champion: Champion
   items: Item[]
   teamId: number
@@ -112,6 +113,25 @@ export interface Match {
   enemyTeam: Team
 }
 
+interface PlayedChampion {
+  championId: number
+  championIcon: string
+  championName: string
+  kda: number
+  win: number
+  loss: number
+  matchNumber: number
+  winningRate: number
+}
+
+interface PlayedPositions {
+  TOP: number
+  JUNGLE: number
+  MIDDLE: number
+  ADC: number
+  SUPPORT: number
+}
+
 interface Statistics {
   totalMatchNumber: number
   totalWins: number
@@ -121,6 +141,8 @@ interface Statistics {
   averageAssists: number
   averageKda: string
   killParticipationRate: number
+  playedChampions: PlayedChampion[]
+  playedPositions: PlayedPositions
 }
 
 export interface SearchSummoner {

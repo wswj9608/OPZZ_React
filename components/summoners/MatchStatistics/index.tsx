@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import MatchHeader from '../Matchs/MatchHeader'
 import { PieChart, Pie, Cell } from 'recharts'
 import { IconPosition } from '@/assets/images/icons'
+import Image from 'next/image'
+import { kdaColor } from '@/utils'
 
 const MatchStatistics = () => {
   const statistics = useMatchStatisticsSelector()
@@ -33,7 +35,8 @@ const MatchStatistics = () => {
     averageAssists,
     averageKda,
     killParticipationRate,
-    // playedChampions,
+    playedChampions,
+    playedPositions,
     // preferredPositions,
   } = statistics
 
@@ -41,6 +44,10 @@ const MatchStatistics = () => {
     { name: 'losses', value: totalLosses },
     { name: 'wins', value: totalWins },
   ]
+
+  type Position = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'ADC' | 'SUPPORT'
+
+  const positions: Position[] = ['TOP', 'JUNGLE', 'MIDDLE', 'ADC', 'SUPPORT']
 
   return (
     <>
@@ -85,31 +92,35 @@ const MatchStatistics = () => {
         <PlayedChampion>
           <Text>플레이한 챔피언 (최근 {totalMatchNumber}게임)</Text>
           <div className="container">
-            {/* {playedChampions?.map(({ winningRate, championIcon, championName, wins, losses, kda }, idx) => (
-              <ChampStatistics key={idx}>
-                <div className="champ-icon" />
-                <div className="statistics">
-                  <Text color={red[600]}>{winningRate}%</Text>
-                  <Text color={gray[400]}>
-                    ({wins}승 {losses}패)
-                  </Text>
-                  <Text>{kda} 평점</Text>
-                </div>
-              </ChampStatistics>
-            ))} */}
+            {playedChampions?.map(({ championIcon, win, loss, kda, winningRate }, idx) => {
+              if (idx > 2) return null
+
+              return (
+                <ChampStatistics key={idx}>
+                  <Image className="champ-icon" src={championIcon} width={24} height={24} />
+                  <div className="statistics">
+                    <Text color={winningRate > 50 ? red[600] : gray[600]}>{winningRate}%</Text>
+                    <Text color={gray[400]}>
+                      ({win}승 {loss}패)
+                    </Text>
+                    <Text color={kdaColor(kda)}>{kda} 평점</Text>
+                  </div>
+                </ChampStatistics>
+              )
+            })}
           </div>
         </PlayedChampion>
         <PreferredPosition>
           <Text>선호 포지션 (랭크)</Text>
           <div className="container">
-            {/* {preferredPositions?.map(position => (
-              <div key={position.line}>
-                <Bar height={Math.round((position.playedGameCount / totalMatchNumber) * 100)}>
+            {positions.map(position => (
+              <div key={position}>
+                <Bar height={Math.round((playedPositions[position] / totalMatchNumber) * 100)}>
                   <div className="played-line" />
                 </Bar>
-                <IconPosition line={position.line} />
+                <IconPosition line={position} />
               </div>
-            ))} */}
+            ))}
           </div>
         </PreferredPosition>
       </StatisticsWrapper>
@@ -183,8 +194,6 @@ const ChampStatistics = styled.div`
     width: 24px;
     height: 24px;
     border-radius: 50%;
-
-    background-color: ${blue[400]};
   }
 
   .statistics {
