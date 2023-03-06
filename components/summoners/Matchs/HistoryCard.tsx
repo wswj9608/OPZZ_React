@@ -16,7 +16,6 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
   const summonerName = query.summonerName as string
   const { gameDuration, playerMatchDatas, gameEndTimestamp, queueType } = match
   const [isShowDetail, setIsShowDetail] = useState(false)
-  console.log(match)
 
   const {
     champion,
@@ -33,7 +32,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     visionWardsBoughtInGame,
     totalMinionsKilled,
     minionsPerMinute,
-    // mostMultiKills,
+    mostMultiKills,
   } = match.playerMatchDatas.find(
     data => data.summonerName.toLowerCase() === summonerName.toLowerCase()
   ) as PlayerMatchData
@@ -136,11 +135,11 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
             </div>
             <div className="second-line">
               <ItemsBox items={items} isWin={win} />
-              {/* {mostMultiKills && (
+              {mostMultiKills && (
                 <div className="most-kill-badge">
                   <Text color="#FFF">{mostMultiKills}</Text>
                 </div>
-              )} */}
+              )}
               {/* <div className="mvp-badge">
             <Text   color="#FFF">
               MVP

@@ -65,6 +65,7 @@ export interface PlayerMatchData {
   totalDamageTaken: number
   damageDealtToChampionPercent: number
   damageTakenPercent: number
+  mostMultiKills: string
 }
 
 export interface Team {
