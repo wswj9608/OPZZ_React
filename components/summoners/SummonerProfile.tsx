@@ -13,6 +13,7 @@ const SummonerProfile = () => {
   if (!summonerProfile) return null
 
   const { summonerIconImageUrl, summonerLevel, name } = summonerProfile
+  const ifiUrl = `http://ifi.gg/summoner/${name}`
 
   return (
     <ProfileWrapper>
@@ -46,17 +47,18 @@ const SummonerProfile = () => {
               {name}
             </Text>
           </div>
-          <div className="ranking">
+          {/* <div className="ranking">
             <Text color="#7b7a8e">
               래더 랭킹 <span>156,676</span> 위 (상위 3.71%)
             </Text>
-          </div>
+          </div> */}
           <div className="button-wrap">
             <Button buttonType="fill">전적 갱신</Button>
-            <Button buttonType="line">티어 그래프</Button>
-            <Button buttonType="fill" color="#7d59ea">
-              롤 몇 시간 했는지 궁금해?
-            </Button>
+            <a target="_blank" href={ifiUrl}>
+              <Button buttonType="fill" color="#7d59ea">
+                롤 몇 시간 했는지 궁금해?
+              </Button>
+            </a>
           </div>
           <Text color="#7b7a8e">최근 업데이트: 5일 전</Text>
         </div>

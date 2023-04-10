@@ -3,23 +3,28 @@ import { gray } from '@/styles/palette'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { IconSearchSvg } from '@/assets/images/icons'
+import { useMatchStatisticsSelector } from '@/atoms/summoners'
 
 const categories = [
   {
     id: 0,
     name: '전체',
   },
-  {
-    id: 1,
-    name: '솔로랭크',
-  },
-  {
-    id: 2,
-    name: '자유랭크',
-  },
+  // {
+  //   id: 1,
+  //   name: '솔로랭크',
+  // },
+  // {
+  //   id: 2,
+  //   name: '자유랭크',
+  // },
 ]
 
 const MatchHeader = () => {
+  const statistics = useMatchStatisticsSelector()
+
+  if (!statistics) return null
+
   return (
     <HeaderWrapper>
       <div className="categorise">
@@ -28,12 +33,12 @@ const MatchHeader = () => {
             {category.name}
           </Button>
         ))}
-        <Button buttonType="category">큐타입</Button>
+        {/* <Button buttonType="category">큐타입</Button> */}
       </div>
-      <ChampionSearchInput>
+      {/* <ChampionSearchInput>
         <IconSearchSvg />
         <input placeholder="챔피언 검색" />
-      </ChampionSearchInput>
+      </ChampionSearchInput> */}
     </HeaderWrapper>
   )
 }
