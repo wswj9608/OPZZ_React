@@ -1,19 +1,11 @@
-import { ProgressBar, Text } from '@/elements'
-import { blue, gray, main, red, teal, yellow } from '@/styles/palette'
+import { gray } from '@/styles/palette'
 import styled from 'styled-components'
 import GameDetail from './GameDetail'
 import GameDetailHeader from './GameDetailHeader'
-import ItemsBox from './ItemsBox'
 import { MatchDetailProps } from './types'
-import IconBaron from '@/assets/images/icons/icon-baron.svg'
-import IconDragon from '@/assets/images/icons/icon-dragon.svg'
-import IconTower from '@/assets/images/icons/icon-tower.svg'
-import { useTeamsSelector } from '@/atoms/summoners'
 import TotalMatchStatus from './TotalMatchStatus'
 
 const MatchDetail = ({ gameDatas, teamId, gameId }: MatchDetailProps) => {
-  // const teams = useTeamsSelector()
-
   const friendlyTeam = gameDatas.filter(data => data.teamId === teamId)
   const enemyTeam = gameDatas.filter(data => data.teamId !== teamId)
 

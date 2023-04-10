@@ -22,11 +22,12 @@
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "off", // <--- THIS IS THE NEW RULE
+    "react-hooks/exhaustive-deps": "off",
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     "indent": "off",
     "import/no-unresolved": "off",
+    "react/function-component-definition": "off",
     "react/self-closing-comp": [
       "error",
       {
@@ -42,9 +43,9 @@
         }
       }
     ],
-
     "@typescript-eslint/no-empty-function": "off",
     "import/extensions": "off",
+    "array-callback-return": "off",
     "comma-dangle": "off",
     "object-curly-newline": "off",
     "no-use-before-define": "off",

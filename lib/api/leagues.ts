@@ -1,3 +1,4 @@
+/* eslint-disable */
 import client from './common'
 
 export const getLeaguesToAxios = async () => {

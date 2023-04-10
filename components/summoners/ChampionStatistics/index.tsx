@@ -1,25 +1,13 @@
 import { useSummonerChampionStatistics } from '@/atoms/summoners'
 import { Text } from '@/elements'
-import { getChampionStatisticsToAxios } from '@/lib/api/statistics'
 import { blue, gray } from '@/styles/palette'
-import { useEffect } from 'react'
 import styled from 'styled-components'
 import ChampStatisticsHeader from './ChampStatisticsHeader'
 
 const ChampionStatistics = () => {
-  const [championStatistics, setChampionStatistics] = useSummonerChampionStatistics()
-
-  // const getChampionStatistics = async () => {
-  //   const res = await getChampionStatisticsToAxios()
-  //   setChampionStatistics(res)
-  // }
-
-  // useEffect(() => {
-  //   getChampionStatistics()
-  // }, [])
+  const [championStatistics] = useSummonerChampionStatistics()
 
   if (!championStatistics) return null
-  console.log(championStatistics)
 
   return (
     <>

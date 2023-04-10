@@ -1,28 +1,19 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
-import { getSearchSummoner, getSummonerProfileToAxios } from '@/lib/api/summoner'
-import { useLeaguesSelector, useSearchSummonerState, useSummonerLeagues, useSummonerMatchs } from '@/atoms/summoners'
+import { getSearchSummoner } from '@/lib/api/summoner'
+import { useSearchSummonerState } from '@/atoms/summoners'
 import SummonerProfile from '@/components/summoners/SummonerProfile'
 import Matchs from '@/components/summoners/Matchs'
 import League from '@/components/summoners/League'
-import matchDb from '@/@fake-db'
 import MatchStatistics from '@/components/summoners/MatchStatistics'
-import { getLeaguesToAxios } from '@/lib/api/leagues'
 import ChampionStatistics from '@/components/summoners/ChampionStatistics'
 import MatchHeader from '@/components/summoners/Matchs/MatchHeader'
 
 const Summoners = () => {
   const { query, isReady } = useRouter()
   const { summonerName } = query
-  // const [summonerLeagues, setSummonerLeagues] = useSummonerLeagues()
   const [, setSearchSummonerState] = useSearchSummonerState()
-
-  // const getLeagues = async () => {
-  //   const res = await getLeaguesToAxios()
-  //   setSummonerLeagues(res)
-  // }
-  console.log(summonerName)
 
   const searchSummoner = async () => {
     const res = await getSearchSummoner(summonerName as string)
@@ -34,7 +25,6 @@ const Summoners = () => {
 
     searchSummoner()
   }, [isReady])
-  // const matchData = matchDb()
 
   return (
     <SummonersWrapper>

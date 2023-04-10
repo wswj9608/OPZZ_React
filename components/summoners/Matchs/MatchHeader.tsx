@@ -1,8 +1,8 @@
 import { Button } from '@/elements'
 import { gray } from '@/styles/palette'
-import Image from 'next/image'
+// import Image from 'next/image'
 import styled from 'styled-components'
-import { IconSearchSvg } from '@/assets/images/icons'
+// import { IconSearchSvg } from '@/assets/images/icons'
 import { useMatchStatisticsSelector } from '@/atoms/summoners'
 
 const categories = [
@@ -62,22 +62,22 @@ const HeaderWrapper = styled.div`
   }
 `
 
-const ChampionSearchInput = styled.div`
-  background-color: ${gray[200]};
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 12px;
+// const ChampionSearchInput = styled.div`
+//   background-color: ${gray[200]};
+//   border-radius: 4px;
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
+//   padding: 0 12px;
 
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
+//   .icon {
+//     width: 24px;
+//     height: 24px;
+//   }
 
-  input {
-    font-size: 12px;
-  }
-`
+//   input {
+//     font-size: 12px;
+//   }
+// `
 
 export default MatchHeader

@@ -1,13 +1,9 @@
 import Image from 'next/image'
-import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Button, Text } from '@/elements'
-import { ProfileProps } from './types'
-import { getSummonerProfileToAxios } from '@/lib/api/summoner'
-import { useSummonerProfile, useSummonerProfileSelector } from '@/atoms/summoners'
-import { useRouter } from 'next/router'
+import { useSummonerProfileSelector } from '@/atoms/summoners'
 
-const SummonerProfile = () => {
+function SummonerProfile() {
   const summonerProfile = useSummonerProfileSelector()
 
   if (!summonerProfile) return null
@@ -47,20 +43,14 @@ const SummonerProfile = () => {
               {name}
             </Text>
           </div>
-          {/* <div className="ranking">
-            <Text color="#7b7a8e">
-              래더 랭킹 <span>156,676</span> 위 (상위 3.71%)
-            </Text>
-          </div> */}
           <div className="button-wrap">
             <Button buttonType="fill">전적 갱신</Button>
-            <a target="_blank" href={ifiUrl}>
+            <a target="_blank" href={ifiUrl} rel="noreferrer">
               <Button buttonType="fill" color="#7d59ea">
                 롤 몇 시간 했는지 궁금해?
               </Button>
             </a>
           </div>
-          <Text color="#7b7a8e">최근 업데이트: 5일 전</Text>
         </div>
       </div>
     </ProfileWrapper>

@@ -1,11 +1,11 @@
-import { useLeaguesSelector, useSummonerLeagues } from '@/atoms/summoners'
+import { useLeaguesSelector } from '@/atoms/summoners'
 import React from 'react'
 import styled from 'styled-components'
 import { emblems } from '@/assets/images'
 import { Text } from '@/elements'
 import Image from 'next/image'
 import { gray } from '@/styles/palette'
-import { LeagueProps, RankType, TierType } from './types'
+import { LeagueProps } from './types'
 
 type ModuleType = typeof emblems
 
@@ -21,11 +21,9 @@ const League = ({ queueType }: LeagueProps) => {
   const idx = leagues.findIndex(league => league.queueType === queueType)
 
   const targetLeague = leagues[idx]
-  // const { tier, rank, leaguePoints, wins, losses } = leagues[idx]
 
   const isSoloRank = queueType === 'RANKED_SOLO_5x5'
-  // const { wins, losses, leaguePoints, queueType } = data
-  const winningRate = ((targetLeague?.wins / (targetLeague?.wins + targetLeague?.losses)) * 100).toFixed()
+  const winningRate = ((targetLeague.wins / (targetLeague.wins + targetLeague.losses)) * 100).toFixed()
 
   const imageSize = isSoloRank ? 72 : 40
 
@@ -57,7 +55,7 @@ const League = ({ queueType }: LeagueProps) => {
       {targetLeague && (
         <LeagueState imageSize={imageSize} isSoloRank={isSoloRank}>
           <div className="emblem">
-            <Image src={emblemGenerator(targetLeague.tier)} width={imageSize} height={imageSize} />
+            <Image src={emblemGenerator(targetLeague.tier)} width={imageSize} height={imageSize} alt="emblem" />
           </div>
 
           <div className="tier">

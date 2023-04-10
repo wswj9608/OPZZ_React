@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 import styled from 'styled-components'
 import { useState } from 'react'
-import Link from 'next/link'
 import { gray } from '@/styles/palette'
-import { Button, Text } from '@/elements'
+import { Text } from '@/elements'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
@@ -50,7 +48,7 @@ const Home: NextPage = () => {
           <input type="text" onChange={handleSummonerName} placeholder={searchInputPlaceHolder} onKeyDown={onKeyDown} />
         </div>
         <div className="search-button">
-          <button onClick={searchSummonerName}>
+          <button type="button" onClick={searchSummonerName}>
             <Image src={searchButtonImageUrl} alt="search" width={100} height={45} />
           </button>
         </div>

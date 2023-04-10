@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Text } from '@/elements'
 import { useRouter } from 'next/router'
-import { blue, gray, main, red } from '@/styles/palette'
-import { HistoryCardProps } from './types'
-import ItemsBox from './ItemsBox'
-import MatchDetail from './MatchDetail'
+import { blue, main, red } from '@/styles/palette'
 import { IconArrowDownSvg } from '@/assets/images/icons'
 import { PlayerMatchData } from '@/lib/api/types'
 import { perkIcons } from '@/assets/images/perkIcons'
+import { HistoryCardProps } from './types'
+import ItemsBox from './ItemsBox'
+import MatchDetail from './MatchDetail'
 
 const HistoryCard = ({ match }: HistoryCardProps) => {
   const { query } = useRouter()
@@ -37,7 +37,7 @@ const HistoryCard = ({ match }: HistoryCardProps) => {
     data => data.summonerName.toLowerCase() === summonerName.toLowerCase()
   ) as PlayerMatchData
 
-  const { championIcon, championLevel, championName } = champion
+  const { championIcon, championLevel } = champion
   const { kda, killParticipation } = challenges
 
   const perkIcon = (perkId: number) => {

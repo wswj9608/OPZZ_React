@@ -1,6 +1,6 @@
-import { useSummonerMatchs, useSummonerProfile } from '@/atoms/summoners'
+import { useSummonerProfile } from '@/atoms/summoners'
 import { ProgressBar, Text } from '@/elements'
-import { blue, gray, main, orange, red, teal, yellow } from '@/styles/palette'
+import { gray, main, red, yellow } from '@/styles/palette'
 import { kdaColor, perkIcon } from '@/utils'
 import Image from 'next/image'
 import styled from 'styled-components'
@@ -31,8 +31,6 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
     damageTakenPercent,
   } = gameData
 
-  console.log('data =========>', totalDamageDealtToChampions)
-
   const { championLevel, championIcon } = champion
   const { kda, killParticipation } = challenges
 
@@ -43,16 +41,13 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
     if (win) {
       if (isMe) {
         return main[300]
-      } else {
-        return main[100]
       }
-    } else {
-      if (isMe) {
-        return red[300]
-      } else {
-        return red[100]
-      }
+      return main[100]
     }
+    if (isMe) {
+      return red[300]
+    }
+    return red[100]
   }
 
   return (
@@ -89,14 +84,7 @@ const GameDetail = ({ gameData }: GameDetailProps) => {
         </div>
       </div>
 
-      <div className="score score-container">
-        {/* <Text style={{ fontSize: '12px', width: '20px' }} color={gray[900]} weight="bold">
-          <i>7.6</i>
-        </Text>
-        <div className="badge">
-          <Text color={gray[900]}>MVP</Text>
-        </div> */}
-      </div>
+      <div className="score score-container"></div>
       <div className="kda kda-container">
         <Text>
           {kills} / {deaths} / {assists} ({killParticipation}%)
